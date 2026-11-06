@@ -146,9 +146,35 @@ function makeClient() {
 
 const REAL_CATS = ["product", "offer", "service"]; // raw RSS "news" is noise; only these reach the board
 
-// Classify RSS items in small batches (one big call returns unparseable JSON).
-// Returns ONLY items a batch tagged product/offer/service; a failed batch is
-// dropped, not kept-raw. No key -> nothing (unclassified RSS is just noise).
+// Forced tool => the API guarantees schema-valid structured output, instead of
+// us parsing free text (Haiku was intermittently returning non-JSON prose).
+const VERDICT_TOOL = {
+  name: "record_verdicts",
+  description: "Record one classification verdict per item.",
+  input_schema: {
+    type: "object",
+    properties: {
+      verdicts: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            i: { type: "integer", description: "the item's index" },
+            category: { type: "string", enum: ["product", "offer", "service", "drop"] },
+            region: { type: "string", enum: ["NA", "SA"] },
+            bank: { type: "string", description: "short bank name, or empty" },
+          },
+          required: ["i", "category"],
+        },
+      },
+    },
+    required: ["verdicts"],
+  },
+};
+
+// Classify RSS items in small batches, returning ONLY items tagged
+// product/offer/service; a failed batch is dropped, not kept-raw.
+// No key -> nothing (unclassified RSS is just noise).
 async function classify(client, items, cfg) {
   if (!client || items.length === 0) return [];
   const anthropic = await client;
@@ -159,25 +185,23 @@ async function classify(client, items, cfg) {
     const slice = items.slice(start, start + BATCH);
     const batchInput = slice.map((it, i) => ({ i, title: it.title, summary: (it.summary || "").slice(0, 180), source: it.source }));
     const prompt =
-      `You screen banking-industry headlines for a Simplii Financial product-team dashboard.\n` +
+      `Classify these banking headlines for a Simplii Financial product-team dashboard, via record_verdicts.\n` +
       `Relevant = a RETAIL/consumer bank or neobank in the Americas doing one of: ${cfg.topics.join("; ")}.\n` +
       `Banks of interest (not exhaustive): ${cfg.banks.join(", ")}.\n\n` +
-      `For EACH item return JSON. DROP anything not about a specific bank's product, service, or offer ` +
-      `(generic macro news, regulation think-pieces, crypto prices, sports/unrelated noise).\n` +
-      `category: "product" (feature/platform/app launch), "offer" (rate/discount/bonus/promo), ` +
-      `"service" (new service, fee change, access/eligibility), or null to drop.\n` +
-      `region: "NA" or "SA". bank: the bank's short name or null.\n\n` +
-      `Return ONLY a JSON array like [{"i":0,"category":"product","region":"NA","bank":"RBC"}].\n\n` +
-      `ITEMS:\n${JSON.stringify(batchInput)}`;
+      `One verdict per item. category: "product" (feature/platform/app launch), "offer" (rate/discount/bonus/promo), ` +
+      `"service" (new service, fee change, access/eligibility), or "drop" for anything not about a specific bank's ` +
+      `product/service/offer (generic macro news, regulation think-pieces, crypto prices, sports/unrelated noise).\n` +
+      `region: "NA" or "SA". bank: short name or "".\n\nITEMS:\n${JSON.stringify(batchInput)}`;
     try {
       const resp = await anthropic.messages.create({
         model: MODEL_FAST,
         max_tokens: 2000,
-        // prefill "[" so the model must continue a JSON array (no prose preamble)
-        messages: [{ role: "user", content: prompt }, { role: "assistant", content: "[" }],
+        tools: [VERDICT_TOOL],
+        tool_choice: { type: "tool", name: "record_verdicts" },
+        messages: [{ role: "user", content: prompt }],
       });
-      const text = "[" + resp.content.map((c) => c.text || "").join("");
-      for (const v of extractJson(text)) {
+      const tu = resp.content.find((c) => c.type === "tool_use");
+      for (const v of tu?.input?.verdicts || []) {
         const it = slice[v.i];
         if (!it || !REAL_CATS.includes(v.category)) continue;
         kept.push({ ...it, category: v.category, region: v.region || it.region, bank: v.bank || it.bank });
