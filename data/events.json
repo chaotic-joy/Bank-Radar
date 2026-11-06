@@ -11,6 +11,17 @@
     "endDate": "2026-09-11"
   },
   {
+    "name": "BMO CEO Darryl White at Scotiabank Financials Summit",
+    "type": "conference",
+    "organizer": "Scotiabank",
+    "url": "https://www.bmo.com/main/about-bmo/investor-relations/presentations-events",
+    "location": "Canada",
+    "region": "NA",
+    "date": "2026-09-09",
+    "endDate": "2026-09-09",
+    "id": "a9ab5e8dd88d"
+  },
+  {
     "name": "Nubank U.S. launch event",
     "type": "keynote",
     "organizer": "Nubank",
@@ -20,6 +31,17 @@
     "date": "2026-09-10",
     "endDate": "2026-09-10",
     "id": "533d1c36a9c3"
+  },
+  {
+    "name": "Nubank U.S. Launch Event (Nu Stadium)",
+    "type": "keynote",
+    "organizer": "Nubank",
+    "url": "https://www.americanbanker.com/news/nubank-launches-in-the-u-s-through-a-sponsor-bank",
+    "location": "Nu Stadium, Miami, FL, USA",
+    "region": "NA",
+    "date": "2026-09-10",
+    "endDate": "2026-09-10",
+    "id": "f4f7016ddcd0"
   },
   {
     "name": "Sibos 2026",
@@ -37,7 +59,7 @@
     "name": "Money20/20 USA 2026",
     "type": "conference",
     "organizer": "Money20/20",
-    "location": "The Venetian, Las Vegas, NV",
+    "location": "The Venetian Expo, Las Vegas, NV, USA",
     "region": "NA",
     "url": "https://us.money2020.com",
     "date": "2026-10-18",
@@ -81,7 +103,7 @@
     "type": "keynote",
     "organizer": "Wealthsimple",
     "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
-    "location": "Toronto (Massey Hall), with Vancouver, Montréal and Calgary viewings",
+    "location": "Massey Hall, Toronto, Canada",
     "region": "NA",
     "date": "2026-11-05",
     "endDate": "2026-11-05",
@@ -220,6 +242,28 @@
     "id": "cc199ae87f94"
   },
   {
+    "name": "Scotiabank Q4 2026 Earnings Release",
+    "type": "earnings",
+    "organizer": "Scotiabank",
+    "url": "https://www.theglobeandmail.com/investing/markets/markets-news/Newswire.ca/8647071/scotiabank-to-announce-fourth-quarter-2026-results/",
+    "location": "Toronto, Canada",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "5cf56704e69a"
+  },
+  {
+    "name": "BMO Financial Group Q4 2026 Earnings Release and Conference Call",
+    "type": "earnings",
+    "organizer": "BMO Financial Group",
+    "url": "https://www.bmo.com/main/about-bmo/investor-relations/presentations-events",
+    "location": "Toronto, Canada",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "c28a0d327b92"
+  },
+  {
     "name": "EQB (EQ Bank) Q4 and fiscal 2026 earnings call (10:30 a.m. ET; results Dec 2 after close)",
     "type": "earnings",
     "organizer": "EQB Inc.",
@@ -262,6 +306,17 @@
     "date": "2026-12-03",
     "endDate": "2026-12-03",
     "id": "0080212e4c70"
+  },
+  {
+    "name": "RBC Q4 and Fiscal 2026 Earnings Release",
+    "type": "earnings",
+    "organizer": "Royal Bank of Canada",
+    "url": "https://www.theglobeandmail.com/investing/markets/stocks/RY-N/pressreleases/8592986/rbc-to-announce-fourth-quarter-and-fiscal-2026-results/",
+    "location": "Toronto, Canada",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "0c6644c47f89"
   },
   {
     "name": "National Bank of Canada Q4 2026 results and strategic update (90-minute call, 8:00 a.m. ET)",

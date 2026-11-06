@@ -5,7 +5,7 @@
     "source": "Finextra",
     "summary": "BMO is introducing AI Agent Assist to help clients get faster answers and resolutions when they contact BMO's Virtual Connect contact centre about their credit card transactions.",
     "date": "2026-11-06",
-    "category": "service",
+    "category": "product",
     "bank": "BMO",
     "region": "NA",
     "id": "72bd5f5f001c"
@@ -231,6 +231,39 @@
     "id": "647de1d489cf"
   },
   {
+    "title": "JPMorgan Chase signs cybersecurity and coding deal with OpenAI",
+    "url": "https://www.finextra.com/newsarticle/48718/jpmorgan-chase-signs-cybersecurity-and-coding-deal-with-openai?utm_medium=rssfinextra&utm_source=finextrafeed",
+    "source": "Finextra",
+    "summary": "JPMorgan Chase has formed a strategic partnership with OpenAI for use of the AI lab's coding and cybersecurity models.",
+    "date": "2026-11-06",
+    "category": "service",
+    "bank": "JPMorgan",
+    "region": "NA",
+    "id": "b86101b1fcd4"
+  },
+  {
+    "title": "KCB Tanzania integrates PayPal into mobile banking",
+    "url": "https://www.finextra.com/pressarticle/111606/kcb-tanzania-integrates-paypal-into-mobile-banking?utm_medium=rssfinextra&utm_source=finextrafeed",
+    "source": "Finextra",
+    "summary": "KCB Bank Tanzania has partnered with PayPal to integrate PayPal services into the KCB Mobile App, giving customers a simple, secure and convenient way to connect to global payments directly through their banking app.",
+    "date": "2026-11-06",
+    "category": "product",
+    "bank": "KCB",
+    "region": "SA",
+    "id": "a82b1ec4dc4f"
+  },
+  {
+    "region": "NA",
+    "bank": "RBC",
+    "title": "RBC Avion Visa Infinite welcome offer: up to 70,000 points (apply by Nov 25, 2026)",
+    "summary": "New applications for the RBC Avion Visa Infinite or Platinum received between Aug 13 and Nov 25, 2026 can earn up to 70,000 Avion points (travel value up to $1,500). Date shown is when the offer was confirmed active.",
+    "url": "https://www.nerdwallet.com/ca/p/best/credit-cards/best-welcome-bonuses",
+    "source": "NerdWallet Canada",
+    "category": "offer",
+    "date": "2026-11-06",
+    "id": "7ecd0190a84c"
+  },
+  {
     "region": "NA",
     "bank": "Wealthsimple",
     "title": "Wealthsimple unveils Penny AI assistant at 'Wealthsimple Presents'",
@@ -429,6 +462,83 @@
     "id": "8387cca7847a"
   },
   {
+    "title": "Capital One Outage Today: Is Capital One Down in the US? Customers Report App Crashes, Login Failures & Mobile Banking Problems as 71% of Complaints Point to App Issues | Latest Outage Status - The Sunday Guardian",
+    "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQUGdMU1FSUEFGa3c3eUVjT29PbFRIbkNzaDZaeFlzQ0RUZlIwNXo5YWJJUldWOGU1c2ZYOVFoMy1UMjh0SEF3R0Y1Nm9NaDVJb29FaG1Qd0JrSXNOSXZzb2ZjN3JIWEUwZVlEaTZEWWo0MU51WVFFU3hzNHhaelIwZkFFd25HWHdjbk9uMnA1OWx3QXV5dUFTM3RUVUg3bDNmR1BCVFVTNTVobTRJT3A5Vi1jYjRNbG1FQmoydFZmWExnbzJ6ZzFPLXpfWEJaZk5fOTF3cmxBazZCSnhMa0k1allaN1Y5dmFoc05wYVluQU9EWHdJSTN4dzJzcVQxZVVUc3lqNVd3Tk9Ya0dzckdEZy1VWXRxLXQyQ3BQcm5Ea094RlZhZHIzSUNSdTVzVXhmQWllaEpJU2tZYjROcklyX0s5X3dwSGk2bzEtUtIB0gJBVV95cUxQaUQ1NU1MTkN4U3I3dEx5T1lQYWk4QmJwOFlWZmYwdThrcGVtQXJ0WDZNTklPd054R0ZnM05wckdBUUJHdDk4ZUg3X3BWVTNJYlQxNkJqXzBNcmdwNE1SNWN0azdBWDVwYzlSa2swamhDRVBRb3QwQl9tZWZpOW4zUzVUeGlTZ1Jib3AzRkFINFhFNThmS2F5YUE2VHZ0MFFsSTc1UXlvc2tkZmpqekZwbDljYkV1VVdXTEp0ZUNjY2wtNm82cTRmcV9GWkRlc2xIR1N2OFZLVGdZZXpvM3B2ajVQU2JwNGhRc1Jrck1iUEVZWTFvTERZSjZrbWhqcjZvS1N3TF9yRlpGSTl3Z1N1WVZ6RW10YWNmSWR6NzVOMU5MempXeGo0QVBsNnhpOS1FN0V4VWo4TkRlWWVJSzE4dGZtUkY5bTJETDdLLWFoUWdBdw?oc=5",
+    "source": "Google News · US banks",
+    "summary": "Capital One Outage Today: Is Capital One Down in the US? Customers Report App Crashes, Login Failures & Mobile Banking Problems as 71% of Complaints Point to App Issues | Latest Outage Status The Sunday Guardian",
+    "date": "2026-11-05",
+    "category": "service",
+    "bank": "Capital One",
+    "region": "NA",
+    "id": "4cffb996e910"
+  },
+  {
+    "title": "Best Tax-Free Savings Account Rates in Canada - NerdWallet",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBmVUZjQjlvakZMSkp3UU1MbUs1T0pqbVRfRlFiM3NHME1PbUx6MFNXRWtFLTBva2J2ZFAxY3BoODhWazV6X2pwT3g0QmIzbTRUaEpMaHhWc2F2NjM0VW5XWm90ZGVMb0ZuYTRwT0lpZXVIMU9oR1dJ?oc=5",
+    "source": "Google News · Offers & promos",
+    "summary": "Best Tax-Free Savings Account Rates in Canada NerdWallet",
+    "date": "2026-11-05",
+    "category": "offer",
+    "bank": null,
+    "region": "NA",
+    "id": "abc498a446b7"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple launches Penny, an AI assistant that prepares e-transfers, payments and trades",
+    "summary": "Unveiled at Wealthsimple Presents. Penny can prepare e-transfers, pay invoices, flag duplicate credit card charges and help self-directed investors buy or sell, with client confirmation required before any action. ChatGPT and Claude connections are planned for early 2027.",
+    "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
+    "source": "Wealth Professional",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "9bccf572331c"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple Pay: instant transfers up to $100,000 between Wealthsimple clients",
+    "summary": "Available now. Clients can send up to $100,000 instantly to other Wealthsimple clients, announced as one of 12 products and features at Wealthsimple Presents.",
+    "url": "https://www.iphoneincanada.ca/2026/11/05/wealthsimple-penny-ai-12-new-features/",
+    "source": "iPhone in Canada",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "18132ef95432"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple adds commission-free options trading on Canadian stocks and announces Wealthsimple Pro",
+    "summary": "Wealthsimple says it is the first Canadian brokerage to offer commission-free options on Canadian stocks. The Wealthsimple Pro trading suite (Level 2 data, watchlists, faster execution) is due in late November 2026.",
+    "url": "https://itbrief.ca/story/wealthsimple-launches-ai-assistant-stablecoin-buy-pro-trade",
+    "source": "IT Brief Canada",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "86a427effd3e"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple announces CADD, a Canadian-dollar-backed stablecoin with 3.25% reward",
+    "summary": "Wealthsimple describes CADD as the first Canadian-dollar-backed stablecoin issued by a regulated financial institution, redeemable one-for-one, with a 3.25% annual reward on holdings. Part of the Wealthsimple Presents announcements.",
+    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
+    "source": "Fintech.ca",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "8387cca7847a"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple plans business credit card with no FX fees and 1% cashback, plus rebuilt mobile app",
+    "summary": "A business credit card with no foreign exchange fees and 1% cashback on all purchases is planned for early 2027. A rebuilt native iOS and Android app with a customizable home screen is also expected in early 2027.",
+    "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
+    "source": "MoneySense",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "2284a64f0848"
+  },
+  {
     "region": "NA",
     "bank": "Chime",
     "title": "Chime Q3 2026: Jade AI agent, Chime Invest, joint accounts and credit line in beta",
@@ -511,10 +621,153 @@
     "source": "Google News · LatAm banks",
     "summary": "Nubank unveils global brand refresh by Koto ahead of US launch Design Week",
     "date": "2026-11-03",
-    "category": "service",
+    "category": "product",
     "bank": "Nubank",
-    "region": "NA",
+    "region": "SA",
     "id": "f15c3163b49a"
+  },
+  {
+    "title": "Site e aplicativo do Banco do Brasil apresentam instabilidade - Agência Brasil",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSldHUWVXYVpsbXBSVkpyLUt4OEpxTUV2VXJqNDdpQjlFODVTRmpuOFAydTBWa1BjRWtRczBEWnNUWGdFLTc1NmNpOWxNVTN4WGw5Vnp0bG1Cb3RMandNVVhKZDNtQzd6LWF1RDhMQ3NiOGZiOUNhRDgtR1hMcHo0TDNVaFQxY0pGdnJMT1ItY01TZVFZQ1liMjRsVktnT3pwYmVOUDFYOUNmQlNLc3pMTUhQRmNvQU9NYkZ3?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Site e aplicativo do Banco do Brasil apresentam instabilidade Agência Brasil",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "129eaa946acc"
+  },
+  {
+    "title": "App do Banco do Brasil caiu? Usuários reclamam de instabilidade nesta terça (3) - Estadão",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNQS1lSnZ4WkktTmtYSEQtQTg5SnFoRDlDSHc2RnhiRy1NWEZCalpyZTJmbkFDTVhqRlZGOVZtX1BVd3R1Z2dNTEV0cEY5UXp3QlgwZjAyU3I3R3hrd0N4UnR0WkRvX1pmekVMVkdfNXdVOU9RT2NhdHBZXzVjNVhOamFubWJTU1dVYVltcEx2cW9VbFpvdVA0ajVLSzZ1RV9KYkJQY1NlOTB1YzlhdlJ3ZjB0akVzeExXUHRwQ09sbllzYXpHbC1KVUtYLWYxdzNYUWhn0gHYAUFVX3lxTE1XT0kxdktnZmlRNXc5UU5aN1cxeXpOT3djSXJza3l6MVlxcjcwdFVpSWNwamVwTzVBMFhjZ2RoeVdmMTAyVTIzbDZqOEtkTWJ5NWg4SWRSMkN2ck5LRmlPSXdyT1FkYU9IMUkwUUd0VEJRRHByTGEtMzR4Vk94NE1xS2tWd0t6M1djMDJaTHpFSFZKeWZyRXM0Z0Qxem1lWU9HdVFyVG9vb3ZsanhtbWNkaFBmczU4amZIYUtYNS1iVGlVWjR3bzFHZl9uZ0ExMjJLdURDMkdLUA?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "App do Banco do Brasil caiu? Usuários reclamam de instabilidade nesta terça (3) Estadão",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "34cd33f06d3e"
+  },
+  {
+    "title": "Banco do Brasil fora do ar? Usuários relatam falha para acessar aplicativo do banco - O GLOBO",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQakxLR1ptLS1XV1hDRHBYNTQtUmoxVHZoS2pFVE9DR04xalY0X09Lb3NOMkp4NFJETmVnU3dYNHBtTDlUZXByQjBfSVJLRmJPei01Q3U3VWdaQ2kyR3JCRjA1UEZGNTluRzFwX1dmZVNZQWt5a3NUODlVZFl4SkVIdmx5SmE3bmRTRER5dmpobGQ4NFFCalRDakhNYnpoRXhVemx6djBsTHEwWThOQUFxY0U0MHR0cWJfZ3RwVGlaV0QzdjFCclItQUZBNnd2VDMwMlRxS3p0ZVLSAecBQVVfeXFMTW52RndBUDlGeUZHUFhaMHo4TFp0SXpuTVdlZ21MZjU1RVI3d0hCR0Zia1JmQ055ZUZhWlBncnl4c1JUSlNRMWVCWjRFcDhTVFIzSzIxWDRacDV0Z0Jic2kwNG5Md2lLNTFwUWw3dlpaSmtQY2Q3dHlpVGI2S0EwUkF3N1FqQ2hUaTlpV0ppMXFrUUhvR3hzd0xISlJoQ3EwRGtUUVd4VHdGSzk3UVk1bWxmWEZFVlZaVGhlb0RoY2ctZUllZDdiTHVfcUNUeDNjYkp3VHE4MFUyMVMzSnU5bkczOFFuWGFB?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Banco do Brasil fora do ar? Usuários relatam falha para acessar aplicativo do banco O GLOBO",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "be225284dcf0"
+  },
+  {
+    "title": "Banco do Brasil fora do ar? Aplicativo tem instabilidade e clientes reclamam nas redes - G1",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVnlCUVlrZll0SFRUM0RDb0lOc1ZLaXhySEREVk1NbnUyeW5JTFczVmI1Sm15eFBMdUp6MER6N09wcDcya0xUT3ZZWVFKQm4tV2Roc3FKUmZSdGhKcEhlcml5WjhlTENMQVVQN2NQREhLRkdubGtSWllGMUpnVXBVWVdEa1pyVzY2RXNn0gGaAUFVX3lxTE9iN1FKUi1uWGl2endkUVY0cFkxWFIzcXdfazFXdG5NX0NtMjlNWmgtZXY0OU9uOTdzWXY2ZDNXSVJZRGd1RDlGcTBNcFFDeXVnWVVlTWoyeWg3QUVvVmNVaHJxSWFGdDBSZWVuQVFHVzBrWjJydnAxZHNEN19iblNMUFlrbGthQlpFOWJKMEQ4eVRhWmpGQnJHUHc?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Banco do Brasil fora do ar? Aplicativo tem instabilidade e clientes reclamam nas redes G1",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "baba0b8c6b85"
+  },
+  {
+    "title": "Site e app do Banco do Brasil apresentam instabilidade hoje - SBT News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZmc1Sk5HSG1qMGE5MWxzR0diRkRkWHU1MXJQSERLakx6dUtqSzNUZUNTZ24wekk0VEFEREdtVUttdERmZmV5N0ZuMzh5dEJmNFEwaThLc0dtZEVjeWJxOHduNnpUQXNnLUpMNF9LWmU5RlR6VnN3a213SFpSVl9NSml5OHFUeHJpVnVkckFXR0Frc0gtdG1ScHk1OVk?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Site e app do Banco do Brasil apresentam instabilidade hoje SBT News",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "de30f71bc182"
+  },
+  {
+    "title": "Banco do Brasil enfrenta instabilidade em aplicativos e clientes relatam dificuldades em usar Pix - Seu Dinheiro",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQQmdUbHNTRDVmWE9yU0tRb2pCZGRSSnFlWVhReENBeGhoU2VpazNHVnhFbXpIRTNFSU1mMExLQVB6azFRVW1jYVMwUlJxVjAyX3ZQcFN2TkQtYUdBVzZyYkJ4b0VCaGNRWE5ZV3l3OE83dHMtckFuXzVwRnFLbHVZaE0yRVF4VS12eGJ1V0FnSU1zOGQ3TW1nQ3I0VGYyeXZqNFpiR0NoZFRlQ3RMLS1rQ1hxekZjR1Z6cVBhMklaUFRTQWNFdXdQVk1UVHI?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Banco do Brasil enfrenta instabilidade em aplicativos e clientes relatam dificuldades em usar Pix Seu Dinheiro",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "bf911cb87a79"
+  },
+  {
+    "title": "Site e app do Banco do Brasil apresentam instabilidade no login - BandNews",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNE9faS1rTi1fN0gwWG41ZC1nbWxXbS1XQ3lOR0JYVGxGbGRsOVBWTmhmaVZFd1Q0RFVSY0R0dGJMV2lOVnU2X292dldJcW50UFBKcWp6d3hkMmJKRGtJVTU5M0x2QnJWbkdJLW9pN3BJTjBCYWZxTmdySGdBcC1vQVc5VExZSDZNcjhCZDl3Rl9HUjl5SjRTZktPdkJlV2Js?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Site e app do Banco do Brasil apresentam instabilidade no login BandNews",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "cd01a9a2aeaf"
+  },
+  {
+    "title": "App Banco do Brasil fora do ar? Usuários relatam instabilidade nesta terça-feira (3) - Folha PE",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQb1dwbkpvdERyTHpuemdhZkhvNm9Ybl8yTFR0eWtaRE02OENFMzN2bFZ4UF9JbVdyQms3VEllVWdDSmx3V01yVEhPT2VsR0FLVGVJSHVxMDU3Tk1uZGFyY25JQzFvd1ZNV0RiQVQweGc3dEFQNXlTa190MXJNWVdMdF85X2JiMHZOYmdyd0R1MzRlY1FvR0E2MGFNbkdNdkYweDI1RjdUVUNLdmFhdHNTRkVrODhiRFpfUnVyZnRQNlp4T2d3UHRMd1MwQQ?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "App Banco do Brasil fora do ar? Usuários relatam instabilidade nesta terça-feira (3) Folha PE",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "38466dbd58f9"
+  },
+  {
+    "title": "Banco do Brasil: site e app apresentam instabilidade - Correio do Povo",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSVlsSTEybFZyNDczWE1qNlRuZ2tkUHNaTVM0Wk05clppUms4RXIwWnF0NUxKXzhnY2I4ajkxVU55TTZoWVZ3STVuekQ4YVhGTzZNcmtJQzA0NFRzYVRWTi1LRE1icTQtbkxMRGpER0UxX2YxUlhNT0ZqZ1ZmcXNIbmdYSzExdXpBb3RGTHNUaENVNlRlY3hqVTd6Y2VZT0gyelNJQWFaQ1BSc2RVOHE0TFJKcmxLSWRP?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Banco do Brasil: site e app apresentam instabilidade Correio do Povo",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "ad2ab2b9bfd6"
+  },
+  {
+    "title": "App do Banco do Brasil tem instabilidade e usuários relatam falhas | Diário do Grande ABC - Notícias e informações - Diário do Grande ABC",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZEFsYUdpckR6cXBrWkhfNlZDajV2YVZiWjR1WVQwalFWaFdxci0zaEFXai1IU09hanVLUEpOZ3MzdFJZeERFb2RKeFhkenIycnBuRUFQY2RTdDRpQ2c1MVJmY0tfQkloY1hQWlhteTVnUlNlanoxZE14U1BrcHltVFhiRHZDc1dCTjhmdGIzZVJfX3A2YUFMcy15SG15RThHQVVjVHo5MXlUajQ?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "App do Banco do Brasil tem instabilidade e usuários relatam falhas | Diário do Grande ABC - Notícias e informações Diário do Grande ABC",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "8a638d6a7af2"
+  },
+  {
+    "title": "Clientes do Banco do Brasil relatam app fora do ar e Pix travado nesta terça-feira - BPMoney",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVktfTTlHQ1JBcHpBYUdxWDNYVHdWclZLaWVwTXJUSTlLYkx5OHZ6YUR6RkR3UHBpLTlybE9JSU01U2txRzhGa3hrRmdyejNwYlBCLUJzbGhlV1Yxd19YZVpZXzlrS0Z4QnRWbDBhTWZ5Sy1qbUltRXJJX3lrem84UmZxLVFsU28?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Clientes do Banco do Brasil relatam app fora do ar e Pix travado nesta terça-feira BPMoney",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "728db3e24da1"
+  },
+  {
+    "title": "App do Banco do Brasil apresenta instabilidade e gera queixas de clientes - UOL Economia",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUWhrbnRYdzBqb3lKZWM4UEZRQkJCU29xY2NTS3pYT294dFJPRTRaWmZxT1hnd0ZkN193d2ZKc1hfSDdrZFRTaWxCY0M2bmR4STJiRVdlNlVfRkFPNHVuRmdIY0JOREU0OU5ESUIxTVdFbndWNzVab0R0QklmMW1jM2ZFbmVjT004bXFtRUlKSQ?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "App do Banco do Brasil apresenta instabilidade e gera queixas de clientes UOL Economia",
+    "date": "2026-11-03",
+    "category": "service",
+    "bank": "Banco do Brasil",
+    "region": "SA",
+    "id": "9aa87983cb02"
+  },
+  {
+    "title": "Revolut Secures New Zealand Banking License, Expanding Its Global Footprint",
+    "url": "https://finovate.com/revolut-secures-new-zealand-banking-license-expanding-its-global-footprint/",
+    "source": "Finovate",
+    "summary": "Digital banking platform Revolut announced today that it has officially launched in New Zealand as a bank after the Reserve Bank of New Zealand registered Revolut Bank New Zealand Limited. This registration makes Revolut the country’s 27th registered bank and its first digital bank. The new registration, which comes three years after Revolut first began Read more... The post Revolut Secures New Ze",
+    "date": "2026-11-03",
+    "category": "product",
+    "bank": "Revolut",
+    "region": "NA",
+    "id": "e66e4f3f876f"
   },
   {
     "region": "NA",
@@ -533,7 +786,7 @@
     "source": "Google News · LatAm banks",
     "summary": "Weekly Recap: BBD cut to Neutral and Bradesco expands crypto access TradingView",
     "date": "2026-11-02",
-    "category": "service",
+    "category": "product",
     "bank": "Bradesco",
     "region": "SA",
     "id": "191f3b252807"
@@ -572,6 +825,17 @@
     "id": "be152aa3e4fe"
   },
   {
+    "region": "NA",
+    "bank": "Scotiabank",
+    "title": "Scotiabank Passport Visa Infinite: 35,000 bonus Scene+ points for newcomers",
+    "summary": "Scotiabank's StartRight offer applies to new Passport Visa Infinite accounts opened between Nov 2, 2026 and Jan 4, 2027, with minimum spend. Scotiabank markets up to $2,300 in first-year value for newcomers.",
+    "url": "https://startright.scotiabank.com/ca/en/newcomers-to-canada-offer.html",
+    "source": "Scotiabank",
+    "category": "offer",
+    "date": "2026-11-02",
+    "id": "da4a092e1615"
+  },
+  {
     "title": "Nubank’s US Push and the Agentic Payments Liability Gap - The Fintech Times",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTEkzRk9hVGlIVFN4M2FIdldGb3VoMFl5aDNEaElYTDRYSV9BV2RPNTVTanVYcUU4dmZZaGRBbUVOenZaYmhXMzNtc19BajItY2swa3FLdUJWRjk1c2Z5UnR1aEVJODlBY2NLS0toQUV1YUNTdTVlZFdiYUNVeV80T2UycE1DZXpNNjRZ?oc=5",
     "source": "Google News · LatAm banks",
@@ -581,6 +845,39 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "73291f2bb346"
+  },
+  {
+    "title": "Itaú lança novo meio de pagamento para checkout, o Itaú Pay - Valor Econômico",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQSDJWSkFyWThFeFVzanRXUkstWlRWYm9GSmV2Y0ppRXdqUnE2WnpiUjVaRUU2R1diVHpvc0Jzc3VqRVg1b1hHRUlnR2dwRmhxbmNjZ2s1VzVScTE5c2M5ZUNuNGhFOFNzTXN2VTlVaW1iV3NfNTdFVGQweUpwN0ZpejZiUkRHV0xkVms5a0N0Mk9uVGVEeTFFbTdvc01rMEFnU2JGb3NidE0xcWstYnNGQkZWb9IBwgFBVV95cUxQMGZ2bXdibjVlX1RrbTM1c05pOGtzSDFNLTUtOXA1cktaaGJCMHBMSzZVal94a0tFRVBlODB6UGpSRlNfbVNRMVFaZF92SHhMX0ZCY2QwRnIxZzBZMjZVM1pLdE1QSGJvYTFfcWxfeTNBMG1wMHVhSTJTUk15Wk9VV3lBZHNJU1hBUW5mYjBacEVNakhGY3ZsV2lkVVJOTnIxTnBkel9DanFHSlNWSndGdmNaSjhlSnhtSGNBdDQ5MDB2UQ?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Itaú lança novo meio de pagamento para checkout, o Itaú Pay Valor Econômico",
+    "date": "2026-10-30",
+    "category": "product",
+    "bank": "Itaú",
+    "region": "SA",
+    "id": "d7f28a8448ee"
+  },
+  {
+    "title": "Na onda do pagamento sem fricção, Itaú lança Itaú Pay para simplificar compra digital - O GLOBO",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOMnFrQ2JrbnctR0xqRm9RTEpWTXJkUHRCclRmT09xTUxTX3Y2dkNGMnFLcTh2YV9tRFZwMzc4UEpFbmRTeWI0d3pIMzhRQlhFQlJhRFBEclpfQXhaQVhlU2ZWYnBIQ216dGNHbDBMam8wQWtWTUFhYVB3dnlPM2RiMlJHTEhjbFAzX3ZXRjI4QzdxMTU0clZNb0REMUM1V0xQMHpKSTk3SFNzTHQzR3ZFYTFPSEo2NjFGODJCaEZZeVpoNXVrYlA0UVhReWFVVFdjV3p2OFhZN3NSTWs4a1p4cE4tWlBTazDSAfYBQVVfeXFMTzlkLUxpLTJNMHVTM0d4VUYzU0tkNDk0UXlsWHVVQTducnoybHdQZEI3UUE5V2tsZmowMUxReFRNaUVVZ19fdXZHcjBLNERFcWd6MzRXeE0tRkJDOTBRWVUtXzZJQV9tVFgzNENKRGFXVkJGczBpc19mYUZXazloTWdFN1JEcHRDTFNrVXlDNUpPamJQcHV2OVN6MDhyVlVfYzJlWV9yM01PSDdORjJWZEtEV2xEdXpOc01FeVhBekV1NkhZbGd3R0UtbGd3cGlPaFlhT2RIanBIcXNQcHA5ODRsZ1dzT21sMXI5OHJUUi13aVJHYUVn?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Na onda do pagamento sem fricção, Itaú lança Itaú Pay para simplificar compra digital O GLOBO",
+    "date": "2026-10-30",
+    "category": "product",
+    "bank": "Itaú",
+    "region": "SA",
+    "id": "8291740bf2a4"
+  },
+  {
+    "title": "Itaú lança forma de pagamento para checkout de comércio eletrônico - CNN Brasil",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZ04yeXY3OXQ4R2FxVHlwdVZ1a1VkZzNpY0pJeU4yNE9SMGlTSTFDdnBDMnpLbHlTbTkwYXVkZzhFc1hUUE1FME9hd2FlUEt3eUdEWTh5V0o1X1VWZ2pJRlRQVUFZTlFCQW5HQ0FqSzlLZEtXeVNBNHROTElPLVVGdXJNQkhqVGJreWhvRGFVZWpoRXhEUWlvSFpsdExLLUhVX2pvVVZySGN3NnA5Mk1mZDJFZjRNa1l2YTlCQw?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Itaú lança forma de pagamento para checkout de comércio eletrônico CNN Brasil",
+    "date": "2026-10-30",
+    "category": "product",
+    "bank": "Itaú",
+    "region": "SA",
+    "id": "21bbda372527"
   },
   {
     "region": "NA",
@@ -639,6 +936,83 @@
   },
   {
     "region": "NA",
+    "bank": "Simplii Financial",
+    "title": "Simplii launches new 'Simplii Account' and pilots account folders and payment backup",
+    "summary": "Simplii announced a new account type and is piloting in-app folders that clients can self-build, plus a payment backup feature that automatically covers certain transactions to reduce insufficient-funds fees. Aimed at DIY banking clients; Simplii has 2M+ clients.",
+    "url": "https://www.investmentexecutive.com/news/industry/simplii-financial-rolls-out-tools-for-diy-banking-in-bid-for-growth/",
+    "source": "Investment Executive (Canadian Press)",
+    "category": "product",
+    "date": "2026-10-13",
+    "id": "02de466075e5"
+  },
+  {
+    "region": "NA",
+    "bank": "Simplii Financial",
+    "title": "Simplii partners with CIBC Investor's Edge so clients can invest from their Simplii account",
+    "summary": "New partnership lets Simplii clients invest through CIBC Investor's Edge while accessing funds from their Simplii account, announced alongside the new Simplii Account.",
+    "url": "https://www.theglobeandmail.com/business/article-simplii-financial-rolls-out-new-banking-tools-for-diy-clients/",
+    "source": "The Globe and Mail (Canadian Press)",
+    "category": "service",
+    "date": "2026-10-13",
+    "id": "8b51a1451e2e"
+  },
+  {
+    "region": "NA",
+    "bank": "Simplii Financial",
+    "title": "Simplii Financial: $350 welcome bonus with no monthly account fees",
+    "summary": "Listed as a top Canadian bank promotion for November 2026. Simplii's offer combines a $350 welcome bonus with no monthly account fees. Aggregator source, so verify terms on simplii.com.",
+    "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
+    "source": "Savvy New Canadians",
+    "category": "offer",
+    "date": "2026-10-08",
+    "id": "9fb0a8c87503"
+  },
+  {
+    "region": "NA",
+    "bank": "Koho",
+    "title": "KOHO promo: $40 bonus and up to 6.50% cash back",
+    "summary": "KOHO is listed among the top Canadian bank offers with a $40 bonus and up to 6.50% cash back on purchases. Aggregator source, so verify terms on koho.ca.",
+    "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
+    "source": "Savvy New Canadians",
+    "category": "offer",
+    "date": "2026-10-08",
+    "id": "9fb0a8c87503"
+  },
+  {
+    "region": "NA",
+    "bank": "EQ Bank",
+    "title": "EQ Bank savings promo: up to 2.75% interest",
+    "summary": "EQ Bank is listed among the top Canadian bank offers with interest of up to 2.75%. Aggregator source, so verify terms on eqbank.ca.",
+    "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
+    "source": "Savvy New Canadians",
+    "category": "offer",
+    "date": "2026-10-08",
+    "id": "9fb0a8c87503"
+  },
+  {
+    "region": "NA",
+    "bank": "Neo Financial",
+    "title": "Neo Financial Mastercard: $25 cash bonus and up to 15% cash back at partners",
+    "summary": "New Neo cardholders get a $25 cash bonus, with up to 15% cash back at Neo partner stores and retail locations. Aggregator source, so verify terms on neofinancial.com.",
+    "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
+    "source": "Savvy New Canadians",
+    "category": "offer",
+    "date": "2026-10-08",
+    "id": "9fb0a8c87503"
+  },
+  {
+    "region": "NA",
+    "bank": "SoFi",
+    "title": "SoFi direct deposit bonus promotion runs May 15 – Dec 31, 2026",
+    "summary": "SoFi's two-tier direct deposit promotion is open to eligible new and existing members who have not previously set up direct deposit on SoFi Checking and Savings. Secondary source, so verify terms on sofi.com.",
+    "url": "https://banksmobile.net/chime-vs-sofi-vs-ally-direct-deposit/",
+    "source": "BanksMobile",
+    "category": "offer",
+    "date": "2026-10-05",
+    "id": "82262092768a"
+  },
+  {
+    "region": "NA",
     "bank": "RBC",
     "title": "RBC upgrades Cash Back Mastercard portfolio: uncapped 3% categories and $1 redemptions",
     "summary": "New earn structures took effect Oct 1, 2026. The Cash Back Preferred World Elite Mastercard earns uncapped 3% on everyday categories such as groceries, dining, gas and streaming. From December 2026, cardholders can redeem cash back anytime from $1. The date is the effective date, not a confirmed publish date.",
@@ -647,6 +1021,17 @@
     "category": "offer",
     "date": "2026-10-01",
     "id": "be152aa3e4fe"
+  },
+  {
+    "region": "NA",
+    "bank": "Chime",
+    "title": "Chime reported to be acquiring Stride Bank in $590M deal",
+    "summary": "A fintech newsletter reports a $590M Chime deal for Stride Bank, one of Chime's partner banks. Confirm the details with a Chime or Stride primary source before publishing.",
+    "url": "https://www.fintechbrainfood.com/p/nubank-america",
+    "source": "Fintech Brainfood",
+    "category": "service",
+    "date": "2026-09-13",
+    "id": "d4d5a45c3ad8"
   },
   {
     "region": "SA",
@@ -669,5 +1054,38 @@
     "category": "offer",
     "date": "2026-09-10",
     "id": "a96df31119b3"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank launches U.S. banking operations through partner Lead Bank",
+    "summary": "Nubank went live in the U.S. at an event in Miami while it awaits final OCC approval of its national bank charter. It offers a deposit account, a no-annual-fee credit card and no-fee transfers to Brazil and Mexico.",
+    "url": "https://www.bankingdive.com/news/nubank-us-launch-multicurrency-account-bank-partner-occ-charter-application/830583/",
+    "source": "Banking Dive",
+    "category": "service",
+    "date": "2026-09-10",
+    "id": "e48c3bca677a"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank introduces Nu Global, a multi-currency digital asset account across 35+ countries",
+    "summary": "Introduced at the U.S. launch event. A multi-currency, stablecoin-linked account for international customers and no-fee money movement across more than 35 countries.",
+    "url": "https://www.americanbanker.com/news/nubank-launches-in-the-u-s-through-a-sponsor-bank",
+    "source": "American Banker",
+    "category": "product",
+    "date": "2026-09-10",
+    "id": "a56ca91ad0f5"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank U.S. launch offer: 3.5% APY account and 1.5% cashback no-fee card",
+    "summary": "The Nu Account pays 3.5% APY at launch. The credit card has no annual fee and offers unlimited 1.5% cash back, with a route to 2%.",
+    "url": "https://news.bloombergtax.com/financial-accounting/nubank-speeds-up-us-launch-through-partnership-with-lead-bank",
+    "source": "Bloomberg Tax",
+    "category": "offer",
+    "date": "2026-09-10",
+    "id": "1fee2f7c37b7"
   }
 ]
