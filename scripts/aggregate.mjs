@@ -231,6 +231,47 @@ async function discover(client, cfg) {
   }
 }
 
+// Daily brief: themes + highlights worth reacting to, from the final board.
+// Best-effort; returns null (frontend hides the block) on no key / failure.
+async function summarize(client, news) {
+  if (!client || news.length === 0) return null;
+  const anthropic = await client;
+  const recent = [...news]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 60)
+    .map((n) => ({ title: n.title, bank: n.bank, category: n.category, region: n.region, date: n.date, summary: (n.summary || "").slice(0, 200) }));
+  const prompt =
+    `You are briefing the Simplii Financial product team on competitor bank news. ` +
+    `Below is today's tracked news across banks in the Americas.\n\n` +
+    `Write a sharp, skimmable brief:\n` +
+    `- "tldr": 1-2 sentences capturing the state of play today.\n` +
+    `- "themes": 3-5 short phrases naming common threads across the items (e.g. "AI assistants in mobile apps", "savings-rate competition").\n` +
+    `- "highlights": 2-4 items genuinely worth reacting to, each {"headline": the development, "why": one line on why it matters to Simplii's product team}. ` +
+    `Prefer moves by direct competitors (CIBC, RBC, TD, Scotiabank, BMO, Wealthsimple, EQ Bank, Tangerine, Chime) or clear category shifts.\n\n` +
+    `Base it ONLY on the items below; do not invent. Output a SINGLE JSON object in a \`\`\`json fence:\n` +
+    `\`\`\`json\n{"tldr":"","themes":["",""],"highlights":[{"headline":"","why":""}]}\n\`\`\`\n\n` +
+    `ITEMS:\n${JSON.stringify(recent)}`;
+  try {
+    const resp = await anthropic.messages.create({
+      model: MODEL_SMART,
+      max_tokens: 1500,
+      messages: [{ role: "user", content: prompt }],
+    });
+    const text = resp.content.map((c) => c.text || "").join("");
+    const s = extractJson(text);
+    const brief = {
+      tldr: String(s.tldr || ""),
+      themes: Array.isArray(s.themes) ? s.themes.map(String).slice(0, 6) : [],
+      highlights: Array.isArray(s.highlights) ? s.highlights.filter((h) => h && h.headline).slice(0, 4) : [],
+    };
+    console.log(`  brief: ${brief.themes.length} themes, ${brief.highlights.length} highlights`);
+    return brief;
+  } catch (err) {
+    console.warn(`  brief skipped: ${err.message}`);
+    return null;
+  }
+}
+
 // --- main -------------------------------------------------------------------
 
 async function main() {
@@ -265,9 +306,14 @@ async function main() {
   }).filter((n) => REAL_CATS.includes(n.category)); // board shows only categorized items
   const events = mergeEvents(existingEvents, found.events);
 
+  console.log("Writing brief…");
+  const brief = await summarize(client, news);
+
   const stamp = { updated: new Date().toISOString() };
   await writeFile(join(DATA, "news.json"), JSON.stringify(news, null, 2));
   await writeFile(join(DATA, "events.json"), JSON.stringify(events, null, 2));
+  // keep the previous brief if this run couldn't make one
+  if (brief) await writeFile(join(DATA, "summary.json"), JSON.stringify({ ...stamp, ...brief }, null, 2));
   await writeFile(join(DATA, "meta.json"), JSON.stringify({ ...stamp, news: news.length, events: events.length, aiEnabled: !!client }, null, 2));
   console.log(`Done. ${news.length} news, ${events.length} events. AI=${!!client}`);
 }

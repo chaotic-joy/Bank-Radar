@@ -98,6 +98,24 @@ main {
 #search:focus { outline: none; border-color: var(--accent); }
 #search::placeholder { color: var(--muted); }
 
+/* daily AI brief */
+.brief:empty { display: none; }
+.brief {
+  background: linear-gradient(135deg, var(--accent-soft), var(--panel) 60%);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px;
+}
+.brief-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+.brief-date { font-family: var(--mono); font-size: 10.5px; color: var(--muted); letter-spacing: .04em; }
+.brief-tldr { font-family: var(--serif); font-size: 18px; line-height: 1.4; margin: 0 0 12px; color: var(--text); letter-spacing: -.01em; }
+.brief-themes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.theme { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--text); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.brief-highlights { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+.brief-highlights li { font-size: 13px; line-height: 1.45; }
+.brief-highlights li::marker { color: var(--accent); }
+.hl-head { font-weight: 600; color: var(--text); }
+.hl-why { color: var(--muted); }
+
 #controls { margin-bottom: 18px; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .subfilters { margin-top: 10px; }

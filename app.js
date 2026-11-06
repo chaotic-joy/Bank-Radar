@@ -9,13 +9,15 @@ const esc = (s) => (s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const fmtDate = (iso) => new Date(iso + "T00:00:00").toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" });
 
 async function load() {
-  const [news, events, meta] = await Promise.all([
+  const [news, events, meta, brief] = await Promise.all([
     fetch("data/news.json").then((r) => r.json()).catch(() => []),
     fetch("data/events.json").then((r) => r.json()).catch(() => []),
     fetch("data/meta.json").then((r) => r.json()).catch(() => ({})),
+    fetch("data/summary.json").then((r) => r.json()).catch(() => null),
   ]);
   state.news = news;
   state.events = events;
+  renderBrief(brief);
 
   const when = meta.updated ? new Date(meta.updated).toLocaleString("en-CA") : "—";
   $("#meta").innerHTML = `Updated ${esc(when)}<br>${news.length} news · ${events.length} events · AI ${meta.aiEnabled ? "on" : "off"}`;
@@ -26,6 +28,22 @@ async function load() {
   populateBanks();
   renderNews();
   renderEvents();
+}
+
+// daily AI brief above the news stream (hidden if none was generated)
+function renderBrief(b) {
+  const el = $("#brief");
+  if (!b || (!b.tldr && !(b.themes || []).length && !(b.highlights || []).length)) { el.innerHTML = ""; return; }
+  const when = b.updated ? new Date(b.updated).toLocaleDateString("en-CA", { weekday: "short", month: "short", day: "numeric" }) : "";
+  const themes = (b.themes || []).map((t) => `<span class="theme">${esc(t)}</span>`).join("");
+  const highlights = (b.highlights || [])
+    .map((h) => `<li><span class="hl-head">${esc(h.headline)}</span>${h.why ? ` <span class="hl-why">${esc(h.why)}</span>` : ""}</li>`)
+    .join("");
+  el.innerHTML = `
+    <div class="brief-head"><span class="label">Daily brief</span>${when ? `<span class="brief-date">${esc(when)}</span>` : ""}</div>
+    ${b.tldr ? `<p class="brief-tldr">${esc(b.tldr)}</p>` : ""}
+    ${themes ? `<div class="brief-themes">${themes}</div>` : ""}
+    ${highlights ? `<ul class="brief-highlights">${highlights}</ul>` : ""}`;
 }
 
 // fill the bank dropdown from banks present in the data (Simplii pinned first)
