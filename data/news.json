@@ -11,6 +11,50 @@
     "id": "72bd5f5f001c"
   },
   {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple unveils Penny AI assistant at 'Wealthsimple Presents'",
+    "summary": "Penny can prepare e-transfers, pay invoices, flag duplicate credit card charges and help self-directed investors buy and sell. It never acts without client confirmation. ChatGPT and Claude connections are planned for early 2027, along with a rebuilt native mobile app.",
+    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
+    "source": "Fintech.ca",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "8387cca7847a"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple Pay: instant transfers up to $100,000 between clients",
+    "summary": "Available now, Wealthsimple Pay lets clients send up to $100,000 instantly to other Wealthsimple clients. Temporary virtual cards with custom expiry dates and spending limits were also announced.",
+    "url": "https://www.iphoneincanada.ca/2026/11/05/wealthsimple-penny-ai-12-new-features/",
+    "source": "iPhone in Canada",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "18132ef95432"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple launches commission-free options on Canadian stocks; Wealthsimple Pro due late November",
+    "summary": "Wealthsimple says it is the first Canadian brokerage with commission-free options on Canadian stocks. The Wealthsimple Pro trading platform, with Level 2 data, launches in late November 2026.",
+    "url": "https://tradersunion.com/news/companies/show/4117831-wealthsimple-new-features-toronto-event/",
+    "source": "Traders Union",
+    "category": "offer",
+    "date": "2026-11-05",
+    "id": "f11d1831af45"
+  },
+  {
+    "region": "NA",
+    "bank": "Chime",
+    "title": "Chime Q3 2026: Jade AI agent, Chime Invest, joint accounts and credit line in beta",
+    "summary": "On its Q3 call Chime said its Jade personal finance AI agent is available to millions of members. Over recent months it launched Chime Invest, rolled out Visa Flex and introduced joint accounts. An unsecured line of credit is in beta and an unsecured credit card is expected next year.",
+    "url": "https://fool.com/earnings/call-transcripts/2026/11/05/chime-financial-chym-q3-2026-earnings-call-transcript",
+    "source": "Motley Fool transcript",
+    "category": "product",
+    "date": "2026-11-04",
+    "id": "903280b42ec1"
+  },
+  {
     "title": "OnePay Taps Stripe to Power Stablecoin Deposits",
     "url": "https://finovate.com/onepay-taps-stripe-to-power-stablecoin-deposits/",
     "source": "Finovate",
@@ -20,6 +64,94 @@
     "bank": "OnePay",
     "region": "NA",
     "id": "8adf2814e4ef"
+  },
+  {
+    "region": "NA",
+    "bank": "RBC",
+    "title": "RBC overhauls Cash Back Mastercard portfolio with $1 redemption minimum",
+    "summary": "New earn structures took effect automatically on Oct 1, 2026. From December 2026, cardholders can redeem cash back anytime in RBC Online Banking or the RBC Mobile app once their balance reaches $1, and rewards accumulate indefinitely.",
+    "url": "https://www.marketscreener.com/news/royal-bank-of-canada-announces-enhancements-to-rbc-cash-back-mastercard-portfolio-ce785fd9db8df025",
+    "source": "MarketScreener (RBC release)",
+    "category": "service",
+    "date": "2026-11-02",
+    "id": "606dbc4de8ac"
+  },
+  {
+    "region": "NA",
+    "bank": "TD",
+    "title": "TD app feature makes it easier to move money from another financial institution to TD",
+    "summary": "TD launched a new app feature to simplify and speed up moving money from another financial institution into a TD account. This is a headline from TD's newsroom index, so the link goes to the news listing and not the individual release.",
+    "url": "https://stories.td.com/ca/en/news",
+    "source": "TD Stories",
+    "category": "product",
+    "date": "2026-10-29",
+    "id": "1792aab8f385"
+  },
+  {
+    "region": "NA",
+    "bank": "TD",
+    "title": "TD Canada Trust raises TD Prime Rate by 25 bps to 4.70%",
+    "summary": "TD Canada Trust increased its Prime Rate by 25 basis points to 4.70%, effective October 29, 2026. This affects variable-rate lending products.",
+    "url": "https://td.mediaroom.com/2026-10-28-TD-Canada-Trust-announces-change-to-TD-Prime-Rate",
+    "source": "TD Newsroom",
+    "category": "service",
+    "date": "2026-10-28",
+    "id": "eb434189b672"
+  },
+  {
+    "region": "NA",
+    "bank": "Scotiabank",
+    "title": "Scotia app adds credit card self-serve options and scheduled/recurring Interac e-Transfers",
+    "summary": "The Scotia app now offers expanded self-serve options for credit cards, including setting or updating a PIN and replacing damaged cards. Clients can also schedule future-dated and recurring Interac e-Transfers. The release follows the bank's inaugural Client Innovation Day.",
+    "url": "https://scotiabank.investorroom.com/2026-10-27-Scotiabank-Digital-Banking-Update-Simplifying-Everyday-Banking-with-New-Self-Serve-and-Money-Transfer-Capabilities",
+    "source": "Scotiabank Newsroom",
+    "category": "product",
+    "date": "2026-10-27",
+    "id": "594dd8f8b3ce"
+  },
+  {
+    "region": "NA",
+    "bank": "Simplii Financial",
+    "title": "Simplii Financial launches new Simplii Account and pilots account folders",
+    "summary": "Simplii introduced a new account type, the Simplii Account, and is piloting self-built account folders and a payment backup feature that covers certain transactions to reduce insufficient-funds fees. It also partnered with CIBC Investor's Edge so clients can invest while accessing funds from their Simplii account.",
+    "url": "https://www.investmentexecutive.com/news/industry/simplii-financial-rolls-out-tools-for-diy-banking-in-bid-for-growth/",
+    "source": "Investment Executive / Canadian Press",
+    "category": "product",
+    "date": "2026-10-13",
+    "id": "02de466075e5"
+  },
+  {
+    "region": "NA",
+    "bank": "RBC",
+    "title": "RBC Mobile adds TipRanks Smart Score research for Direct Investing clients",
+    "summary": "Version 6.68.1 gives Direct Investing clients access to TipRanks Smart Score research with analyst consensus and price targets.",
+    "url": "https://apps.apple.com/ca/app/rbc-mobile/id407597290",
+    "source": "Apple App Store (RBC Mobile release notes)",
+    "category": "product",
+    "date": "2026-10-13",
+    "id": "43499524ea3b"
+  },
+  {
+    "region": "NA",
+    "bank": "TD",
+    "title": "TD expands agentic AI across mortgage operations",
+    "summary": "TD announced two new agentic AI capabilities for Real Estate Secured Lending, covering mortgage funding and discharge, to speed up the mortgage lifecycle.",
+    "url": "https://www.newswire.ca/news/td-bank-group/",
+    "source": "Canada NewsWire (TD)",
+    "category": "product",
+    "date": "2026-10-13",
+    "id": "86dea4db8623"
+  },
+  {
+    "region": "NA",
+    "bank": "Scotiabank",
+    "title": "Scotia Wealth Management launches Scotia Global Intelligence for UHNW clients",
+    "summary": "A new service gives ultra-high-net-worth clients a comprehensive view of their entire portfolio, delivered by the Chief Investment Office team.",
+    "url": "https://scotiabank.investorroom.com/2026-10-06-Scotia-Wealth-Management-R-launches-Scotia-Global-Intelligence-TM-,-expanding-its-offering-for-Ultra-High-Net-Worth-clients",
+    "source": "Scotiabank Newsroom",
+    "category": "service",
+    "date": "2026-10-06",
+    "id": "e78653c7a85c"
   },
   {
     "id": "ee28d56f5287",
@@ -42,6 +174,28 @@
     "category": "product",
     "date": "2026-09-22",
     "region": "NA"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank launches US operations via Lead Bank partnership",
+    "summary": "Nubank opened US operations at an event at Nu Stadium in Miami, ahead of final charter approval, using partner bank Lead Bank. It also introduced the Nu Global multi-currency account.",
+    "url": "https://www.americanbanker.com/news/nubank-launches-in-the-u-s-through-a-sponsor-bank",
+    "source": "American Banker",
+    "category": "product",
+    "date": "2026-09-10",
+    "id": "a56ca91ad0f5"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank US debut offers 3.5% APY savings, 1.5% cashback card and no-fee transfers to Brazil/Mexico",
+    "summary": "The US launch includes a 3.5% APY deposit account, a no-annual-fee credit card with unlimited 1.5% cashback, and no-fee transfers to Brazil and Mexico.",
+    "url": "https://www.axios.com/pro/fintech-deals/2026/09/10/nu-neobank-us-launch",
+    "source": "Axios Pro",
+    "category": "offer",
+    "date": "2026-09-10",
+    "id": "03e864825978"
   },
   {
     "id": "2758aa6fa674",

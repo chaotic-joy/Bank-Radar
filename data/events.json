@@ -15,11 +15,33 @@
     "name": "Money20/20 USA 2026",
     "type": "conference",
     "organizer": "Money20/20",
-    "location": "Las Vegas, NV",
+    "location": "The Venetian Expo, Las Vegas, NV",
     "region": "NA",
-    "url": "https://us.money2020.com/",
+    "url": "https://us.money2020.com",
     "date": "2026-10-18",
     "endDate": "2026-10-21"
+  },
+  {
+    "name": "Chime Q3 2026 Earnings Call",
+    "type": "earnings",
+    "organizer": "Chime Financial (Nasdaq: CHYM)",
+    "url": "https://www.chime.com/newsroom/",
+    "location": "Virtual",
+    "region": "NA",
+    "date": "2026-11-04",
+    "endDate": "2026-11-04",
+    "id": "a1bd4bc03427"
+  },
+  {
+    "name": "Wealthsimple Presents: Something Good Is Going to Happen",
+    "type": "keynote",
+    "organizer": "Wealthsimple",
+    "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
+    "location": "Massey Hall, Toronto (also Vancouver, Montréal, Calgary)",
+    "region": "NA",
+    "date": "2026-11-05",
+    "endDate": "2026-11-05",
+    "id": "8a3b37a8ca9a"
   },
   {
     "id": "ebb0cdb0f469",
@@ -42,5 +64,16 @@
     "url": "https://fintechamericas.co/",
     "date": "2026-12-01",
     "endDate": null
+  },
+  {
+    "name": "Scotiabank Q4 2026 Results",
+    "type": "earnings",
+    "organizer": "Scotiabank",
+    "url": "https://scotiabank.investorroom.com/index.php?s=43&l=100",
+    "location": "Toronto / virtual",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "8db02244df77"
   }
 ]
