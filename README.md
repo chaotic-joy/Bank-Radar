@@ -2,7 +2,10 @@
 
 A dashboard for the Simplii Financial product team tracking **(1)** a filterable stream of
 product/offer/service news from banks across the Americas, and **(2)** a calendar of recent
-and upcoming banking/fintech events (conferences, keynotes, investor calls).
+and upcoming banking/fintech events (conferences, keynotes, investor calls). Each day it also
+generates an AI **brief** of the common themes and the news worth reacting to.
+
+![Bank Radar dashboard](docs/screenshot.jpg)
 
 ## How it works
 
