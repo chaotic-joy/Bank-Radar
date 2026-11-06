@@ -1,0 +1,16 @@
+{
+  "name": "competitor-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bank product-news + events dashboard for the Simplii product team.",
+  "scripts": {
+    "refresh": "node scripts/aggregate.mjs",
+    "selftest": "node scripts/aggregate.mjs --selftest",
+    "dev": "npx --yes serve ."
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "rss-parser": "^3.13.0"
+  }
+}

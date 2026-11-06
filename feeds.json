@@ -1,0 +1,33 @@
+{
+  "_comment": "Edit this file to tune what the aggregator pulls. 'feeds' = RSS/Atom URLs (the don't-miss-anything safety net). 'banks' + 'topics' steer the AI classification and the web-search discovery pass. No code changes needed.",
+  "maxAgeDays": 120,
+  "maxNewsItems": 150,
+  "feeds": [
+    { "url": "https://www.finextra.com/rss/headlines.aspx", "source": "Finextra" },
+    { "url": "https://thefinancialbrand.com/feed/", "source": "The Financial Brand" },
+    { "url": "https://finovate.com/feed/", "source": "Finovate" },
+    { "url": "https://www.pymnts.com/feed/", "source": "PYMNTS" },
+    { "url": "https://www.americanbanker.com/feed", "source": "American Banker" },
+    { "url": "https://www.fintechfutures.com/feed/", "source": "FinTech Futures" }
+  ],
+  "banks": [
+    "Simplii Financial", "CIBC", "RBC", "Royal Bank of Canada", "TD", "TD Bank",
+    "Scotiabank", "BMO", "Bank of Montreal", "National Bank", "Tangerine",
+    "EQ Bank", "Wealthsimple", "Koho", "Neo Financial", "Desjardins",
+    "Chase", "JPMorgan", "Bank of America", "Wells Fargo", "Citi", "Citibank",
+    "Capital One", "US Bank", "PNC", "Truist", "Ally", "Chime", "SoFi",
+    "Varo", "Current", "Nubank", "Mercado Pago", "Ualá", "Banco do Brasil",
+    "Itaú", "Bradesco", "Nequi", "Bancolombia"
+  ],
+  "topics": [
+    "new product or feature launch",
+    "platform or mobile app update",
+    "new service offering",
+    "promotional offer, discount, bonus, or interest-rate change",
+    "partnership or acquisition affecting retail banking products"
+  ],
+  "regions": {
+    "NA": "North America (Canada, United States, Mexico)",
+    "SA": "South America / Latin America (Brazil, Argentina, Colombia, Chile, etc.)"
+  }
+}

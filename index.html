@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Intelligence Dashboard · Simplii Product</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <h1>Bank Intelligence</h1>
+        <p class="sub">Product news &amp; events across the Americas</p>
+      </div>
+    </div>
+    <div class="meta" id="meta">loading…</div>
+  </header>
+
+  <main>
+    <section class="col news-col">
+      <div class="col-head">
+        <h2>News stream</h2>
+        <input id="search" type="search" placeholder="Search banks, features, offers…" />
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="chip active" data-cat="all">All</button>
+        <button class="chip" data-cat="product">Product updates</button>
+        <button class="chip" data-cat="offer">Offers</button>
+        <button class="chip" data-cat="service">Service updates</button>
+        <span class="spacer"></span>
+        <button class="chip region active" data-region="all">All regions</button>
+        <button class="chip region" data-region="NA">N. America</button>
+        <button class="chip region" data-region="SA">S. America</button>
+      </div>
+
+      <div id="news" class="list"></div>
+    </section>
+
+    <section class="col events-col">
+      <div class="col-head"><h2>Events calendar</h2></div>
+      <div id="events" class="list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footnote"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

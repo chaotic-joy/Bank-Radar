@@ -1,0 +1,46 @@
+[
+  {
+    "id": "seed-finovatefall",
+    "name": "FinovateFall 2026",
+    "type": "conference",
+    "organizer": "Finovate",
+    "location": "New York, NY (Marriott Marquis Times Square)",
+    "region": "NA",
+    "url": "https://finovate.com/events/finovatefall/",
+    "date": "2026-09-09",
+    "endDate": "2026-09-11"
+  },
+  {
+    "id": "seed-m2020usa",
+    "name": "Money20/20 USA 2026",
+    "type": "conference",
+    "organizer": "Money20/20",
+    "location": "Las Vegas, NV",
+    "region": "NA",
+    "url": "https://us.money2020.com/",
+    "date": "2026-10-18",
+    "endDate": "2026-10-21"
+  },
+  {
+    "id": "seed-nerdcon",
+    "name": "Fintech Nerdcon 2026",
+    "type": "conference",
+    "organizer": "Fintech Nerdcon",
+    "location": "San Diego, CA",
+    "region": "NA",
+    "url": "https://fintechnerdcon.com/",
+    "date": "2026-11-18",
+    "endDate": "2026-11-20"
+  },
+  {
+    "id": "seed-fintechamericas",
+    "name": "Fintech Americas (LatAm) — dates TBC",
+    "type": "conference",
+    "organizer": "Fintech Americas",
+    "location": "Miami, FL / Latin America",
+    "region": "SA",
+    "url": "https://fintechamericas.co/",
+    "date": "2026-12-01",
+    "endDate": null
+  }
+]
