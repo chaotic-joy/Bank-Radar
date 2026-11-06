@@ -11,15 +11,37 @@
     "endDate": "2026-09-11"
   },
   {
+    "name": "Nubank U.S. launch event",
+    "type": "keynote",
+    "organizer": "Nubank",
+    "url": "https://www.crowdfundinsider.com/2026/10/318156-nubank-nu-advances-business-expansion-plans-via-us-launch-ai-credit-models-and-fintech-focused-leadership/",
+    "location": "Nu Stadium, Miami, USA",
+    "region": "NA",
+    "date": "2026-09-10",
+    "endDate": "2026-09-10",
+    "id": "533d1c36a9c3"
+  },
+  {
     "id": "f52c5e81a6ce",
     "name": "Money20/20 USA 2026",
     "type": "conference",
-    "organizer": "Money20/20",
-    "location": "The Venetian Expo, Las Vegas, NV",
+    "organizer": "Money20/20 (Informa)",
+    "location": "The Venetian, Las Vegas, USA",
     "region": "NA",
     "url": "https://us.money2020.com",
     "date": "2026-10-18",
     "endDate": "2026-10-21"
+  },
+  {
+    "name": "SoFi Q3 2026 earnings",
+    "type": "earnings",
+    "organizer": "SoFi Technologies",
+    "url": "https://investors.sofi.com/news/Press-Releases/",
+    "location": "Virtual",
+    "region": "NA",
+    "date": "2026-10-27",
+    "endDate": "2026-10-27",
+    "id": "25cd401db2fd"
   },
   {
     "name": "Chime Q3 2026 Earnings Call",
@@ -36,12 +58,23 @@
     "name": "Wealthsimple Presents: Something Good Is Going to Happen",
     "type": "keynote",
     "organizer": "Wealthsimple",
-    "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
-    "location": "Massey Hall, Toronto (also Vancouver, Montréal, Calgary)",
+    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
+    "location": "Massey Hall, Toronto, Canada (with Vancouver, Montréal, Calgary viewings)",
     "region": "NA",
     "date": "2026-11-05",
     "endDate": "2026-11-05",
     "id": "8a3b37a8ca9a"
+  },
+  {
+    "name": "Chime Financial Q3 2026 earnings call",
+    "type": "earnings",
+    "organizer": "Chime Financial",
+    "url": "https://tradingkey.com/news/transcripts/262279491-",
+    "location": "Virtual",
+    "region": "NA",
+    "date": "2026-11-05",
+    "endDate": "2026-11-05",
+    "id": "ec270661f66e"
   },
   {
     "id": "ebb0cdb0f469",
@@ -75,5 +108,38 @@
     "date": "2026-12-02",
     "endDate": "2026-12-02",
     "id": "8db02244df77"
+  },
+  {
+    "name": "Scotiabank Q4 2026 results and conference call (7:15 a.m. ET)",
+    "type": "earnings",
+    "organizer": "Scotiabank",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/scotiabank-announce-fourth-quarter-2026-140000352.html",
+    "location": "Toronto, Canada / webcast",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "76d6356138e5"
+  },
+  {
+    "name": "EQB (EQ Bank) Q4 and fiscal 2026 earnings call (10:30 a.m. ET; results Dec 2 after close)",
+    "type": "earnings",
+    "organizer": "EQB Inc.",
+    "url": "https://ca.finance.yahoo.com/news/eqb-announce-fourth-quarter-fiscal-133500806.html",
+    "location": "Toronto, Canada / webcast",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "03a335768f35"
+  },
+  {
+    "name": "National Bank of Canada Q4 2026 results and strategic update (90-minute call, 8:00 a.m. ET)",
+    "type": "investor-call",
+    "organizer": "National Bank of Canada",
+    "url": "https://www.nbc.ca/about-us/news-media/press-release/2026/20261029-nbc-report-q4-results.html",
+    "location": "Montreal, Canada / webcast",
+    "region": "NA",
+    "date": "2026-12-04",
+    "endDate": "2026-12-04",
+    "id": "d988d908dd35"
   }
 ]
