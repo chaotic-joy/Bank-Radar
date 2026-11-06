@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // set theme before paint to avoid a flash
+    (function () {
+      try {
+        var t = localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) { document.documentElement.setAttribute("data-theme", "dark"); }
+    })();
+  </script>
   <title>Bank Radar · Simplii Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +28,10 @@
         <p class="sub">Product news &amp; events across the Americas</p>
       </div>
     </div>
-    <div class="meta" id="meta">loading…</div>
+    <div class="topbar-right">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">☀</button>
+      <div class="meta" id="meta">loading…</div>
+    </div>
   </header>
 
   <main>

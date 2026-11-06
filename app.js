@@ -92,4 +92,19 @@ $("#filters").addEventListener("click", (ev) => {
 });
 $("#search").addEventListener("input", (e) => { state.q = e.target.value; renderNews(); });
 
+// theme toggle (initial theme is set pre-paint by the inline script in <head>)
+const toggle = $("#themeToggle");
+function syncToggle() {
+  const dark = (document.documentElement.getAttribute("data-theme") || "dark") !== "light";
+  toggle.textContent = dark ? "☀" : "☾";
+  toggle.title = dark ? "Switch to light" : "Switch to dark";
+}
+toggle.addEventListener("click", () => {
+  const next = (document.documentElement.getAttribute("data-theme") === "light") ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", next);
+  try { localStorage.setItem("theme", next); } catch (e) { /* ignore */ }
+  syncToggle();
+});
+syncToggle();
+
 load();
