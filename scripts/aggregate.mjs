@@ -148,7 +148,7 @@ async function classify(client, items, cfg) {
   try {
     const resp = await anthropic.messages.create({
       model: MODEL_FAST,
-      max_tokens: 4000,
+      max_tokens: 8000,
       messages: [{ role: "user", content: prompt }],
     });
     const text = resp.content.map((c) => c.text || "").join("");

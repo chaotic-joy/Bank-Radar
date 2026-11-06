@@ -1,23 +1,73 @@
 {
-  "_comment": "Edit this file to tune what the aggregator pulls. 'feeds' = RSS/Atom URLs (the don't-miss-anything safety net). 'banks' + 'topics' steer the AI classification and the web-search discovery pass. No code changes needed.",
+  "_comment": "Edit to tune aggregation. feeds = RSS/Atom URLs (Google News search feeds are reliable + targetable). banks/topics steer AI classification + discovery. No code changes needed.",
   "maxAgeDays": 120,
   "maxNewsItems": 150,
   "feeds": [
-    { "url": "https://www.finextra.com/rss/headlines.aspx", "source": "Finextra" },
-    { "url": "https://thefinancialbrand.com/feed/", "source": "The Financial Brand" },
-    { "url": "https://finovate.com/feed/", "source": "Finovate" },
-    { "url": "https://www.pymnts.com/feed/", "source": "PYMNTS" },
-    { "url": "https://www.americanbanker.com/feed", "source": "American Banker" },
-    { "url": "https://www.fintechfutures.com/feed/", "source": "FinTech Futures" }
+    {
+      "url": "https://news.google.com/rss/search?q=(%22RBC%22%20OR%20%22TD%20Bank%22%20OR%20%22Scotiabank%22%20OR%20%22BMO%22%20OR%20%22CIBC%22%20OR%20%22Simplii%20Financial%22%20OR%20%22Tangerine%22%20OR%20%22EQ%20Bank%22%20OR%20%22Wealthsimple%22%20OR%20%22Koho%22%20OR%20%22Neo%20Financial%22)%20(launch%20OR%20%22new%20feature%22%20OR%20app%20OR%20%22interest%20rate%22%20OR%20offer%20OR%20promotion%20OR%20rewards)%20when%3A45d&hl=en-CA&gl=CA&ceid=CA:en",
+      "source": "Google News · Canadian banks"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=(%22Chime%22%20OR%20%22SoFi%22%20OR%20%22Varo%22%20OR%20%22Current%22%20OR%20%22Chase%22%20OR%20%22Bank%20of%20America%22%20OR%20%22Wells%20Fargo%22%20OR%20%22Capital%20One%22%20OR%20%22Ally%20Bank%22%20OR%20%22PNC%22%20OR%20%22US%20Bank%22)%20(launch%20OR%20%22new%20feature%22%20OR%20app%20OR%20savings%20OR%20offer%20OR%20promotion)%20when%3A45d&hl=en-CA&gl=CA&ceid=CA:en",
+      "source": "Google News · US banks"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=(bank%20OR%20neobank%20OR%20%22credit%20card%22)%20(%22welcome%20bonus%22%20OR%20%22sign-up%20bonus%22%20OR%20%22savings%20rate%22%20OR%20%22GIC%20rate%22%20OR%20%22cash%20bonus%22%20OR%20promotion)%20(Canada%20OR%20%22United%20States%22)%20when%3A45d&hl=en-CA&gl=CA&ceid=CA:en",
+      "source": "Google News · Offers & promos"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=(%22Nubank%22%20OR%20%22Mercado%20Pago%22%20OR%20%22Ual%C3%A1%22%20OR%20%22Bancolombia%22%20OR%20%22Nequi%22%20OR%20%22Banco%20do%20Brasil%22%20OR%20%22Ita%C3%BA%22%20OR%20%22Bradesco%22)%20(launch%20OR%20%22new%20feature%22%20OR%20app%20OR%20product%20OR%20expands)%20when%3A45d&hl=en-CA&gl=CA&ceid=CA:en",
+      "source": "Google News · LatAm banks"
+    },
+    {
+      "url": "https://www.finextra.com/rss/headlines.aspx",
+      "source": "Finextra"
+    },
+    {
+      "url": "https://finovate.com/feed/",
+      "source": "Finovate"
+    }
   ],
   "banks": [
-    "Simplii Financial", "CIBC", "RBC", "Royal Bank of Canada", "TD", "TD Bank",
-    "Scotiabank", "BMO", "Bank of Montreal", "National Bank", "Tangerine",
-    "EQ Bank", "Wealthsimple", "Koho", "Neo Financial", "Desjardins",
-    "Chase", "JPMorgan", "Bank of America", "Wells Fargo", "Citi", "Citibank",
-    "Capital One", "US Bank", "PNC", "Truist", "Ally", "Chime", "SoFi",
-    "Varo", "Current", "Nubank", "Mercado Pago", "Ualá", "Banco do Brasil",
-    "Itaú", "Bradesco", "Nequi", "Bancolombia"
+    "Simplii Financial",
+    "CIBC",
+    "RBC",
+    "Royal Bank of Canada",
+    "TD",
+    "TD Bank",
+    "Scotiabank",
+    "BMO",
+    "Bank of Montreal",
+    "National Bank",
+    "Tangerine",
+    "EQ Bank",
+    "Wealthsimple",
+    "Koho",
+    "Neo Financial",
+    "Desjardins",
+    "Chase",
+    "JPMorgan",
+    "Bank of America",
+    "Wells Fargo",
+    "Citi",
+    "Citibank",
+    "Capital One",
+    "US Bank",
+    "PNC",
+    "Truist",
+    "Ally",
+    "Chime",
+    "SoFi",
+    "Varo",
+    "Current",
+    "Nubank",
+    "Mercado Pago",
+    "Ualá",
+    "Banco do Brasil",
+    "Itaú",
+    "Bradesco",
+    "Nequi",
+    "Bancolombia"
   ],
   "topics": [
     "new product or feature launch",
