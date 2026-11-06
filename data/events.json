@@ -26,11 +26,22 @@
     "name": "Money20/20 USA 2026",
     "type": "conference",
     "organizer": "Money20/20 (Informa)",
-    "location": "The Venetian, Las Vegas, USA",
+    "location": "The Venetian, Las Vegas, NV, USA",
     "region": "NA",
     "url": "https://us.money2020.com",
     "date": "2026-10-18",
     "endDate": "2026-10-21"
+  },
+  {
+    "name": "Mexico Tech Week 2026",
+    "type": "conference",
+    "organizer": "Mexico Tech Week (distributed community events)",
+    "url": "https://events.lat/blog/latam-tech-weeks-compared",
+    "location": "Mexico City, Mexico",
+    "region": "SA",
+    "date": "2026-10-26",
+    "endDate": "2026-11-01",
+    "id": "c0639d8b10d7"
   },
   {
     "name": "SoFi Q3 2026 earnings",
@@ -58,8 +69,8 @@
     "name": "Wealthsimple Presents: Something Good Is Going to Happen",
     "type": "keynote",
     "organizer": "Wealthsimple",
-    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
-    "location": "Massey Hall, Toronto, Canada (with Vancouver, Montréal, Calgary viewings)",
+    "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
+    "location": "Massey Hall, Toronto, Canada (with Vancouver, Montréal and Calgary)",
     "region": "NA",
     "date": "2026-11-05",
     "endDate": "2026-11-05",
@@ -69,8 +80,8 @@
     "name": "Chime Financial Q3 2026 earnings call",
     "type": "earnings",
     "organizer": "Chime Financial",
-    "url": "https://tradingkey.com/news/transcripts/262279491-",
-    "location": "Virtual",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/chime-financial-chym-said-q3-021416272.html",
+    "location": "Virtual (US)",
     "region": "NA",
     "date": "2026-11-05",
     "endDate": "2026-11-05",
@@ -86,6 +97,28 @@
     "url": "https://fintechnerdcon.com/",
     "date": "2026-11-18",
     "endDate": "2026-11-20"
+  },
+  {
+    "name": "StartCo Mexico City 2026",
+    "type": "conference",
+    "organizer": "StartCo",
+    "url": "https://www.startupblink.com/blog/top-startup-events-in-latin-america/",
+    "location": "Mexico City, Mexico",
+    "region": "SA",
+    "date": "2026-11-19",
+    "endDate": "2026-11-20",
+    "id": "d70f03b1bb74"
+  },
+  {
+    "name": "CASE26 (São Paulo)",
+    "type": "conference",
+    "organizer": "CASE26 / FEA-USP",
+    "url": "https://www.startupblink.com/blog/top-startup-events-in-latin-america/",
+    "location": "FEA-USP, São Paulo, Brazil",
+    "region": "SA",
+    "date": "2026-11-26",
+    "endDate": "2026-11-27",
+    "id": "cc49525dfae2"
   },
   {
     "id": "f899dbda10aa",
@@ -121,6 +154,17 @@
     "id": "76d6356138e5"
   },
   {
+    "name": "Scotiabank Q4 and fiscal 2026 earnings conference call",
+    "type": "earnings",
+    "organizer": "Scotiabank",
+    "url": "https://www.scotiabank.com/ca/en/about/investors-shareholders/financial-result.html",
+    "location": "Toronto, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "24624255c078"
+  },
+  {
     "name": "EQB (EQ Bank) Q4 and fiscal 2026 earnings call (10:30 a.m. ET; results Dec 2 after close)",
     "type": "earnings",
     "organizer": "EQB Inc.",
@@ -132,6 +176,28 @@
     "id": "03a335768f35"
   },
   {
+    "name": "CIBC Q4 and fiscal 2026 results",
+    "type": "earnings",
+    "organizer": "CIBC",
+    "url": "https://www.cibc.com/en/about-cibc/investor-relations/quarterly-results.html",
+    "location": "Toronto, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "70bf0d664717"
+  },
+  {
+    "name": "RBC Q4 and fiscal 2026 earnings",
+    "type": "earnings",
+    "organizer": "Royal Bank of Canada",
+    "url": "https://www.tipranks.com/stocks/tse:ry/earnings",
+    "location": "Toronto, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "0e5704c2e951"
+  },
+  {
     "name": "National Bank of Canada Q4 2026 results and strategic update (90-minute call, 8:00 a.m. ET)",
     "type": "investor-call",
     "organizer": "National Bank of Canada",
@@ -141,5 +207,16 @@
     "date": "2026-12-04",
     "endDate": "2026-12-04",
     "id": "d988d908dd35"
+  },
+  {
+    "name": "National Bank of Canada Q4/FY2026 results and strategic update",
+    "type": "investor-call",
+    "organizer": "National Bank of Canada",
+    "url": "https://www.nbc.ca/about-us/news-media/press-release/2026/20261029-nbc-report-q4-results.html",
+    "location": "Montréal, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-04",
+    "endDate": "2026-12-04",
+    "id": "13e47322e78f"
   }
 ]
