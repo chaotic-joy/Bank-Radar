@@ -41,15 +41,26 @@
         <input id="search" type="search" placeholder="Search banks, features, offers…" />
       </div>
 
-      <div class="filters" id="filters">
-        <button class="chip active" data-cat="all">All</button>
-        <button class="chip" data-cat="product">Product updates</button>
-        <button class="chip" data-cat="offer">Offers</button>
-        <button class="chip" data-cat="service">Service updates</button>
-        <span class="spacer"></span>
-        <button class="chip region active" data-region="all">All regions</button>
-        <button class="chip region" data-region="NA">N. America</button>
-        <button class="chip region" data-region="SA">S. America</button>
+      <div id="controls">
+        <div class="filters">
+          <button class="chip active" data-group="cat" data-value="all">All</button>
+          <button class="chip" data-group="cat" data-value="product">Product updates</button>
+          <button class="chip" data-group="cat" data-value="offer">Offers</button>
+          <button class="chip" data-group="cat" data-value="service">Service updates</button>
+          <span class="spacer"></span>
+          <select id="bankFilter" class="select" aria-label="Filter by bank">
+            <option value="all">All banks</option>
+          </select>
+        </div>
+        <div class="filters subfilters">
+          <button class="chip focus active" data-group="focus" data-value="all">Everyone</button>
+          <button class="chip focus" data-group="focus" data-value="own">Simplii</button>
+          <button class="chip focus" data-group="focus" data-value="competitors">Competitors</button>
+          <span class="spacer"></span>
+          <button class="chip active" data-group="region" data-value="all">All regions</button>
+          <button class="chip" data-group="region" data-value="NA">N. America</button>
+          <button class="chip" data-group="region" data-value="SA">S. America</button>
+        </div>
       </div>
 
       <div id="news" class="list"></div>

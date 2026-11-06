@@ -1,5 +1,8 @@
 // Static dashboard: reads data/*.json, renders news (filterable) + events.
-const state = { news: [], events: [], cat: "all", region: "all", q: "" };
+const state = { news: [], events: [], cat: "all", region: "all", focus: "all", bank: "all", q: "" };
+
+// own brand = Simplii (Ray's team); match on bank field or title
+const isOwn = (n) => /simplii/i.test(`${n.bank || ""} ${n.title || ""}`);
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => (s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -20,8 +23,18 @@ async function load() {
     ? `<span class="seedbadge">SAMPLE DATA</span> Seeded for demo. Add an ANTHROPIC_API_KEY and run <code>npm run refresh</code> for live aggregation.`
     : "Live data from RSS + AI aggregation. Click any card for the source.";
 
+  populateBanks();
   renderNews();
   renderEvents();
+}
+
+// fill the bank dropdown from banks present in the data (Simplii pinned first)
+function populateBanks() {
+  const banks = [...new Set(state.news.map((n) => n.bank).filter(Boolean))];
+  banks.sort((a, b) => (/simplii/i.test(b) ? 1 : 0) - (/simplii/i.test(a) ? 1 : 0) || a.localeCompare(b));
+  $("#bankFilter").innerHTML =
+    `<option value="all">All banks</option>` +
+    banks.map((b) => `<option value="${esc(b)}">${esc(b)}</option>`).join("");
 }
 
 function renderNews() {
@@ -29,6 +42,9 @@ function renderNews() {
   const items = state.news.filter((n) => {
     if (state.cat !== "all" && n.category !== state.cat) return false;
     if (state.region !== "all" && n.region !== state.region) return false;
+    if (state.focus === "own" && !isOwn(n)) return false;
+    if (state.focus === "competitors" && isOwn(n)) return false;
+    if (state.bank !== "all" && (n.bank || "") !== state.bank) return false;
     if (q && !(`${n.title} ${n.summary} ${n.bank} ${n.source}`.toLowerCase().includes(q))) return false;
     return true;
   });
@@ -39,7 +55,7 @@ function renderNews() {
 
 function card(n) {
   const cat = n.category || "news";
-  return `<a class="card" href="${esc(n.url)}" target="_blank" rel="noopener">
+  return `<a class="card${isOwn(n) ? " own" : ""}" href="${esc(n.url)}" target="_blank" rel="noopener">
     <div class="row1">
       <span class="tag ${cat}">${cat === "news" ? "News" : cat}</span>
       ${n.bank ? `<span class="bank">${esc(n.bank)}</span>` : ""}
@@ -78,18 +94,17 @@ function eventRow(e, past) {
   return e.url ? `<a class="card" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="card">${inner}</div>`;
 }
 
-// filter wiring
-$("#filters").addEventListener("click", (ev) => {
-  const btn = ev.target.closest(".chip");
+// filter wiring: chip groups (cat / focus / region) via data-group + data-value
+$("#controls").addEventListener("click", (ev) => {
+  const btn = ev.target.closest(".chip[data-group]");
   if (!btn) return;
-  const group = btn.classList.contains("region") ? "region" : "cat";
-  const key = group === "region" ? "data-region" : "data-cat";
-  document.querySelectorAll(`.chip${group === "region" ? ".region" : ":not(.region)"}`)
-    .forEach((c) => c.classList.remove("active"));
+  const group = btn.dataset.group;
+  btn.parentElement.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) => c.classList.remove("active"));
   btn.classList.add("active");
-  state[group] = btn.getAttribute(key);
+  state[group] = btn.dataset.value;
   renderNews();
 });
+$("#bankFilter").addEventListener("change", (e) => { state.bank = e.target.value; renderNews(); });
 $("#search").addEventListener("input", (e) => { state.q = e.target.value; renderNews(); });
 
 // theme toggle (initial theme is set pre-paint by the inline script in <head>)

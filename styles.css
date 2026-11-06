@@ -98,8 +98,16 @@ main {
 #search:focus { outline: none; border-color: var(--accent); }
 #search::placeholder { color: var(--muted); }
 
-.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; align-items: center; }
+#controls { margin-bottom: 18px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.subfilters { margin-top: 10px; }
 .spacer { flex: 1; }
+.select {
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+  padding: 6px 12px; border-radius: 999px; font-size: 12.5px; font-family: var(--sans); cursor: pointer; max-width: 200px;
+}
+.select:focus { outline: none; border-color: var(--accent); }
+.chip.focus.active { background: transparent; color: var(--accent); border-color: var(--accent); }
 .chip {
   background: var(--panel); border: 1px solid var(--line); color: var(--muted);
   padding: 6px 13px; border-radius: 999px; font-size: 12.5px; cursor: pointer; transition: .13s; font-family: var(--sans);
@@ -114,6 +122,8 @@ main {
   padding: 16px 18px; display: block; text-decoration: none; color: inherit; transition: .14s; position: relative;
 }
 .card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+/* own brand (Simplii) stands out subtly from competitors */
+.card.own { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); background: linear-gradient(105deg, var(--accent-soft), var(--panel) 55%); }
 .card .row1 { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 
 .tag {

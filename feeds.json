@@ -20,6 +20,14 @@
       "source": "Google News · LatAm banks"
     },
     {
+      "url": "https://news.google.com/rss/search?q=(%22Nubank%22%20OR%20%22Ita%C3%BA%22%20OR%20%22Bradesco%22%20OR%20%22Banco%20do%20Brasil%22%20OR%20%22Banco%20Inter%22%20OR%20%22C6%20Bank%22%20OR%20%22PicPay%22%20OR%20%22Mercado%20Pago%22)%20(lan%C3%A7a%20OR%20%22novo%20recurso%22%20OR%20app%20OR%20cart%C3%A3o%20OR%20conta%20OR%20produto%20OR%20oferta)%20when%3A45d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "source": "Google News · Brasil (PT)"
+    },
+    {
+      "url": "https://news.google.com/rss/search?q=(%22Nubank%22%20OR%20%22Mercado%20Pago%22%20OR%20%22Ual%C3%A1%22%20OR%20%22Bancolombia%22%20OR%20%22Nequi%22%20OR%20%22Banco%20Galicia%22%20OR%20%22BBVA%20M%C3%A9xico%22%20OR%20%22Banorte%22%20OR%20%22Davivienda%22)%20(lanza%20OR%20%22nueva%20funci%C3%B3n%22%20OR%20app%20OR%20tarjeta%20OR%20cuenta%20OR%20producto%20OR%20promoci%C3%B3n)%20when%3A45d&hl=es-419&gl=MX&ceid=MX:es-419",
+      "source": "Google News · LatAm (ES)"
+    },
+    {
       "url": "https://www.finextra.com/rss/headlines.aspx",
       "source": "Finextra"
     },
@@ -67,7 +75,15 @@
     "Itaú",
     "Bradesco",
     "Nequi",
-    "Bancolombia"
+    "Bancolombia",
+    "Banco Inter",
+    "C6 Bank",
+    "PicPay",
+    "Banco Galicia",
+    "BBVA México",
+    "Banorte",
+    "Davivienda",
+    "Banco Inter US"
   ],
   "topics": [
     "new product or feature launch",

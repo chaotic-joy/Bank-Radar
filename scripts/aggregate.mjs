@@ -25,6 +25,9 @@ const CATEGORIES = ["product", "offer", "service", "news"];
 const normTitle = (s) =>
   (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
+// strip a trailing " - Publisher" / " | Publisher" suffix (Google News adds these)
+const cleanTitle = (s) => (s || "").replace(/\s[-–—|]\s[^-–—|]*$/, "").trim();
+
 const idFor = (item) =>
   createHash("sha1").update(item.url || normTitle(item.title)).digest("hex").slice(0, 12);
 
@@ -50,19 +53,31 @@ function extractJson(text) {
   throw new Error("no parseable JSON in model reply");
 }
 
-// Merge new items into existing, dedupe by url OR normalized title, newest first,
-// drop anything older than maxAgeDays, cap to limit.
+// Merge new items into existing, dedupe by cleaned title (collapses the same
+// story arriving from Google News and the AI discovery pass), newest first,
+// drop anything older than maxAgeDays, cap to limit. On a collision keep the
+// best of each field: direct source URL, a real category, the longer summary.
+const isDirect = (u) => u && !/news\.google\./.test(u);
 function mergeNews(existing, incoming, { maxAgeDays, limit }) {
   const byKey = new Map();
   for (const it of [...existing, ...incoming]) {
     if (!it.title || !it.date) continue;
     if (daysAgo(it.date) > maxAgeDays) continue;
-    const key = it.url ? it.url.replace(/[?#].*$/, "") : normTitle(it.title);
+    const key = normTitle(cleanTitle(it.title)).slice(0, 80);
+    if (!key) continue;
     const prev = byKey.get(key);
-    // keep the richer record (prefer one that has been classified)
-    if (!prev || (prev.category === "news" && it.category !== "news")) {
-      byKey.set(key, { ...prev, ...it, id: idFor(it) });
-    }
+    const merged = prev
+      ? {
+          ...prev, ...it,
+          category: it.category !== "news" ? it.category : prev.category,
+          url: isDirect(it.url) ? it.url : (isDirect(prev.url) ? prev.url : (it.url || prev.url)),
+          summary: (it.summary || "").length >= (prev.summary || "").length ? it.summary : prev.summary,
+          bank: it.bank || prev.bank,
+          region: it.region || prev.region,
+        }
+      : { ...it };
+    merged.id = idFor(merged);
+    byKey.set(key, merged);
   }
   return [...byKey.values()]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -249,14 +264,16 @@ function selftest() {
   let threw = false; try { extractJson("no json here"); } catch { threw = true; }
   assert(threw, "extractJson throws when nothing parses");
 
-  // dedupe by url, prefer classified over "news"
-  const merged = mergeNews(
-    [{ title: "RBC launches X", url: "http://a/1", date: "2026-11-01", category: "news" }],
-    [{ title: "RBC launches X!", url: "http://a/1?utm=1", date: "2026-11-01", category: "product" }],
-    { maxAgeDays: 120, limit: 10 }
-  );
-  assert(merged.length === 1, "url dedupe (ignoring query string)");
-  assert(merged[0].category === "product", "prefers classified record");
+  // cross-source title dedupe: same story from Google News + discovery collapses,
+  // keeping the direct URL, the real category, and the longer summary
+  const merged = mergeNews([], [
+    { title: "BMO launches AI agent - BMO Newsroom", url: "https://news.google.com/rss/articles/abc", date: "2026-11-01", category: "news", summary: "short" },
+    { title: "BMO launches AI agent", url: "https://bmo.com/press/ai", date: "2026-11-01", category: "product", summary: "a much longer summary with detail" },
+  ], { maxAgeDays: 999999, limit: 10 });
+  assert(merged.length === 1, "cross-source title dedupe");
+  assert(merged[0].url === "https://bmo.com/press/ai", "prefers direct url over google news redirect");
+  assert(merged[0].category === "product", "prefers classified category");
+  assert(/longer/.test(merged[0].summary), "keeps the longer summary");
 
   // age filter
   const old = mergeNews([], [{ title: "old", url: "u", date: "2000-01-01", category: "news" }], { maxAgeDays: 120, limit: 10 });
