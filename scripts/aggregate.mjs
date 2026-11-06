@@ -30,6 +30,26 @@ const idFor = (item) =>
 
 const daysAgo = (iso) => (Date.now() - new Date(iso).getTime()) / 86400000;
 
+// Pull JSON out of an LLM reply that may wrap it in a ```json fence or narrate
+// around it (web-search answers interleave citations). Prefers a fenced block,
+// else the outermost {...} or [...]. Throws if nothing parses.
+function extractJson(text) {
+  const fence = text.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  const candidates = [];
+  if (fence) candidates.push(fence[1]);
+  const o = text.indexOf("{"), oc = text.lastIndexOf("}");
+  const a = text.indexOf("["), ac = text.lastIndexOf("]");
+  const obj = o !== -1 && oc > o ? text.slice(o, oc + 1) : null;
+  const arr = a !== -1 && ac > a ? text.slice(a, ac + 1) : null;
+  // try the outermost container first (whichever bracket opens earliest)
+  if (arr && (o === -1 || a < o)) { candidates.push(arr); if (obj) candidates.push(obj); }
+  else { if (obj) candidates.push(obj); if (arr) candidates.push(arr); }
+  for (const c of candidates) {
+    try { return JSON.parse(c); } catch { /* try next */ }
+  }
+  throw new Error("no parseable JSON in model reply");
+}
+
 // Merge new items into existing, dedupe by url OR normalized title, newest first,
 // drop anything older than maxAgeDays, cap to limit.
 function mergeNews(existing, incoming, { maxAgeDays, limit }) {
@@ -72,7 +92,10 @@ async function loadJson(name, fallback) {
 
 async function fetchRss(feeds) {
   const { default: Parser } = await import("rss-parser");
-  const parser = new Parser({ timeout: 15000 });
+  const parser = new Parser({
+    timeout: 15000,
+    headers: { "User-Agent": "Mozilla/5.0 (compatible; BankRadar/1.0; +https://github.com/chaotic-joy/Bank-Radar)" },
+  });
   const out = [];
   for (const { url, source } of feeds) {
     try {
@@ -129,7 +152,7 @@ async function classify(client, items, cfg) {
       messages: [{ role: "user", content: prompt }],
     });
     const text = resp.content.map((c) => c.text || "").join("");
-    const verdicts = JSON.parse(text.slice(text.indexOf("["), text.lastIndexOf("]") + 1));
+    const verdicts = extractJson(text);
     const kept = [];
     for (const v of verdicts) {
       const it = items[v.i];
@@ -151,27 +174,33 @@ async function discover(client, cfg) {
   const anthropic = await client;
   const today = new Date().toISOString().slice(0, 10);
   const prompt =
-    `Today is ${today}. Using web search, find for a Simplii Financial product-team dashboard:\n` +
-    `1) Recent (last 60 days) PROMOTIONAL OFFERS from banks in the Americas — welcome bonuses, ` +
-    `savings/GIC rate promos, credit-card offers. Banks of interest: ${cfg.banks.join(", ")}.\n` +
-    `2) Recent and UPCOMING banking/fintech EVENTS in North AND South America — conferences, ` +
-    `keynotes, investor days, earnings calls (e.g. Money20/20, Finovate, bank investor days, ` +
-    `Wealthsimple keynotes, LatAm fintech events).\n\n` +
-    `Return ONLY JSON: {"news":[{"title","summary","url","source","bank","category":"offer","region","date":"YYYY-MM-DD"}],` +
-    `"events":[{"name","type":"conference|keynote|investor-call|earnings","organizer","url","location","region","date":"YYYY-MM-DD","endDate":"YYYY-MM-DD"}]}.\n` +
-    `Only include items with a real source URL and a concrete date. Prefer primary sources.`;
+    `Today is ${today}. Use web search to compile, for a Simplii Financial product-team dashboard, ` +
+    `news and events about RETAIL banks and neobanks in the Americas. Banks of interest: ${cfg.banks.join(", ")}.\n\n` +
+    `Find items from the LAST 60 DAYS in three buckets, plus upcoming events:\n` +
+    `A) PRODUCT news — a bank launching a feature, platform update, or app capability (category "product").\n` +
+    `B) OFFERS — welcome bonuses, savings/GIC rate promos, credit-card offers, discounts (category "offer").\n` +
+    `C) SERVICE news — new services, fee changes, access/eligibility changes (category "service").\n` +
+    `D) EVENTS — recent and UPCOMING banking/fintech conferences, keynotes, investor days, earnings calls in ` +
+    `North AND South America (Money20/20, Finovate, bank investor days, Wealthsimple keynotes, LatAm fintech events).\n\n` +
+    `Aim for 15-25 news items and 8-15 events. Only include items with a REAL source URL and a concrete date; ` +
+    `prefer primary sources (the bank's own newsroom). Set region "NA" or "SA".\n\n` +
+    `Output your final answer as a SINGLE JSON object in a \`\`\`json fenced code block, nothing after it:\n` +
+    `\`\`\`json\n{"news":[{"title":"","summary":"","url":"","source":"","bank":"","category":"product|offer|service","region":"NA","date":"YYYY-MM-DD"}],` +
+    `"events":[{"name":"","type":"conference|keynote|investor-call|earnings","organizer":"","url":"","location":"","region":"NA","date":"YYYY-MM-DD","endDate":"YYYY-MM-DD"}]}\n\`\`\``;
   try {
     const resp = await anthropic.messages.create({
       model: MODEL_SMART,
-      max_tokens: 4000,
+      max_tokens: 8000,
       tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 8 }],
       messages: [{ role: "user", content: prompt }],
     });
     const text = resp.content.map((c) => c.text || "").join("");
-    const parsed = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
-    const news = (parsed.news || []).filter((n) => n.url && n.date).map((n) => ({ category: "offer", region: "NA", bank: null, ...n }));
+    const parsed = extractJson(text);
+    const news = (parsed.news || [])
+      .filter((n) => n.url && n.date)
+      .map((n) => ({ region: "NA", bank: null, ...n, category: CATEGORIES.includes(n.category) ? n.category : "news" }));
     const events = (parsed.events || []).filter((e) => e.date && e.name);
-    console.log(`  discovered: ${news.length} offers, ${events.length} events`);
+    console.log(`  discovered: ${news.length} news, ${events.length} events`);
     return { news, events };
   } catch (err) {
     console.warn(`  discovery skipped: ${err.message}`);
@@ -212,6 +241,13 @@ async function main() {
 
 function selftest() {
   const assert = (c, m) => { if (!c) throw new Error("FAIL: " + m); };
+
+  // extractJson: fenced block wins over surrounding narration
+  assert(extractJson('Here are results:\n```json\n{"a":1}\n```').a === 1, "extractJson reads fenced block");
+  assert(extractJson('I searched the web. Final answer: {"news":[],"events":[]} done.').news.length === 0, "extractJson reads bare object amid prose");
+  assert(extractJson('[{"i":0,"category":"product"}]')[0].category === "product", "extractJson reads bare array");
+  let threw = false; try { extractJson("no json here"); } catch { threw = true; }
+  assert(threw, "extractJson throws when nothing parses");
 
   // dedupe by url, prefer classified over "news"
   const merged = mergeNews(
