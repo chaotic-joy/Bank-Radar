@@ -173,9 +173,10 @@ async function classify(client, items, cfg) {
       const resp = await anthropic.messages.create({
         model: MODEL_FAST,
         max_tokens: 2000,
-        messages: [{ role: "user", content: prompt }],
+        // prefill "[" so the model must continue a JSON array (no prose preamble)
+        messages: [{ role: "user", content: prompt }, { role: "assistant", content: "[" }],
       });
-      const text = resp.content.map((c) => c.text || "").join("");
+      const text = "[" + resp.content.map((c) => c.text || "").join("");
       for (const v of extractJson(text)) {
         const it = slice[v.i];
         if (!it || !REAL_CATS.includes(v.category)) continue;
