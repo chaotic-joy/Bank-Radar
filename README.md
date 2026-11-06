@@ -28,7 +28,7 @@ npm run dev               # serve the dashboard at http://localhost:3000
 ANTHROPIC_API_KEY=sk-...  npm run refresh   # pull live data (RSS-only if key omitted)
 ```
 
-Without a key, `refresh` still works — it just keeps RSS items unclassified (category `news`).
+The AI key is required for useful output: Claude both classifies RSS items (raw feed headlines are too noisy to show unfiltered) and runs the web-search discovery pass. Without a key, `refresh` runs but produces no board items.
 
 ## Deploy
 

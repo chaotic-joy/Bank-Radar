@@ -144,42 +144,50 @@ function makeClient() {
   return import("@anthropic-ai/sdk").then((m) => new m.default());
 }
 
-// Classify + filter RSS items. Returns a subset, tagged with category/bank/region.
+const REAL_CATS = ["product", "offer", "service"]; // raw RSS "news" is noise; only these reach the board
+
+// Classify RSS items in small batches (one big call returns unparseable JSON).
+// Returns ONLY items a batch tagged product/offer/service; a failed batch is
+// dropped, not kept-raw. No key -> nothing (unclassified RSS is just noise).
 async function classify(client, items, cfg) {
-  if (!client || items.length === 0) return items;
+  if (!client || items.length === 0) return [];
   const anthropic = await client;
-  const batchInput = items.map((it, i) => ({ i, title: it.title, summary: it.summary, source: it.source }));
-  const prompt =
-    `You screen banking-industry headlines for a Simplii Financial product-team dashboard.\n` +
-    `Relevant = a RETAIL/consumer bank or neobank in the Americas doing one of: ${cfg.topics.join("; ")}.\n` +
-    `Banks of interest (not exhaustive): ${cfg.banks.join(", ")}.\n\n` +
-    `For EACH item below return JSON. Drop items that are not about a specific bank's product, ` +
-    `service, or offer (e.g. generic macro news, regulation think-pieces, crypto price moves).\n` +
-    `category: "product" (feature/platform/app launch), "offer" (rate/discount/bonus/promo), ` +
-    `"service" (new service, fee change, access/eligibility), or null to drop.\n` +
-    `region: "NA" or "SA". bank: the bank's short name or null.\n\n` +
-    `Return ONLY a JSON array like [{"i":0,"category":"product","region":"NA","bank":"RBC"}].\n\n` +
-    `ITEMS:\n${JSON.stringify(batchInput)}`;
-  try {
-    const resp = await anthropic.messages.create({
-      model: MODEL_FAST,
-      max_tokens: 8000,
-      messages: [{ role: "user", content: prompt }],
-    });
-    const text = resp.content.map((c) => c.text || "").join("");
-    const verdicts = extractJson(text);
-    const kept = [];
-    for (const v of verdicts) {
-      const it = items[v.i];
-      if (!it || !v.category || !CATEGORIES.includes(v.category)) continue;
-      kept.push({ ...it, category: v.category, region: v.region || it.region, bank: v.bank || it.bank });
+  const BATCH = 40;
+  const kept = [];
+  let failed = 0;
+  for (let start = 0; start < items.length; start += BATCH) {
+    const slice = items.slice(start, start + BATCH);
+    const batchInput = slice.map((it, i) => ({ i, title: it.title, summary: (it.summary || "").slice(0, 180), source: it.source }));
+    const prompt =
+      `You screen banking-industry headlines for a Simplii Financial product-team dashboard.\n` +
+      `Relevant = a RETAIL/consumer bank or neobank in the Americas doing one of: ${cfg.topics.join("; ")}.\n` +
+      `Banks of interest (not exhaustive): ${cfg.banks.join(", ")}.\n\n` +
+      `For EACH item return JSON. DROP anything not about a specific bank's product, service, or offer ` +
+      `(generic macro news, regulation think-pieces, crypto prices, sports/unrelated noise).\n` +
+      `category: "product" (feature/platform/app launch), "offer" (rate/discount/bonus/promo), ` +
+      `"service" (new service, fee change, access/eligibility), or null to drop.\n` +
+      `region: "NA" or "SA". bank: the bank's short name or null.\n\n` +
+      `Return ONLY a JSON array like [{"i":0,"category":"product","region":"NA","bank":"RBC"}].\n\n` +
+      `ITEMS:\n${JSON.stringify(batchInput)}`;
+    try {
+      const resp = await anthropic.messages.create({
+        model: MODEL_FAST,
+        max_tokens: 2000,
+        messages: [{ role: "user", content: prompt }],
+      });
+      const text = resp.content.map((c) => c.text || "").join("");
+      for (const v of extractJson(text)) {
+        const it = slice[v.i];
+        if (!it || !REAL_CATS.includes(v.category)) continue;
+        kept.push({ ...it, category: v.category, region: v.region || it.region, bank: v.bank || it.bank });
+      }
+    } catch (err) {
+      failed++;
+      console.warn(`  classify batch @${start} dropped: ${err.message}`);
     }
-    console.log(`  classified: kept ${kept.length}/${items.length}`);
-    return kept;
-  } catch (err) {
-    console.warn(`  classify FAIL (keeping RSS unclassified): ${err.message}`);
-    return items;
   }
+  console.log(`  classified: kept ${kept.length}/${items.length}${failed ? ` (${failed} batches failed)` : ""}`);
+  return kept;
 }
 
 // Web-search discovery: offers + events RSS won't have. Best-effort; never fatal.
@@ -231,7 +239,19 @@ async function main() {
 
   console.log("Fetching RSS…");
   const rss = await fetchRss(cfg.feeds);
-  const classified = await classify(client, rss, cfg);
+
+  // dedupe + keep the newest ~140 unique candidates before classifying (keeps
+  // each batch small and the API cost bounded)
+  const seen = new Set();
+  const candidates = [];
+  for (const it of rss.sort((a, b) => new Date(b.date) - new Date(a.date))) {
+    const k = normTitle(cleanTitle(it.title)).slice(0, 80);
+    if (!k || seen.has(k)) continue;
+    seen.add(k);
+    candidates.push(it);
+    if (candidates.length >= 140) break;
+  }
+  const classified = await classify(client, candidates, cfg);
 
   console.log("Discovery pass…");
   const found = await discover(client, cfg);
@@ -242,7 +262,7 @@ async function main() {
   const news = mergeNews(existingNews, [...classified, ...found.news], {
     maxAgeDays: cfg.maxAgeDays ?? 120,
     limit: cfg.maxNewsItems ?? 150,
-  });
+  }).filter((n) => REAL_CATS.includes(n.category)); // board shows only categorized items
   const events = mergeEvents(existingEvents, found.events);
 
   const stamp = { updated: new Date().toISOString() };
