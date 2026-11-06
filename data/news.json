@@ -1,72 +1,28 @@
 [
   {
-    "id": "seed-tokendeposit",
-    "title": "Canada's Big Six banks explore a shared CAD tokenized-deposit system",
-    "summary": "RBC, TD, BMO, CIBC, Scotiabank and National Bank are jointly studying a Canadian-dollar tokenized-deposit solution, starting with transfers between institutions. Money would be issued by the commercial banks, not a central-bank digital currency. Described as exploratory.",
-    "url": "https://nbc.ca/about-us/news-media/press-release/2026/20260922-banks-secure-tokenized-deposit-solution.html",
-    "source": "National Bank (press release)",
-    "bank": "Big Six",
+    "title": "BMO launches AI agent to help credit card customers get answers",
+    "url": "https://www.finextra.com/pressarticle/111609/bmo-launches-ai-agent-to-help-credit-card-customers-get-answers?utm_medium=rssfinextra&utm_source=finextrafeed",
+    "source": "Finextra",
+    "summary": "BMO is introducing AI Agent Assist to help clients get faster answers and resolutions when they contact BMO's Virtual Connect contact centre about their credit card transactions.",
+    "date": "2026-11-06",
     "category": "product",
-    "date": "2026-09-22",
-    "region": "NA"
-  },
-  {
-    "id": "seed-openbanking",
-    "title": "Open banking framework arriving in Canada in 2026",
-    "summary": "Canada's federal open-banking framework is slated to begin in 2026, enabling consented read-only data sharing and mandating participation from major banks. Verify specifics against the official regulator page.",
-    "url": "https://technewsday.com/?p=49785",
-    "source": "TechNewsDay",
-    "bank": null,
-    "category": "service",
-    "date": "2026-08-15",
-    "region": "NA"
-  },
-  {
-    "id": "seed-lowfee",
-    "title": "Ottawa's new $0 and low-fee bank accounts now live at 14 institutions",
-    "summary": "Fourteen federally regulated institutions — including RBC, TD, BMO, Scotiabank, CIBC and National Bank — have implemented new FCAC rules offering $0 and low-fee chequing accounts.",
-    "url": "https://www.iphoneincanada.ca/2025/12/01/ottawa-says-new-low-fee-bank-accounts-are-now-available/",
-    "source": "iPhone in Canada",
-    "bank": null,
-    "category": "service",
-    "date": "2025-12-01",
-    "region": "NA"
-  },
-  {
-    "id": "seed-bmoenrol",
-    "title": "BMO unveils automated digital enrolment for online banking",
-    "summary": "BMO launched Automated Digital Enrolment, which seamlessly enrols customers into commonly used mobile banking features during onboarding.",
-    "url": "https://ibsintelligence.com/ibsi-news/bmo-unveils-automated-digital-enrolment-to-help-customers-bank-online",
-    "source": "IBS Intelligence",
     "bank": "BMO",
+    "region": "NA",
+    "id": "72bd5f5f001c"
+  },
+  {
+    "title": "OnePay Taps Stripe to Power Stablecoin Deposits",
+    "url": "https://finovate.com/onepay-taps-stripe-to-power-stablecoin-deposits/",
+    "source": "Finovate",
+    "summary": "Digital bank OnePay announced this month that it is allowing select US customers to fund their OnePay checking accounts using stablecoins and receive the value as US dollars, all without requiring a separate crypto account or wallet. Users can fund their accounts by sending stablecoins from an external wallet to a deposit address, and OnePay Read more... The post OnePay Taps Stripe to Power Stable",
+    "date": "2026-11-03",
     "category": "product",
-    "date": "2026-06-10",
-    "region": "NA"
+    "bank": "OnePay",
+    "region": "NA",
+    "id": "8adf2814e4ef"
   },
   {
-    "id": "seed-chimeplus",
-    "title": "Chime launches Chime+ premium tier, redesigned app and Chime Workplace",
-    "summary": "Chime introduced Chime+, a premium membership tier with new features in a redesigned app, alongside Chime Workplace, as it expands toward instant loans.",
-    "url": "https://www.crowdfundinsider.com/portal/chime",
-    "source": "Crowdfund Insider",
-    "bank": "Chime",
-    "category": "product",
-    "date": "2025-03-31",
-    "region": "NA"
-  },
-  {
-    "id": "seed-scotiaoffer",
-    "title": "Scotiabank: up to 5% savings promo and bundle worth up to $1,000",
-    "summary": "A Scotia High Interest Savings promo of up to 5% for 3 months, with a Preferred Package + savings + credit card bundle worth up to $1,000. Promo window referenced as ending Oct 29, 2026 — verify current terms.",
-    "url": "https://www.finder.com/ca/new-bank-account-offers",
-    "source": "Finder",
-    "bank": "Scotiabank",
-    "category": "offer",
-    "date": "2026-09-01",
-    "region": "NA"
-  },
-  {
-    "id": "seed-simpliioffer",
+    "id": "ee28d56f5287",
     "title": "Simplii Financial: 4.50% HISA promo for 5 months",
     "summary": "Simplii offered 4.50% on a high-interest savings account for 5 months (Oct 1 – Jan 31, 2026). Window has closed — included as an example of own-brand tracking.",
     "url": "https://milesopedia.com/en/?p=399480",
@@ -77,14 +33,36 @@
     "region": "NA"
   },
   {
-    "id": "seed-sofivaults",
-    "title": "SoFi Savings Vaults with up to 3.80% APY",
-    "summary": "SoFi's bucket-style 'Savings Vaults' tool with a rate reported up to 3.80% APY (with qualifying direct deposit). Rates change frequently — verify.",
-    "url": "https://www.emarketer.com/insights/neobanks-explained-list/",
-    "source": "eMarketer",
-    "bank": "SoFi",
+    "id": "32d7556ffdf6",
+    "title": "Canada's Big Six banks explore a shared CAD tokenized-deposit system",
+    "summary": "RBC, TD, BMO, CIBC, Scotiabank and National Bank are jointly studying a Canadian-dollar tokenized-deposit solution, starting with transfers between institutions. Money would be issued by the commercial banks, not a central-bank digital currency. Described as exploratory.",
+    "url": "https://nbc.ca/about-us/news-media/press-release/2026/20260922-banks-secure-tokenized-deposit-solution.html",
+    "source": "National Bank (press release)",
+    "bank": "Big Six",
+    "category": "product",
+    "date": "2026-09-22",
+    "region": "NA"
+  },
+  {
+    "id": "2758aa6fa674",
+    "title": "Scotiabank: up to 5% savings promo and bundle worth up to $1,000",
+    "summary": "A Scotia High Interest Savings promo of up to 5% for 3 months, with a Preferred Package + savings + credit card bundle worth up to $1,000. Promo window referenced as ending Oct 29, 2026 — verify current terms.",
+    "url": "https://www.finder.com/ca/new-bank-account-offers",
+    "source": "Finder",
+    "bank": "Scotiabank",
     "category": "offer",
-    "date": "2026-03-15",
+    "date": "2026-09-01",
+    "region": "NA"
+  },
+  {
+    "id": "7742953263bd",
+    "title": "Open banking framework arriving in Canada in 2026",
+    "summary": "Canada's federal open-banking framework is slated to begin in 2026, enabling consented read-only data sharing and mandating participation from major banks. Verify specifics against the official regulator page.",
+    "url": "https://technewsday.com/?p=49785",
+    "source": "TechNewsDay",
+    "bank": null,
+    "category": "service",
+    "date": "2026-08-15",
     "region": "NA"
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "id": "seed-finovatefall",
+    "id": "bd3606443601",
     "name": "FinovateFall 2026",
     "type": "conference",
     "organizer": "Finovate",
@@ -11,7 +11,7 @@
     "endDate": "2026-09-11"
   },
   {
-    "id": "seed-m2020usa",
+    "id": "f52c5e81a6ce",
     "name": "Money20/20 USA 2026",
     "type": "conference",
     "organizer": "Money20/20",
@@ -22,7 +22,7 @@
     "endDate": "2026-10-21"
   },
   {
-    "id": "seed-nerdcon",
+    "id": "ebb0cdb0f469",
     "name": "Fintech Nerdcon 2026",
     "type": "conference",
     "organizer": "Fintech Nerdcon",
@@ -33,7 +33,7 @@
     "endDate": "2026-11-20"
   },
   {
-    "id": "seed-fintechamericas",
+    "id": "f899dbda10aa",
     "name": "Fintech Americas (LatAm) — dates TBC",
     "type": "conference",
     "organizer": "Fintech Americas",

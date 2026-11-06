@@ -1,1 +1,6 @@
-{ "updated": "2026-11-06T00:00:00.000Z", "news": 8, "events": 4, "aiEnabled": false, "seed": true }
+{
+  "updated": "2026-11-06T19:31:56.696Z",
+  "news": 6,
+  "events": 4,
+  "aiEnabled": true
+}
