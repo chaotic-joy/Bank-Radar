@@ -4,9 +4,9 @@
     "name": "FinovateFall 2026",
     "type": "conference",
     "organizer": "Finovate",
-    "location": "New York, NY (Marriott Marquis Times Square)",
+    "location": "New York, NY",
     "region": "NA",
-    "url": "https://finovate.com/events/finovatefall/",
+    "url": "https://virtuslab.com/blog/business-insights/best-fintech-conferences-second-half-2026",
     "date": "2026-09-09",
     "endDate": "2026-09-11"
   },
@@ -22,11 +22,22 @@
     "id": "533d1c36a9c3"
   },
   {
+    "name": "Sibos 2026",
+    "type": "conference",
+    "organizer": "SWIFT",
+    "url": "https://ctomagazine.com/top-fintech-conferences-2026/",
+    "location": "Miami Beach, FL",
+    "region": "NA",
+    "date": "2026-09-28",
+    "endDate": "2026-10-01",
+    "id": "7fc5d6090a7d"
+  },
+  {
     "id": "f52c5e81a6ce",
     "name": "Money20/20 USA 2026",
     "type": "conference",
-    "organizer": "Money20/20 (Informa)",
-    "location": "The Venetian, Las Vegas, NV, USA",
+    "organizer": "Money20/20",
+    "location": "The Venetian, Las Vegas, NV",
     "region": "NA",
     "url": "https://us.money2020.com",
     "date": "2026-10-18",
@@ -70,7 +81,7 @@
     "type": "keynote",
     "organizer": "Wealthsimple",
     "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
-    "location": "Massey Hall, Toronto, Canada (with Vancouver, Montréal and Calgary)",
+    "location": "Toronto (Massey Hall), with Vancouver, Montréal and Calgary viewings",
     "region": "NA",
     "date": "2026-11-05",
     "endDate": "2026-11-05",
@@ -88,13 +99,46 @@
     "id": "ec270661f66e"
   },
   {
-    "id": "ebb0cdb0f469",
-    "name": "Fintech Nerdcon 2026",
+    "name": "Banking Transformation Summit USA",
     "type": "conference",
-    "organizer": "Fintech Nerdcon",
+    "organizer": "Banking Transformation Summit",
+    "url": "https://www.fintechevents.co/",
+    "location": "Charlotte, NC",
+    "region": "NA",
+    "date": "2026-11-09",
+    "endDate": "2026-11-10",
+    "id": "51dd70235373"
+  },
+  {
+    "name": "NextGen Payments & RegTech Forum",
+    "type": "conference",
+    "organizer": "NextGen Payments & RegTech Forum",
+    "url": "https://www.fintechevents.co/",
+    "location": "Austin, TX",
+    "region": "NA",
+    "date": "2026-11-13",
+    "endDate": "2026-11-14",
+    "id": "ed0f58ce8fdd"
+  },
+  {
+    "name": "CrossTech World 2026",
+    "type": "conference",
+    "organizer": "CrossTech",
+    "url": "https://www.fintechweekly.com/fintech-conferences?region=americas&variant=redesign",
+    "location": "Davie, FL",
+    "region": "NA",
+    "date": "2026-11-17",
+    "endDate": "2026-11-17",
+    "id": "ee28f943aec6"
+  },
+  {
+    "id": "ebb0cdb0f469",
+    "name": "Fintech NerdCon 2026",
+    "type": "conference",
+    "organizer": "Fintech NerdCon",
     "location": "San Diego, CA",
     "region": "NA",
-    "url": "https://fintechnerdcon.com/",
+    "url": "https://www.fintechevents.co/",
     "date": "2026-11-18",
     "endDate": "2026-11-20"
   },
@@ -165,6 +209,17 @@
     "id": "24624255c078"
   },
   {
+    "name": "Scotiabank Q4 2026 results and conference call",
+    "type": "earnings",
+    "organizer": "Scotiabank",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/scotiabank-announce-fourth-quarter-2026-140000352.html",
+    "location": "Toronto / webcast (7:15 a.m. ET)",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "cc199ae87f94"
+  },
+  {
     "name": "EQB (EQ Bank) Q4 and fiscal 2026 earnings call (10:30 a.m. ET; results Dec 2 after close)",
     "type": "earnings",
     "organizer": "EQB Inc.",
@@ -198,6 +253,17 @@
     "id": "0e5704c2e951"
   },
   {
+    "name": "EQB (EQ Bank) Q4 and fiscal 2026 earnings call",
+    "type": "earnings",
+    "organizer": "EQB Inc.",
+    "url": "https://ca.finance.yahoo.com/news/eqb-announce-fourth-quarter-fiscal-133500806.html",
+    "location": "Toronto / webcast (10:30 a.m. ET); results released Dec 2 after market close",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "0080212e4c70"
+  },
+  {
     "name": "National Bank of Canada Q4 2026 results and strategic update (90-minute call, 8:00 a.m. ET)",
     "type": "investor-call",
     "organizer": "National Bank of Canada",
@@ -218,5 +284,49 @@
     "date": "2026-12-04",
     "endDate": "2026-12-04",
     "id": "13e47322e78f"
+  },
+  {
+    "name": "National Bank of Canada Q4 2026 results and strategic update call",
+    "type": "investor-call",
+    "organizer": "National Bank of Canada",
+    "url": "https://www.nbc.ca/about-us/investors.html",
+    "location": "Montreal / webcast (8:00 a.m. ET)",
+    "region": "NA",
+    "date": "2026-12-04",
+    "endDate": "2026-12-04",
+    "id": "12af0486ae45"
+  },
+  {
+    "name": "U.S. BankTech Summit 2026",
+    "type": "conference",
+    "organizer": "BankTech Summit",
+    "url": "https://www.fintechevents.co/",
+    "location": "Oak Brook, IL (another listing says Austin, TX)",
+    "region": "NA",
+    "date": "2026-12-07",
+    "endDate": "2026-12-09",
+    "id": "307f09b2463b"
+  },
+  {
+    "name": "Fintech Talents North America 2026",
+    "type": "conference",
+    "organizer": "Fintech Talents",
+    "url": "https://www.fintechevents.co/",
+    "location": "Austin, TX",
+    "region": "NA",
+    "date": "2026-12-08",
+    "endDate": "2026-12-09",
+    "id": "4c9f96815185"
+  },
+  {
+    "name": "Fintech Americas Miami 2027",
+    "type": "conference",
+    "organizer": "Fintech Americas",
+    "url": "https://www.fintechamericas.co/en",
+    "location": "Miami Beach Convention Center, FL",
+    "region": "NA",
+    "date": "2027-03-16",
+    "endDate": "2027-03-18",
+    "id": "3143f1e08bce"
   }
 ]

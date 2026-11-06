@@ -5,7 +5,7 @@
     "source": "Finextra",
     "summary": "BMO is introducing AI Agent Assist to help clients get faster answers and resolutions when they contact BMO's Virtual Connect contact centre about their credit card transactions.",
     "date": "2026-11-06",
-    "category": "product",
+    "category": "service",
     "bank": "BMO",
     "region": "NA",
     "id": "72bd5f5f001c"
@@ -221,6 +221,17 @@
   },
   {
     "region": "NA",
+    "bank": "BMO",
+    "title": "BMO introduces AI Agent Assist for credit card service",
+    "summary": "BMO rolled out an internal agentic AI tool for its Virtual Connect contact centre. It does transaction matching, policy retrieval and case preparation, and targets up to 30% shorter call times. Employees remain accountable for servicing decisions.",
+    "url": "https://newswire.ca/news-releases/bmo-using-agentic-ai-to-help-credit-card-clients-get-faster-answers-and-resolutions-809361975.html",
+    "source": "BMO via Canada Newswire",
+    "category": "product",
+    "date": "2026-11-06",
+    "id": "647de1d489cf"
+  },
+  {
+    "region": "NA",
     "bank": "Wealthsimple",
     "title": "Wealthsimple unveils Penny AI assistant at 'Wealthsimple Presents'",
     "summary": "Penny can prepare e-transfers, pay invoices, flag duplicate credit card charges and help self-directed investors buy and sell. It never acts without client confirmation. ChatGPT and Claude connections are planned for early 2027, along with a rebuilt native mobile app.",
@@ -372,6 +383,50 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "0c61f546b448"
+  },
+  {
+    "title": "Banco Inter lança campanha para incentivar famílias a investirem na educação dos filhos - Rádio Itatiaia",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZGtoWExQUVh3S1p6cGRUNnpOZ1BLVGU5RUVEbUppcVBqa0tRckFMdldyRTdid29fQ2tuX2NsWjNLeDYxYjVVREhKd3VldHQxbF8xOEItSlNmVUtueGhHZmpIYV9oQ196QVh1RXhVbTV2Sy1zc0dGZnR5TzREeEY1eXpfNUdnUktYMGg0OFZSMkRzV0JMTVQtSkhMdm5zb0VDaFJaMEkyckFHYTJrbjdmdlZibEJ3Q18yQ25TMEVaRUVIMzFlLWVLbEU3NWt1cWx2R0ctYkVB?oc=5",
+    "source": "Google News · Brasil (PT)",
+    "summary": "Banco Inter lança campanha para incentivar famílias a investirem na educação dos filhos Rádio Itatiaia",
+    "date": "2026-11-05",
+    "category": "offer",
+    "bank": "Banco Inter",
+    "region": "SA",
+    "id": "15af9bcc37aa"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple Pay: instant transfers up to $100,000 and temporary virtual cards",
+    "summary": "Wealthsimple Pay is available now and lets clients send up to $100,000 instantly to other Wealthsimple clients. Temporary virtual cards with custom expiry dates and spending limits were also announced as fraud protection.",
+    "url": "https://www.cp24.com/news/money/2026/11/05/wealthsimple-launches-ai-banking-assistant-that-can-help-move-money-place-trades/",
+    "source": "CP24 / Canadian Press",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "98e092ca25ad"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple Pro trading platform and commission-free CAD options",
+    "summary": "Wealthsimple Pro, with Level 2 data and faster execution, launches in late November. Commission-free options on Canadian stocks are already live. Wealthsimple also announced a business credit card with 1% cash back and no FX fees for early 2027.",
+    "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
+    "source": "Wealth Professional",
+    "category": "product",
+    "date": "2026-11-05",
+    "id": "9bccf572331c"
+  },
+  {
+    "region": "NA",
+    "bank": "Wealthsimple",
+    "title": "Wealthsimple to offer CADD Canadian-dollar stablecoin with 3.25% annual reward",
+    "summary": "Wealthsimple described CADD as the first Canadian-dollar-backed stablecoin issued by a regulated financial institution. It is redeemable one-for-one and carries a 3.25% annual reward on holdings.",
+    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
+    "source": "Fintech.ca",
+    "category": "offer",
+    "date": "2026-11-05",
+    "id": "8387cca7847a"
   },
   {
     "region": "NA",
@@ -526,5 +581,93 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "73291f2bb346"
+  },
+  {
+    "region": "NA",
+    "bank": "RBC",
+    "title": "RBC, BMO and TD block third-party AI agents from accessing digital properties",
+    "summary": "RBC, BMO and TD have blocked third-party personal AI agents from directly accessing their digital channels, citing customer data security. CIBC advises caution and Scotiabank is 'limiting' agents. This is relevant to Simplii's agent-access policy.",
+    "url": "https://www.theglobeandmail.com/business/article-bmo-blocks-third-party-ai-agents-rbc-muse-october-28/",
+    "source": "The Globe and Mail",
+    "category": "service",
+    "date": "2026-10-28",
+    "id": "af2c26587f6d"
+  },
+  {
+    "region": "NA",
+    "bank": "Scotiabank",
+    "title": "Scotiabank digital banking update: redesigned Scotiabank.com, in-app appointments, money transfer tools",
+    "summary": "Scotiabank announced a mobile-first redesign of Scotiabank.com with more personalized offers, in-app appointment booking with reminders, and new self-serve and money transfer capabilities in the Scotia app.",
+    "url": "https://scotiabank.investorroom.com/2026-10-27-Scotiabank-Digital-Banking-Update-Simplifying-Everyday-Banking-with-New-Self-Serve-and-Money-Transfer-Capabilities",
+    "source": "Scotiabank newsroom",
+    "category": "product",
+    "date": "2026-10-27",
+    "id": "594dd8f8b3ce"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank launches Nu Smart Invest",
+    "summary": "A new investment experience in the Nubank app analyzes a customer's portfolio and gives impartial suggestions on diversification, return, liquidity, protection and efficiency. It is rolling out gradually in Brazil.",
+    "url": "https://nu.com/en/newsroom/company/nubank-launches-nu-smart-invest-a-new-tool-that-guides-investment-decisions-in-a-personalized-way-free-of-conflicts-of-interest",
+    "source": "Nubank newsroom",
+    "category": "product",
+    "date": "2026-10-15",
+    "id": "012652fa535c"
+  },
+  {
+    "region": "NA",
+    "bank": "Simplii Financial",
+    "title": "Simplii launches Simplii Account and pilots Folders and payment backup",
+    "summary": "Simplii announced a new account type, a pilot of in-app account folders, a payment backup feature that covers certain transactions to avoid insufficient funds fees, and a partnership with CIBC Investor's Edge so clients can invest while accessing funds from their Simplii account.",
+    "url": "https://www.simplii.com/en/news-releases.html",
+    "source": "Simplii Financial newsroom",
+    "category": "product",
+    "date": "2026-10-13",
+    "id": "7ed15edc304c"
+  },
+  {
+    "region": "NA",
+    "bank": "Simplii Financial",
+    "title": "Simplii head says no chasing 'flavours of the day' like prediction markets",
+    "summary": "In interviews around the Simplii Account launch, Atanaska Novakova said Simplii is targeting DIY clients who want control and value. She said it is deliberately avoiding speculative features such as prediction markets. Simplii has more than 2 million clients.",
+    "url": "https://www.investmentexecutive.com/news/industry/simplii-financial-rolls-out-tools-for-diy-banking-in-bid-for-growth/",
+    "source": "Investment Executive / Canadian Press",
+    "category": "service",
+    "date": "2026-10-13",
+    "id": "02de466075e5"
+  },
+  {
+    "region": "NA",
+    "bank": "RBC",
+    "title": "RBC upgrades Cash Back Mastercard portfolio: uncapped 3% categories and $1 redemptions",
+    "summary": "New earn structures took effect Oct 1, 2026. The Cash Back Preferred World Elite Mastercard earns uncapped 3% on everyday categories such as groceries, dining, gas and streaming. From December 2026, cardholders can redeem cash back anytime from $1. The date is the effective date, not a confirmed publish date.",
+    "url": "https://newswire.ca/news-releases/rbc-enhances-cash-back-mastercard-portfolio-with-unlimited-cash-back-and-on-demand-redemptions-845776623.html",
+    "source": "RBC via Canada Newswire",
+    "category": "offer",
+    "date": "2026-10-01",
+    "id": "be152aa3e4fe"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank launches in the U.S. via Lead Bank and introduces Nu Global",
+    "summary": "Nubank began U.S. operations through a sponsor-bank partnership with Lead Bank while it awaits final OCC charter approval. It also launched Nu Global, a multi-currency account covering 35+ countries.",
+    "url": "https://www.americanbanker.com/news/nubank-launches-in-the-u-s-through-a-sponsor-bank",
+    "source": "American Banker",
+    "category": "product",
+    "date": "2026-09-10",
+    "id": "a56ca91ad0f5"
+  },
+  {
+    "region": "SA",
+    "bank": "Nubank",
+    "title": "Nubank U.S. offer: 3.50% yield savings, 1.5% cash back no-fee card, free international transfers",
+    "summary": "Per Reuters, initial U.S. products through FDIC-insured Lead Bank are deposit accounts at a 3.50% yield, free international money transfers, and a no-fee credit card with 1.5% cash back.",
+    "url": "https://www.aol.com/articles/nubank-launches-high-yield-savings-143516000.html",
+    "source": "Reuters via AOL",
+    "category": "offer",
+    "date": "2026-09-10",
+    "id": "a96df31119b3"
   }
 ]
