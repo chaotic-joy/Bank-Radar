@@ -1,4 +1,4 @@
-# Bank Intelligence Dashboard
+# Bank Radar
 
 A dashboard for the Simplii Financial product team tracking **(1)** a filterable stream of
 product/offer/service news from banks across the Americas, and **(2)** a calendar of recent
