@@ -245,18 +245,6 @@
   {
     "region": "NA",
     "bank": "BMO",
-    "title": "BMO introduces AI Agent Assist for credit card client service",
-    "summary": "BMO is deploying an internal agentic AI tool in its Virtual Connect contact centre, targeting up to a 30% reduction in call times on credit card queries. The capabilities are designed for reuse across the bank.",
-    "url": "https://newswire.ca/news-releases/bmo-using-agentic-ai-to-help-credit-card-clients-get-faster-answers-and-resolutions-809361975.html",
-    "source": "BMO / CNW",
-    "category": "product",
-    "date": "2026-11-06",
-    "id": "647de1d489cf",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "BMO",
     "title": "BMO introduces AI Agent Assist for credit card service",
     "summary": "BMO rolled out an internal agentic AI tool for its Virtual Connect contact centre. It does transaction matching, policy retrieval and case preparation, and targets up to 30% shorter call times. Employees remain accountable for servicing decisions.",
     "url": "https://newswire.ca/news-releases/bmo-using-agentic-ai-to-help-credit-card-clients-get-faster-answers-and-resolutions-809361975.html",
@@ -276,18 +264,6 @@
     "bank": "JPMorgan",
     "region": "NA",
     "id": "b86101b1fcd4",
-    "lang": "en"
-  },
-  {
-    "title": "KCB Tanzania integrates PayPal into mobile banking",
-    "url": "https://www.finextra.com/pressarticle/111606/kcb-tanzania-integrates-paypal-into-mobile-banking?utm_medium=rssfinextra&utm_source=finextrafeed",
-    "source": "Finextra",
-    "summary": "KCB Bank Tanzania has partnered with PayPal to integrate PayPal services into the KCB Mobile App, giving customers a simple, secure and convenient way to connect to global payments directly through their banking app.",
-    "date": "2026-11-06",
-    "category": "product",
-    "bank": "KCB",
-    "region": "SA",
-    "id": "a82b1ec4dc4f",
     "lang": "en"
   },
   {
@@ -626,7 +602,7 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple unveils Penny AI assistant at 'Wealthsimple Presents'",
+    "title": "Wealthsimple launches Penny, an AI assistant for banking and trading",
     "summary": "Penny can prepare e-transfers, pay invoices, flag duplicate credit card charges and help self-directed investors buy and sell. It never acts without client confirmation. ChatGPT and Claude connections are planned for early 2027, along with a rebuilt native mobile app.",
     "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
     "source": "Fintech.ca",
@@ -650,8 +626,8 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple launches commission-free options on Canadian stocks; Wealthsimple Pro due late November",
-    "summary": "Wealthsimple says it is the first Canadian brokerage with commission-free options on Canadian stocks. The Wealthsimple Pro trading platform, with Level 2 data, launches in late November 2026.",
+    "title": "Wealthsimple makes options trading on Canadian stocks commission-free",
+    "summary": "Commission-free CAD options are live now. Faster mobile trading also cuts a trade from eight steps and 21 seconds to two steps and four seconds. Wealthsimple Pro, with Level 2 data, arrives in late November.",
     "url": "https://tradersunion.com/news/companies/show/4117831-wealthsimple-new-features-toronto-event/",
     "source": "Traders Union",
     "category": "offer",
@@ -674,11 +650,11 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple offers commission-free options trading on Canadian stocks; Wealthsimple Pro due late November",
-    "summary": "Wealthsimple says it is the first Canadian brokerage to offer commission-free options on Canadian stocks. Its Pro trading platform (Level 2 data, consolidated watchlists) is expected in late November 2026.",
+    "title": "Wealthsimple Pro trading platform and commission-free CAD options",
+    "summary": "Wealthsimple Pro, with Level 2 data and faster execution, launches in late November. Commission-free options on Canadian stocks are already live. Wealthsimple also announced a business credit card with 1% cash back and no FX fees for early 2027.",
     "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
     "source": "Wealth Professional",
-    "category": "offer",
+    "category": "product",
     "date": "2026-11-05",
     "id": "9bccf572331c",
     "lang": "en"
@@ -724,30 +700,6 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple launches AI assistant Penny and 11 other products",
-    "summary": "At Wealthsimple Presents, the company unveiled Penny, an AI assistant that prepares e-transfers, invoice payments and trades but needs client confirmation. ChatGPT and Claude connections are planned for early 2027, along with a rebuilt native mobile app.",
-    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
-    "source": "Fintech.ca",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "8387cca7847a",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
-    "title": "Wealthsimple Pro trading platform due late November",
-    "summary": "Wealthsimple Pro combines positions, watchlists and Level 2 market data in one view and is expected in late November 2026. Wealthsimple says mobile trading is now two steps instead of eight.",
-    "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
-    "source": "Wealth Professional",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "9bccf572331c",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
     "title": "Wealthsimple offers commission-free options on Canadian stocks",
     "summary": "Wealthsimple says it is the first Canadian brokerage to offer commission-free options trading on Canadian stocks, its most-requested trading feature.",
     "url": "https://www.iphoneincanada.ca/2026/11/05/wealthsimple-penny-ai-12-new-features/",
@@ -760,11 +712,11 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple to launch CADD stablecoin with 3.25% annual reward",
-    "summary": "Wealthsimple plans CADD, described as the first Canadian-dollar-backed stablecoin issued by a regulated financial institution. It will be redeemable one-for-one and carry a 3.25% annual reward on holdings.",
+    "title": "Wealthsimple announces CADD, a Canadian-dollar-backed stablecoin, for late November",
+    "summary": "Wealthsimple describes CADD as the first Canadian-dollar-backed stablecoin issued by a regulated financial institution, redeemable one-for-one, with a 3.25% annual reward on holdings. Part of the Wealthsimple Presents announcements.",
     "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
     "source": "Fintech.ca",
-    "category": "offer",
+    "category": "product",
     "date": "2026-11-05",
     "id": "8387cca7847a",
     "lang": "en"
@@ -772,11 +724,11 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple Business credit card: no FX fees, 1% cash back (early 2027)",
-    "summary": "A new business credit card with no foreign exchange fees and 1% cash back on all purchases is planned for early 2027.",
+    "title": "Wealthsimple Business credit card announced: no FX fees and 1% cashback, early 2027",
+    "summary": "The new business card offers no foreign exchange fees and 1% cashback on all purchases. Any business will be able to apply in early 2027.",
     "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
     "source": "Wealth Professional",
-    "category": "offer",
+    "category": "product",
     "date": "2026-11-05",
     "id": "9bccf572331c",
     "lang": "en"
@@ -816,30 +768,6 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "98e092ca25ad",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
-    "title": "Wealthsimple Pro trading platform and commission-free CAD options",
-    "summary": "Wealthsimple Pro, with Level 2 data and faster execution, launches in late November. Commission-free options on Canadian stocks are already live. Wealthsimple also announced a business credit card with 1% cash back and no FX fees for early 2027.",
-    "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
-    "source": "Wealth Professional",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "9bccf572331c",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
-    "title": "Wealthsimple to offer CADD Canadian-dollar stablecoin with 3.25% annual reward",
-    "summary": "Wealthsimple described CADD as the first Canadian-dollar-backed stablecoin issued by a regulated financial institution. It is redeemable one-for-one and carries a 3.25% annual reward on holdings.",
-    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
-    "source": "Fintech.ca",
-    "category": "offer",
-    "date": "2026-11-05",
-    "id": "8387cca7847a",
     "lang": "en"
   },
   {
@@ -905,18 +833,6 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple announces CADD, a Canadian-dollar-backed stablecoin with 3.25% reward",
-    "summary": "Wealthsimple describes CADD as the first Canadian-dollar-backed stablecoin issued by a regulated financial institution, redeemable one-for-one, with a 3.25% annual reward on holdings. Part of the Wealthsimple Presents announcements.",
-    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
-    "source": "Fintech.ca",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "8387cca7847a",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
     "title": "Wealthsimple plans business credit card with no FX fees and 1% cashback, plus rebuilt mobile app",
     "summary": "A business credit card with no foreign exchange fees and 1% cashback on all purchases is planned for early 2027. A rebuilt native iOS and Android app with a customizable home screen is also expected in early 2027.",
     "url": "https://www.moneysense.ca/news/wealthsimple-presents-canada-launches/",
@@ -942,18 +858,6 @@
   {
     "region": "NA",
     "bank": "Wealthsimple",
-    "title": "Wealthsimple launches Penny, an AI assistant for banking and trading",
-    "summary": "Penny can prepare e-transfers, flag duplicate card charges, pay invoices and help with trades and RRSP questions. The client must confirm every action. Wealthsimple also plans secure ChatGPT and Claude connections in early 2027.",
-    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
-    "source": "Fintech.ca",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "8387cca7847a",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
     "title": "Wealthsimple Pay lets clients send up to $100,000 instantly to other Wealthsimple clients",
     "summary": "Announced at Wealthsimple Presents and available now. Wealthsimple contrasts it with the roughly $3,000 cap on many e-Transfers.",
     "url": "https://www.theglobeandmail.com/investing/markets/markets-news/Newsfile/8678752/wealthsimple-announces-ai-assistant-penny-and-11-more-releases-at-wealthsimple-presents-something-good-is-going-to-happen/",
@@ -973,42 +877,6 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "cc08cb92eef3",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
-    "title": "Wealthsimple Business credit card announced: no FX fees and 1% cashback, early 2027",
-    "summary": "The new business card offers no foreign exchange fees and 1% cashback on all purchases. Any business will be able to apply in early 2027.",
-    "url": "https://www.wealthprofessional.ca/news/industry-news/wealthsimple-launches-ai-assistant-penny-in-sweeping-product-push/393960",
-    "source": "Wealth Professional",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "9bccf572331c",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
-    "title": "Wealthsimple announces CADD, a Canadian-dollar-backed stablecoin, for late November",
-    "summary": "Wealthsimple describes CADD as the first CAD-backed stablecoin issued by a regulated financial institution. It launches alongside the Wealthsimple Pro trading suite and perpetual futures in late November.",
-    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
-    "source": "Fintech.ca",
-    "category": "product",
-    "date": "2026-11-05",
-    "id": "8387cca7847a",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Wealthsimple",
-    "title": "Wealthsimple makes options trading on Canadian stocks commission-free",
-    "summary": "Commission-free CAD options are live now. Faster mobile trading also cuts a trade from eight steps and 21 seconds to two steps and four seconds. Wealthsimple Pro, with Level 2 data, arrives in late November.",
-    "url": "https://tradersunion.com/news/companies/show/4117831-wealthsimple-new-features-toronto-event/",
-    "source": "Traders Union",
-    "category": "offer",
-    "date": "2026-11-05",
-    "id": "f11d1831af45",
     "lang": "en"
   },
   {
@@ -1351,18 +1219,6 @@
   },
   {
     "region": "NA",
-    "bank": "RBC",
-    "title": "RBC enhances Cash Back Mastercard portfolio with unlimited 3% categories and $1 redemptions",
-    "summary": "The RBC Cash Back Preferred World Elite Mastercard now earns unlimited 3% on everyday categories such as groceries, dining, gas and streaming. New earn rates took effect Oct 1, and on-demand cash back redemption from $1 starts in December 2026. The date is estimated from the result's age tag.",
-    "url": "https://newswire.ca/news-releases/rbc-enhances-cash-back-mastercard-portfolio-with-unlimited-cash-back-and-on-demand-redemptions-845776623.html",
-    "source": "RBC / CNW",
-    "category": "offer",
-    "date": "2026-11-02",
-    "id": "be152aa3e4fe",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
     "bank": "Scotiabank",
     "title": "Scotiabank Passport Visa Infinite: 35,000 bonus Scene+ points for newcomers",
     "summary": "Scotiabank's StartRight offer applies to new Passport Visa Infinite accounts opened between Nov 2, 2026 and Jan 4, 2027, with minimum spend. Scotiabank markets up to $2,300 in first-year value for newcomers.",
@@ -1534,9 +1390,9 @@
   },
   {
     "region": "NA",
-    "bank": "Koho",
-    "title": "KOHO promo: $40 bonus and up to 6.50% cash back",
-    "summary": "KOHO is listed among the top Canadian bank offers with a $40 bonus and up to 6.50% cash back on purchases. Aggregator source, so verify terms on koho.ca.",
+    "bank": "Neo Financial",
+    "title": "Neo Financial Mastercard: $25 cash bonus and up to 15% cash back at partners",
+    "summary": "New Neo cardholders get a $25 cash bonus, with up to 15% cash back at Neo partner stores and retail locations. Aggregator source, so verify terms on neofinancial.com.",
     "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
     "source": "Savvy New Canadians",
     "category": "offer",
@@ -1549,18 +1405,6 @@
     "bank": "EQ Bank",
     "title": "EQ Bank savings promo: up to 2.75% interest",
     "summary": "EQ Bank is listed among the top Canadian bank offers with interest of up to 2.75%. Aggregator source, so verify terms on eqbank.ca.",
-    "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
-    "source": "Savvy New Canadians",
-    "category": "offer",
-    "date": "2026-10-08",
-    "id": "9fb0a8c87503",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Neo Financial",
-    "title": "Neo Financial Mastercard: $25 cash bonus and up to 15% cash back at partners",
-    "summary": "New Neo cardholders get a $25 cash bonus, with up to 15% cash back at Neo partner stores and retail locations. Aggregator source, so verify terms on neofinancial.com.",
     "url": "https://www.savvynewcanadians.com/bank-account-promo-offers/",
     "source": "Savvy New Canadians",
     "category": "offer",
@@ -1590,18 +1434,6 @@
     "category": "offer",
     "date": "2026-10-01",
     "id": "be152aa3e4fe",
-    "lang": "en"
-  },
-  {
-    "region": "NA",
-    "bank": "Chime",
-    "title": "Chime reported to be acquiring Stride Bank in $590M deal",
-    "summary": "A fintech newsletter reports a $590M Chime deal for Stride Bank, one of Chime's partner banks. Confirm the details with a Chime or Stride primary source before publishing.",
-    "url": "https://www.fintechbrainfood.com/p/nubank-america",
-    "source": "Fintech Brainfood",
-    "category": "service",
-    "date": "2026-09-13",
-    "id": "d4d5a45c3ad8",
     "lang": "en"
   },
   {
