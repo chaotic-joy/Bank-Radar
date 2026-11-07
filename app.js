@@ -78,7 +78,7 @@ function renderNews() {
     if (state.focus === "own" && !isOwn(n)) return false;
     if (state.focus === "competitors" && isOwn(n)) return false;
     if (state.bank !== "all" && (n.bank || "") !== state.bank) return false;
-    if (q && !(`${n.title} ${n.summary} ${n.bank} ${n.source}`.toLowerCase().includes(q))) return false;
+    if (q && !(`${n.title} ${n.titleOriginal || ""} ${n.summary} ${n.bank} ${n.source}`.toLowerCase().includes(q))) return false;
     return true;
   });
   $("#news").innerHTML = items.length
@@ -86,8 +86,12 @@ function renderNews() {
     : `<div class="empty">No items match these filters.</div>`;
 }
 
+// "pt" -> "Portuguese"; falls back to the code where Intl.DisplayNames isn't available
+const langName = (code) => { try { return new Intl.DisplayNames(["en"], { type: "language" }).of(code); } catch { return code; } };
+
 function card(n) {
   const cat = n.category || "news";
+  const translated = n.lang && n.lang !== "en" && n.titleOriginal;
   return `<a class="card${isOwn(n) ? " own" : ""}" href="${esc(n.url)}" target="_blank" rel="noopener">
     <div class="row1">
       <span class="tag ${cat}">${cat === "news" ? "News" : cat}</span>
@@ -96,7 +100,7 @@ function card(n) {
     </div>
     <h3>${esc(n.title)}</h3>
     ${n.summary ? `<p>${esc(n.summary)}</p>` : ""}
-    <div class="src">${esc(n.source || "")}${n.region ? " · " + (n.region === "SA" ? "S. America" : "N. America") : ""}</div>
+    <div class="src">${esc(n.source || "")}${n.region ? " · " + (n.region === "SA" ? "S. America" : "N. America") : ""}${translated ? ` · <span title="Original: ${esc(n.titleOriginal)}">Translated from ${esc(langName(n.lang))}</span>` : ""}</div>
   </a>`;
 }
 

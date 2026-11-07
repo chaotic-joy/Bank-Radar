@@ -57,23 +57,28 @@ function extractJson(text) {
 // story arriving from Google News and the AI discovery pass), newest first,
 // drop anything older than maxAgeDays, cap to limit. On a collision keep the
 // best of each field: direct source URL, a real category, the longer summary.
+// Translated items are keyed by their ORIGINAL title, so the same story arriving
+// again untranslated from its RSS feed merges into it and keeps the English text.
 const isDirect = (u) => u && !/news\.google\./.test(u);
 function mergeNews(existing, incoming, { maxAgeDays, limit }) {
   const byKey = new Map();
   for (const it of [...existing, ...incoming]) {
     if (!it.title || !it.date) continue;
     if (daysAgo(it.date) > maxAgeDays) continue;
-    const key = normTitle(cleanTitle(it.title)).slice(0, 80);
+    const key = normTitle(cleanTitle(it.titleOriginal || it.title)).slice(0, 80);
     if (!key) continue;
     const prev = byKey.get(key);
+    const keepXlat = prev?.lang && !it.lang; // already translated; don't let a raw re-fetch undo it
     const merged = prev
       ? {
           ...prev, ...it,
           category: it.category !== "news" ? it.category : prev.category,
           url: isDirect(it.url) ? it.url : (isDirect(prev.url) ? prev.url : (it.url || prev.url)),
-          summary: (it.summary || "").length >= (prev.summary || "").length ? it.summary : prev.summary,
+          summary: keepXlat ? prev.summary
+            : (it.summary || "").length >= (prev.summary || "").length ? it.summary : prev.summary,
           bank: it.bank || prev.bank,
           region: it.region || prev.region,
+          ...(keepXlat && { title: prev.title, titleOriginal: prev.titleOriginal, lang: prev.lang }),
         }
       : { ...it };
     merged.id = idFor(merged);
@@ -82,6 +87,22 @@ function mergeNews(existing, incoming, { maxAgeDays, limit }) {
   return [...byKey.values()]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, limit);
+}
+
+// Apply one translation result to an item. Always records the language (so the
+// item is never sent again); for non-English items swaps in the English title
+// and summary and keeps the original title for search and dedupe.
+function applyTranslation(it, r) {
+  const lang = String(r?.lang || "").toLowerCase().slice(0, 2);
+  if (!lang) return it;
+  if (lang === "en" || !r.title_en) return { ...it, lang };
+  return {
+    ...it,
+    lang,
+    titleOriginal: it.titleOriginal || it.title,
+    title: r.title_en.trim(),
+    summary: r.summary_en ? r.summary_en.trim() : it.summary,
+  };
 }
 
 function mergeEvents(existing, incoming) {
@@ -187,6 +208,7 @@ async function classify(client, items, cfg) {
     const prompt =
       `Classify these banking headlines for a Simplii Financial product-team dashboard, via record_verdicts.\n` +
       `Relevant = a RETAIL/consumer bank or neobank in the Americas doing one of: ${cfg.topics.join("; ")}.\n` +
+      `Drop banks based outside North/South America (e.g. African, European, Asian banks), even when a fintech outlet covers them.\n` +
       `Banks of interest (not exhaustive): ${cfg.banks.join(", ")}.\n\n` +
       `One verdict per item. category: "product" (feature/platform/app launch), "offer" (rate/discount/bonus/promo), ` +
       `"service" (new service, fee change, access/eligibility), or "drop" for anything not about a specific bank's ` +
@@ -254,6 +276,74 @@ async function discover(client, cfg) {
     console.warn(`  discovery skipped: ${err.message}`);
     return empty;
   }
+}
+
+// Translate non-English items to English (LatAm feeds are Portuguese/Spanish).
+// Runs on the merged board and only touches items with no `lang` yet: new
+// items each day, plus a one-time backfill of anything from before this existed.
+// Best-effort: a failed batch leaves those items untouched for the next run.
+const XLAT_TOOL = {
+  name: "record_translations",
+  description: "Record the language of each item and, if it isn't English, an English translation.",
+  input_schema: {
+    type: "object",
+    properties: {
+      items: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            i: { type: "integer", description: "the item's index" },
+            lang: { type: "string", description: "ISO 639-1 code of the item's language, e.g. en, pt, es" },
+            title_en: { type: "string", description: "English translation of the title; only if lang is not en" },
+            summary_en: { type: "string", description: "English translation of the summary; only if lang is not en and a summary was given" },
+          },
+          required: ["i", "lang"],
+        },
+      },
+    },
+    required: ["items"],
+  },
+};
+
+async function translate(client, items) {
+  const todo = items.map((it, idx) => ({ it, idx })).filter(({ it }) => !it.lang);
+  if (!client || todo.length === 0) return items;
+  const anthropic = await client;
+  const out = [...items];
+  const BATCH = 25;
+  let translated = 0, failed = 0;
+  for (let start = 0; start < todo.length; start += BATCH) {
+    const slice = todo.slice(start, start + BATCH);
+    const batchInput = slice.map(({ it }, i) => ({ i, title: it.title, summary: it.summary || "" }));
+    const prompt =
+      `These are banking news headlines (with summaries) for an English-speaking product team, via record_translations.\n` +
+      `For each item give its language as an ISO 639-1 code. If it is NOT English, also translate the title and the ` +
+      `summary into natural, concise English. Keep bank, product, program and brand names exactly as written ` +
+      `(e.g. Nubank, Itaú, Pix, Nu Smart Invest, Mercado Pago, Personnalité). Translate only; don't add or drop facts.\n\n` +
+      `ITEMS:\n${JSON.stringify(batchInput)}`;
+    try {
+      const resp = await anthropic.messages.create({
+        model: MODEL_FAST,
+        max_tokens: 6000,
+        tools: [XLAT_TOOL],
+        tool_choice: { type: "tool", name: "record_translations" },
+        messages: [{ role: "user", content: prompt }],
+      });
+      const tu = resp.content.find((c) => c.type === "tool_use");
+      for (const r of tu?.input?.items || []) {
+        const target = slice[r.i];
+        if (!target) continue;
+        out[target.idx] = applyTranslation(target.it, r);
+        if (out[target.idx].titleOriginal && !target.it.titleOriginal) translated++;
+      }
+    } catch (err) {
+      failed++;
+      console.warn(`  translate batch @${start} skipped: ${err.message}`);
+    }
+  }
+  console.log(`  languages tagged for ${todo.length} items; translated ${translated}${failed ? ` (${failed} batches failed)` : ""}`);
+  return out;
 }
 
 // Daily brief: themes + highlights worth reacting to, from the final board.
@@ -325,11 +415,14 @@ async function main() {
   const existingNews = await loadJson("news.json", []);
   const existingEvents = await loadJson("events.json", []);
 
-  const news = mergeNews(existingNews, [...classified, ...found.news], {
+  const merged = mergeNews(existingNews, [...classified, ...found.news], {
     maxAgeDays: cfg.maxAgeDays ?? 120,
     limit: cfg.maxNewsItems ?? 150,
   }).filter((n) => REAL_CATS.includes(n.category)); // board shows only categorized items
   const events = mergeEvents(existingEvents, found.events);
+
+  console.log("Translating…");
+  const news = await translate(client, merged);
 
   console.log("Writing brief…");
   const brief = await summarize(client, news);
@@ -376,6 +469,25 @@ function selftest() {
     { title: "b", url: "b", date: "2026-11-01", category: "news" },
   ], { maxAgeDays: 999999, limit: 10 });
   assert(sorted[0].title === "b", "sorts newest first");
+
+  // translation: English items just get tagged; others swap in English and keep the original
+  const en = applyTranslation({ title: "BMO launches AI agent", summary: "s" }, { i: 0, lang: "en" });
+  assert(en.lang === "en" && en.title === "BMO launches AI agent" && !en.titleOriginal, "english item only tagged");
+  const pt = applyTranslation(
+    { title: "Itaú lança cartão World Legend - Valor", summary: "O banco lançou um cartão" },
+    { i: 0, lang: "pt", title_en: "Itaú launches World Legend card - Valor", summary_en: "The bank launched a card" });
+  assert(pt.lang === "pt" && pt.title.startsWith("Itaú launches") && pt.titleOriginal.startsWith("Itaú lança"), "non-english item translated, original kept");
+  assert(pt.summary === "The bank launched a card", "summary translated");
+  assert(applyTranslation({ title: "x" }, { i: 0 }).lang === undefined, "no lang in result leaves item untouched");
+
+  // the same story re-fetched untranslated from RSS merges into the translated one and keeps the English
+  const again = mergeNews(
+    [{ ...pt, url: "https://news.google.com/rss/articles/itau", date: "2026-11-05", category: "product" }],
+    [{ title: "Itaú lança cartão World Legend - Valor", summary: "O banco lançou um cartão de altíssima renda", url: "https://news.google.com/rss/articles/itau", date: "2026-11-05", category: "product" }],
+    { maxAgeDays: 999999, limit: 10 });
+  assert(again.length === 1, "translated item and its untranslated re-fetch dedupe");
+  assert(again[0].title.startsWith("Itaú launches") && again[0].lang === "pt", "re-fetch doesn't overwrite the English title");
+  assert(again[0].summary === "The bank launched a card", "re-fetch doesn't overwrite the English summary (even if longer)");
 
   // events: dedupe same name+month, keep chronological
   const evs = mergeEvents([], [
