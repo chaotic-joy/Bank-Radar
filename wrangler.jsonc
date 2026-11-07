@@ -7,5 +7,7 @@
   },
   "assets": {
     "directory": "."
-  }
+  },
+  // required by `wrangler preview`, which Workers Builds runs for non-main branches
+  "previews": {}
 }
