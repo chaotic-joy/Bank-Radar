@@ -86,7 +86,7 @@ body {
 .money-btn {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   background: none; border: 0; padding: 6px; cursor: pointer; line-height: 1;
-  font-size: 22px; border-radius: 50%; transition: transform .12s ease;
+  font-size: 32px; border-radius: 50%; transition: transform .12s ease;
 }
 .money-btn:hover { transform: translate(-50%, -50%) scale(1.18); }
 .money-btn:active { transform: translate(-50%, -50%) scale(.9); }
