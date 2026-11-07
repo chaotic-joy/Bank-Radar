@@ -14,13 +14,13 @@
       } catch (e) { document.documentElement.setAttribute("data-theme", "dark"); }
     })();
   </script>
-  <title>Bank Radar · Bank/Fintech News + Events</title>
+  <title>Bank Radar · Bank, Fintech &amp; Exchange News + Events</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0f141c" />
-  <meta name="description" content="Bank &amp; fintech product news &amp; events from across the Americas, with a daily AI brief." />
+  <meta name="description" content="Bank, fintech &amp; exchange product news &amp; events from across the Americas, with a daily AI brief." />
   <link rel="canonical" href="https://bank-radar.raykhan.me/" />
   <!-- link previews (Slack, LinkedIn, iMessage, X, etc.); image source: docs/og-image.html -->
   <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
   <meta property="og:locale" content="en_CA" />
   <meta property="og:url" content="https://bank-radar.raykhan.me/" />
   <meta property="og:title" content="Bank Radar" />
-  <meta property="og:description" content="Bank &amp; fintech product news &amp; events from across the Americas, with a daily AI brief." />
+  <meta property="og:description" content="Bank, fintech &amp; exchange product news &amp; events from across the Americas, with a daily AI brief." />
   <meta property="og:image" content="https://bank-radar.raykhan.me/og-image.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
@@ -36,7 +36,7 @@
   <meta property="og:image:alt" content="Bank Radar: bank and fintech product news and events from across the Americas, with a radar graphic." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bank Radar" />
-  <meta name="twitter:description" content="Bank &amp; fintech product news &amp; events from across the Americas, with a daily AI brief." />
+  <meta name="twitter:description" content="Bank, fintech &amp; exchange product news &amp; events from across the Americas, with a daily AI brief." />
   <meta name="twitter:image" content="https://bank-radar.raykhan.me/og-image.jpg" />
   <meta name="twitter:image:alt" content="Bank Radar: bank and fintech product news and events from across the Americas, with a radar graphic." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +65,7 @@
       <span class="dot"></span>
       <div>
         <h1>Bank Radar</h1>
-        <p class="sub">Bank &amp; fintech product news &amp; events from across the Americas · Updated daily</p>
+        <p class="sub">Bank, fintech &amp; exchange product news &amp; events from across the Americas · Updated daily</p>
       </div>
     </div>
     <button id="moneyBtn" class="money-btn" type="button" aria-label="Make it rain money">💰</button>
@@ -85,7 +85,7 @@
 
       <div class="col-head">
         <h2>News stream</h2>
-        <input id="search" type="search" placeholder="Search banks, features, offers…" />
+        <input id="search" type="search" placeholder="Search companies, features, offers…" />
       </div>
 
       <div id="controls">
@@ -95,8 +95,8 @@
           <button class="chip" data-group="cat" data-value="offer">Offers</button>
           <button class="chip" data-group="cat" data-value="service">Service updates</button>
           <span class="spacer"></span>
-          <select id="bankFilter" class="select" aria-label="Filter by bank">
-            <option value="all">All banks</option>
+          <select id="bankFilter" class="select" aria-label="Filter by company">
+            <option value="all">All companies</option>
           </select>
         </div>
         <div class="filters subfilters">
@@ -107,6 +107,12 @@
           <button class="chip active" data-group="region" data-value="all">All regions</button>
           <button class="chip" data-group="region" data-value="NA">N. America</button>
           <button class="chip" data-group="region" data-value="SA">S. America</button>
+        </div>
+        <div class="filters subfilters">
+          <button class="chip active" data-group="sector" data-value="all">All sectors</button>
+          <button class="chip" data-group="sector" data-value="bank">Banks</button>
+          <button class="chip" data-group="sector" data-value="fintech">Fintech</button>
+          <button class="chip" data-group="sector" data-value="exchange">Exchanges &amp; trading</button>
         </div>
       </div>
 

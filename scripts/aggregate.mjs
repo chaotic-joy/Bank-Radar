@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Aggregates bank product news + events into data/news.json and data/events.json.
+// Aggregates bank, fintech and exchange product news + events into data/news.json and data/events.json.
 //
 // Pipeline: RSS feeds (safety net, never misses what has a feed)
 //   -> Claude classifies each item (category + region + relevance)   [needs ANTHROPIC_API_KEY]
@@ -19,6 +19,7 @@ const DATA = join(ROOT, "data");
 const MODEL_FAST = "claude-haiku-5-5";     // cheap classification
 const MODEL_SMART = "claude-sonnet-5-5";   // web-search discovery
 const CATEGORIES = ["product", "offer", "service", "news"];
+const SECTORS = ["bank", "fintech", "exchange"]; // exchange = stock/crypto/derivatives exchanges + trading platforms
 
 // --- pure helpers (covered by --selftest) ----------------------------------
 
@@ -71,6 +72,7 @@ function combine(prev, it) {
     summary: keepXlat ? prev.summary
       : (it.summary || "").length >= (prev.summary || "").length ? it.summary : prev.summary,
     bank: it.bank || prev.bank,
+    sector: it.sector || prev.sector,
     region: it.region || prev.region,
     ...(keepXlat && { title: prev.title, titleOriginal: prev.titleOriginal, lang: prev.lang }),
   };
@@ -136,6 +138,20 @@ function applyTranslation(it, r) {
     summary: r.summary_en ? r.summary_en.trim() : it.summary,
   };
 }
+
+// Sector for a company name from the feeds.json lists, or null if it isn't listed.
+function sectorOf(name, cfg) {
+  const n = (name || "").toLowerCase();
+  if (!n) return null;
+  for (const [sector, names] of Object.entries(cfg.companies || {}))
+    if (names.some((c) => c.toLowerCase() === n)) return sector;
+  return null;
+}
+
+// Make sure every item has a valid sector: keep the model's tag, else look the company up,
+// else "bank" (everything on the board before sectors existed was bank news).
+const withSector = (it, cfg) =>
+  SECTORS.includes(it.sector) ? it : { ...it, sector: sectorOf(it.bank, cfg) || "bank" };
 
 function mergeEvents(existing, incoming) {
   const byKey = new Map();
@@ -215,7 +231,8 @@ const VERDICT_TOOL = {
             i: { type: "integer", description: "the item's index" },
             category: { type: "string", enum: ["product", "offer", "service", "drop"] },
             region: { type: "string", enum: ["NA", "SA"] },
-            bank: { type: "string", description: "short bank name, or empty" },
+            bank: { type: "string", description: "short company name (bank, fintech or exchange), or empty" },
+            sector: { type: "string", enum: SECTORS, description: "bank (incl. its digital brands), fintech (neobank, payments, wallet, lending, investing app), or exchange (stock/crypto/derivatives exchange or trading platform/brokerage)" },
           },
           required: ["i", "category"],
         },
@@ -238,14 +255,20 @@ async function classify(client, items, cfg) {
     const slice = items.slice(start, start + BATCH);
     const batchInput = slice.map((it, i) => ({ i, title: it.title, summary: (it.summary || "").slice(0, 180), source: it.source }));
     const prompt =
-      `Classify these banking headlines for a Simplii Financial product-team dashboard, via record_verdicts.\n` +
-      `Relevant = a RETAIL/consumer bank or neobank in the Americas doing one of: ${cfg.topics.join("; ")}.\n` +
-      `Drop banks based outside North/South America (e.g. African, European, Asian banks), even when a fintech outlet covers them.\n` +
-      `Banks of interest (not exhaustive): ${cfg.banks.join(", ")}.\n\n` +
-      `One verdict per item. category: "product" (feature/platform/app launch), "offer" (rate/discount/bonus/promo), ` +
-      `"service" (new service, fee change, access/eligibility), or "drop" for anything not about a specific bank's ` +
-      `product/service/offer (generic macro news, regulation think-pieces, crypto prices, sports/unrelated noise).\n` +
-      `region: "NA" or "SA". bank: short name or "".\n\nITEMS:\n${JSON.stringify(batchInput)}`;
+      `Classify these financial-services headlines for a Simplii Financial product-team dashboard, via record_verdicts.\n` +
+      `Relevant = a company in the Americas that is a retail/consumer BANK, a FINTECH (neobank, payments, wallet, lending, ` +
+      `investing app), or a trading EXCHANGE / trading platform (stock, crypto, derivatives exchange or brokerage) doing one of: ` +
+      `${cfg.topics.join("; ")}.\n` +
+      `Drop companies based outside North/South America (e.g. African, European, Asian firms), even when a fintech outlet covers them.\n` +
+      `Banks of interest (not exhaustive): ${cfg.companies.bank.join(", ")}.\n` +
+      `Fintechs of interest (not exhaustive): ${cfg.companies.fintech.join(", ")}.\n` +
+      `Exchanges and trading platforms of interest (not exhaustive): ${cfg.companies.exchange.join(", ")}.\n\n` +
+      `One verdict per item. category: "product" (feature/platform/app launch, new trading product or asset listing), ` +
+      `"offer" (rate/discount/bonus/promo), "service" (new service, fee change, access/eligibility, trading hours or market access), ` +
+      `or "drop" for anything not about a specific company's product/service/offer (generic macro news, market moves, ` +
+      `stock or crypto price action, earnings results, regulation think-pieces, sports/unrelated noise).\n` +
+      `region: "NA" or "SA". bank: the company's short name or "". sector: "bank", "fintech" or "exchange".\n\n` +
+      `ITEMS:\n${JSON.stringify(batchInput)}`;
     try {
       const resp = await anthropic.messages.create({
         model: MODEL_FAST,
@@ -258,7 +281,7 @@ async function classify(client, items, cfg) {
       for (const v of tu?.input?.verdicts || []) {
         const it = slice[v.i];
         if (!it || !REAL_CATS.includes(v.category)) continue;
-        kept.push({ ...it, category: v.category, region: v.region || it.region, bank: v.bank || it.bank });
+        kept.push({ ...it, category: v.category, region: v.region || it.region, bank: v.bank || it.bank, sector: v.sector });
       }
     } catch (err) {
       failed++;
@@ -277,17 +300,21 @@ async function discover(client, cfg) {
   const today = new Date().toISOString().slice(0, 10);
   const prompt =
     `Today is ${today}. Use web search to compile, for a Simplii Financial product-team dashboard, ` +
-    `news and events about RETAIL banks and neobanks in the Americas. Banks of interest: ${cfg.banks.join(", ")}.\n\n` +
+    `news and events about companies in the Americas in three sectors:\n` +
+    `- "bank": retail banks and their digital brands. Of interest: ${cfg.companies.bank.join(", ")}.\n` +
+    `- "fintech": neobanks, payments, wallets, lending and investing apps. Of interest: ${cfg.companies.fintech.join(", ")}.\n` +
+    `- "exchange": stock, crypto and derivatives exchanges and trading platforms. Of interest: ${cfg.companies.exchange.join(", ")}.\n` +
+    `Cover all three sectors, not just banks.\n\n` +
     `Find items from the LAST 60 DAYS in three buckets, plus upcoming events:\n` +
-    `A) PRODUCT news — a bank launching a feature, platform update, or app capability (category "product").\n` +
+    `A) PRODUCT news — a company launching a feature, platform update, app capability, new trading product or asset listing (category "product").\n` +
     `B) OFFERS — welcome bonuses, savings/GIC rate promos, credit-card offers, discounts (category "offer").\n` +
-    `C) SERVICE news — new services, fee changes, access/eligibility changes (category "service").\n` +
-    `D) EVENTS — recent and UPCOMING banking/fintech conferences, keynotes, investor days, earnings calls in ` +
-    `North AND South America (Money20/20, Finovate, bank investor days, Wealthsimple keynotes, LatAm fintech events).\n\n` +
-    `Aim for 15-25 news items and 8-15 events. Only include items with a REAL source URL and a concrete date; ` +
-    `prefer primary sources (the bank's own newsroom). Set region "NA" or "SA".\n\n` +
+    `C) SERVICE news — new services, fee changes, access/eligibility changes, trading-hours or market-access changes (category "service").\n` +
+    `D) EVENTS — recent and UPCOMING banking/fintech/trading conferences, keynotes, investor days, earnings calls in ` +
+    `North AND South America (Money20/20, Finovate, Consensus, bank and exchange investor days, Wealthsimple keynotes, LatAm fintech events).\n\n` +
+    `Aim for 20-30 news items and 8-15 events. Only include items with a REAL source URL and a concrete date; ` +
+    `prefer primary sources (the company's own newsroom). Set region "NA" or "SA" and sector "bank", "fintech" or "exchange".\n\n` +
     `Output your final answer as a SINGLE JSON object in a \`\`\`json fenced code block, nothing after it:\n` +
-    `\`\`\`json\n{"news":[{"title":"","summary":"","url":"","source":"","bank":"","category":"product|offer|service","region":"NA","date":"YYYY-MM-DD"}],` +
+    `\`\`\`json\n{"news":[{"title":"","summary":"","url":"","source":"","bank":"company name","sector":"bank|fintech|exchange","category":"product|offer|service","region":"NA","date":"YYYY-MM-DD"}],` +
     `"events":[{"name":"","type":"conference|keynote|investor-call|earnings","organizer":"","url":"","location":"","region":"NA","date":"YYYY-MM-DD","endDate":"YYYY-MM-DD"}]}\n\`\`\``;
   try {
     const resp = await anthropic.messages.create({
@@ -349,7 +376,7 @@ async function translate(client, items) {
     const slice = todo.slice(start, start + BATCH);
     const batchInput = slice.map(({ it }, i) => ({ i, title: it.title, summary: it.summary || "" }));
     const prompt =
-      `These are banking news headlines (with summaries) for an English-speaking product team, via record_translations.\n` +
+      `These are bank, fintech and exchange news headlines (with summaries) for an English-speaking product team, via record_translations.\n` +
       `For each item give its language as an ISO 639-1 code. If it is NOT English, also translate the title and the ` +
       `summary into natural, concise English. Keep bank, product, program and brand names exactly as written ` +
       `(e.g. Nubank, Itaú, Pix, Nu Smart Invest, Mercado Pago, Personnalité). Translate only; don't add or drop facts.\n\n` +
@@ -386,15 +413,16 @@ async function summarize(client, news) {
   const recent = [...news]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 60)
-    .map((n) => ({ title: n.title, bank: n.bank, category: n.category, region: n.region, date: n.date, summary: (n.summary || "").slice(0, 200) }));
+    .map((n) => ({ title: n.title, company: n.bank, sector: n.sector, category: n.category, region: n.region, date: n.date, summary: (n.summary || "").slice(0, 200) }));
   const prompt =
-    `You are briefing the Simplii Financial product team on competitor bank news. ` +
-    `Below is today's tracked news across banks in the Americas.\n\n` +
+    `You are briefing the Simplii Financial product team on competitor news. ` +
+    `Below is today's tracked news across banks, fintechs and trading exchanges in the Americas.\n\n` +
     `Write a sharp, skimmable brief:\n` +
     `- "tldr": 1-2 sentences capturing the state of play today.\n` +
-    `- "themes": 3-5 short phrases naming common threads across the items (e.g. "AI assistants in mobile apps", "savings-rate competition").\n` +
+    `- "themes": 3-5 short phrases naming common threads across the items (e.g. "AI assistants in mobile apps", "savings-rate competition", "24-hour trading").\n` +
     `- "highlights": 2-4 items genuinely worth reacting to, each {"headline": the development, "why": one line on why it matters to Simplii's product team}. ` +
-    `Prefer moves by direct competitors (CIBC, RBC, TD, Scotiabank, BMO, Wealthsimple, EQ Bank, Tangerine, Chime) or clear category shifts.\n\n` +
+    `Prefer moves by direct competitors (CIBC, RBC, TD, Scotiabank, BMO, Wealthsimple, EQ Bank, Tangerine, Chime), ` +
+    `fintech or exchange moves that set new customer expectations, or clear category shifts.\n\n` +
     `Base it ONLY on the items below; do not invent. Output a SINGLE JSON object in a \`\`\`json fence:\n` +
     `\`\`\`json\n{"tldr":"","themes":["",""],"highlights":[{"headline":"","why":""}]}\n\`\`\`\n\n` +
     `ITEMS:\n${JSON.stringify(recent)}`;
@@ -450,7 +478,8 @@ async function main() {
   const merged = mergeNews(existingNews, [...classified, ...found.news], {
     maxAgeDays: cfg.maxAgeDays ?? 120,
     limit: cfg.maxNewsItems ?? 150,
-  }).filter((n) => REAL_CATS.includes(n.category)); // board shows only categorized items
+  }).filter((n) => REAL_CATS.includes(n.category)) // board shows only categorized items
+    .map((n) => withSector(n, cfg));
   const events = mergeEvents(existingEvents, found.events);
 
   console.log("Translating…");
@@ -536,6 +565,13 @@ function selftest() {
     { title: "Wealthsimple to launch CADD stablecoin soon", url: "https://b.example", date: "2026-11-05", category: "product", bank: "Wealthsimple" },
   ], { maxAgeDays: 999999, limit: 10 });
   assert(otherUrl.length === 2, "similar headlines at different URLs are not merged by the URL pass");
+
+  // sector: model's tag wins, else the feeds.json lists, else "bank" (pre-sector items)
+  const scfg = { companies: { bank: ["RBC"], fintech: ["Wealthsimple"], exchange: ["Coinbase"] } };
+  assert(withSector({ bank: "Coinbase", sector: "fintech" }, scfg).sector === "fintech", "keeps a valid model sector");
+  assert(withSector({ bank: "coinbase" }, scfg).sector === "exchange", "looks sector up by company name, case-insensitive");
+  assert(withSector({ bank: "Wealthsimple", sector: "bogus" }, scfg).sector === "fintech", "replaces an invalid sector");
+  assert(withSector({ bank: "Unknown Co" }, scfg).sector === "bank", "unlisted company defaults to bank");
 
   // events: dedupe same name+month, keep chronological
   const evs = mergeEvents([], [

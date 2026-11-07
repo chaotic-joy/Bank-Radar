@@ -1,11 +1,13 @@
 // Static dashboard: reads data/*.json, renders news (filterable) + events.
-const state = { news: [], events: [], cat: "all", region: "all", focus: "all", bank: "all", q: "", evType: "all" };
+const state = { news: [], events: [], cat: "all", region: "all", focus: "all", sector: "all", bank: "all", q: "", evType: "all" };
 
 // event-type chip labels; unknown types fall back to a capitalized version
 const EV_LABELS = { conference: "Conferences", keynote: "Keynotes", earnings: "Earnings calls", "investor-call": "Investor calls" };
 const evLabel = (t) => EV_LABELS[t] || (t ? t[0].toUpperCase() + t.slice(1) : "Other");
 
 // own brand = Simplii (Ray's team); match on bank field or title
+const SECTOR_LABELS = { bank: "Bank", fintech: "Fintech", exchange: "Exchange" };
+
 const isOwn = (n) => /simplii/i.test(`${n.bank || ""} ${n.title || ""}`);
 
 const $ = (s) => document.querySelector(s);
@@ -61,14 +63,20 @@ function renderBrief(b) {
     ${highlights ? `<ul class="brief-highlights">${highlights}</ul>` : ""}`;
 }
 
-// fill the bank dropdown from banks present in the data (Simplii pinned first)
+// fill the company dropdown from companies present in the data (Simplii pinned first),
+// limited to the selected sector so the list stays short
 function populateBanks() {
-  const banks = [...new Set(state.news.map((n) => n.bank).filter(Boolean))];
+  const banks = [...new Set(state.news.filter(inSector).map((n) => n.bank).filter(Boolean))];
   banks.sort((a, b) => (/simplii/i.test(b) ? 1 : 0) - (/simplii/i.test(a) ? 1 : 0) || a.localeCompare(b));
   $("#bankFilter").innerHTML =
-    `<option value="all">All banks</option>` +
-    banks.map((b) => `<option value="${esc(b)}">${esc(b)}</option>`).join("");
+    `<option value="all">All companies</option>` +
+    banks.map((b) => `<option value="${esc(b)}"${b === state.bank ? " selected" : ""}>${esc(b)}</option>`).join("");
+  if (!banks.includes(state.bank)) state.bank = "all";
 }
+
+// items without a sector predate it and were all bank news
+const sectorOf = (n) => n.sector || "bank";
+const inSector = (n) => state.sector === "all" || sectorOf(n) === state.sector;
 
 function renderNews() {
   const q = state.q.toLowerCase();
@@ -77,6 +85,7 @@ function renderNews() {
     if (state.region !== "all" && n.region !== state.region) return false;
     if (state.focus === "own" && !isOwn(n)) return false;
     if (state.focus === "competitors" && isOwn(n)) return false;
+    if (!inSector(n)) return false;
     if (state.bank !== "all" && (n.bank || "") !== state.bank) return false;
     if (q && !(`${n.title} ${n.titleOriginal || ""} ${n.summary} ${n.bank} ${n.source}`.toLowerCase().includes(q))) return false;
     return true;
@@ -100,7 +109,7 @@ function card(n) {
     </div>
     <h3>${esc(n.title)}</h3>
     ${n.summary ? `<p>${esc(n.summary)}</p>` : ""}
-    <div class="src">${esc(n.source || "")}${n.region ? " · " + (n.region === "SA" ? "S. America" : "N. America") : ""}${translated ? ` · <span title="Original: ${esc(n.titleOriginal)}">Translated from ${esc(langName(n.lang))}</span>` : ""}</div>
+    <div class="src">${esc(SECTOR_LABELS[sectorOf(n)] || "")} · ${esc(n.source || "")}${n.region ? " · " + (n.region === "SA" ? "S. America" : "N. America") : ""}${translated ? ` · <span title="Original: ${esc(n.titleOriginal)}">Translated from ${esc(langName(n.lang))}</span>` : ""}</div>
   </a>`;
 }
 
@@ -154,6 +163,7 @@ $("#controls").addEventListener("click", (ev) => {
   btn.parentElement.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) => c.classList.remove("active"));
   btn.classList.add("active");
   state[group] = btn.dataset.value;
+  if (group === "sector") populateBanks();
   renderNews();
 });
 // event-type chips (same data-group/data-value pattern, scoped to the events column)

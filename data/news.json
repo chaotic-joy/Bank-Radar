@@ -9,7 +9,8 @@
     "bank": "BMO",
     "region": "NA",
     "id": "72bd5f5f001c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Chase Marriott Bonvoy Boundless Card: Massive 200K welcome offer - Frequent Miler",
@@ -21,7 +22,8 @@
     "bank": "Chase",
     "region": "NA",
     "id": "0798902b6662",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Nubank Pauses Crypto Withdrawals and Deposits, Points to External Verification Provider - Disruption Banking",
@@ -33,7 +35,8 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "24c287af8b4f",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Nubank Temporarily Suspends Crypto Deposits and Withdrawals After External Provider Failure - BigGo Finance",
@@ -45,7 +48,8 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "16fe688413ed",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Itaú launches World Legend Exclusive card for ultra-high-income clients - Valor Investe",
@@ -58,7 +62,8 @@
     "region": "SA",
     "id": "2820497422bd",
     "lang": "pt",
-    "titleOriginal": "Itaú lança cartão World Legend Exclusive para altíssima renda - Valor Investe"
+    "titleOriginal": "Itaú lança cartão World Legend Exclusive para altíssima renda - Valor Investe",
+    "sector": "bank"
   },
   {
     "title": "Itaú announces World Legend Exclusive Mastercard with up to 8 points per dollar and complimentary flight - Passageiro de Primeira",
@@ -71,7 +76,8 @@
     "region": "SA",
     "id": "ed858869e13c",
     "lang": "pt",
-    "titleOriginal": "Itaú anuncia cartão World Legend Exclusive Mastercard com até 8 pontos por dólar e passagem cortesia - Passageiro de Primeira"
+    "titleOriginal": "Itaú anuncia cartão World Legend Exclusive Mastercard com até 8 pontos por dólar e passagem cortesia - Passageiro de Primeira",
+    "sector": "bank"
   },
   {
     "title": "Itaú launches World Legend Exclusive card with free flights and up to 8 points per dollar - Melhores Cartões",
@@ -84,7 +90,8 @@
     "region": "SA",
     "id": "9a597399706b",
     "lang": "pt",
-    "titleOriginal": "Itaú lança o cartão World Legend Exclusive com passagens aéreas grátis e até 8 pontos por dólar - Melhores Cartões"
+    "titleOriginal": "Itaú lança o cartão World Legend Exclusive com passagens aéreas grátis e até 8 pontos por dólar - Melhores Cartões",
+    "sector": "bank"
   },
   {
     "title": "PrefCG and Banco do Brasil form partnership with urban mobility app - Diário MS News",
@@ -97,7 +104,8 @@
     "region": "SA",
     "id": "50c59f37050e",
     "lang": "pt",
-    "titleOriginal": "PrefCG e Banco do Brasil firmam parceria com App de mobilidade urbana - Diário MS News"
+    "titleOriginal": "PrefCG e Banco do Brasil firmam parceria com App de mobilidade urbana - Diário MS News",
+    "sector": "bank"
   },
   {
     "title": "8 points per dollar, extra flight and up to 20 companions in VIP lounges: what the Itaú R$12,000 card offers - Seu Dinheiro",
@@ -110,7 +118,8 @@
     "region": "SA",
     "id": "bf210402f267",
     "lang": "pt",
-    "titleOriginal": "8 pontos por dólar, passagem aérea extra e até 20 acompanhantes nas salas VIP: o que oferece o cartão de R$ 12 mil do Itaú - Seu Dinheiro"
+    "titleOriginal": "8 pontos por dólar, passagem aérea extra e até 20 acompanhantes nas salas VIP: o que oferece o cartão de R$ 12 mil do Itaú - Seu Dinheiro",
+    "sector": "bank"
   },
   {
     "title": "Mercado Pago restricts cryptocurrency transfers after external incident - Mercado&Consumo",
@@ -123,7 +132,8 @@
     "region": "SA",
     "id": "e984d19229b7",
     "lang": "pt",
-    "titleOriginal": "Mercado Pago restringe transferências de criptomoedas após incidente externo - Mercado&Consumo"
+    "titleOriginal": "Mercado Pago restringe transferências de criptomoedas após incidente externo - Mercado&Consumo",
+    "sector": "fintech"
   },
   {
     "title": "Nubank (ROXO34) freezes crypto withdrawals and customers can't withdraw coins from the app - Investidor10",
@@ -136,7 +146,8 @@
     "region": "SA",
     "id": "5d034a39d87a",
     "lang": "pt",
-    "titleOriginal": "Nubank (ROXO34) trava saques de cripto e clientes ficam sem tirar moedas do app - Investidor10"
+    "titleOriginal": "Nubank (ROXO34) trava saques de cripto e clientes ficam sem tirar moedas do app - Investidor10",
+    "sector": "fintech"
   },
   {
     "title": "Itaú LATAM Pass card: earn up to 40,000 miles on sign-up and 5.25 miles per dollar spent - Passageiro de Primeira",
@@ -149,7 +160,8 @@
     "region": "SA",
     "id": "8a4765690fd9",
     "lang": "pt",
-    "titleOriginal": "Cartão LATAM Pass Itaú: ganhe até 40 mil milhas na adesão e 5,25 milhas por dólar gasto - Passageiro de Primeira"
+    "titleOriginal": "Cartão LATAM Pass Itaú: ganhe até 40 mil milhas na adesão e 5,25 milhas por dólar gasto - Passageiro de Primeira",
+    "sector": "bank"
   },
   {
     "title": "Itaú tries to attract the super-rich with new card, but innovates little - iG Economia",
@@ -162,7 +174,8 @@
     "region": "SA",
     "id": "f6cdb04a0d89",
     "lang": "pt",
-    "titleOriginal": "Itaú tenta atrair super-ricos com novo cartão, mas inova pouco - iG Economia"
+    "titleOriginal": "Itaú tenta atrair super-ricos com novo cartão, mas inova pouco - iG Economia",
+    "sector": "bank"
   },
   {
     "title": "Nubank (ROXO34) suspends crypto withdrawals and deposits - Money Times",
@@ -175,7 +188,8 @@
     "region": "SA",
     "id": "fbae799194cb",
     "lang": "pt",
-    "titleOriginal": "Nubank (ROXO34) suspende saques e depósitos de criptomoedas - Money Times"
+    "titleOriginal": "Nubank (ROXO34) suspende saques e depósitos de criptomoedas - Money Times",
+    "sector": "fintech"
   },
   {
     "title": "Nubank freezes crypto withdrawals and customers can't withdraw coins from the app - BeInCrypto",
@@ -188,7 +202,8 @@
     "region": "SA",
     "id": "af44b6827209",
     "lang": "pt",
-    "titleOriginal": "Nubank trava saques de cripto e clientes ficam sem tirar moedas do app - BeInCrypto"
+    "titleOriginal": "Nubank trava saques de cripto e clientes ficam sem tirar moedas do app - BeInCrypto",
+    "sector": "fintech"
   },
   {
     "title": "Nubank and Mercado Pago suspend crypto withdrawals and deposits; here's what is known so far - Folha Vitória",
@@ -201,7 +216,8 @@
     "region": "SA",
     "id": "c61e29346567",
     "lang": "pt",
-    "titleOriginal": "Nubank e Mercado Pago suspendem saques e depósitos de criptomoedas; veja o que se sabe até agora - Folha Vitória"
+    "titleOriginal": "Nubank e Mercado Pago suspendem saques e depósitos de criptomoedas; veja o que se sabe até agora - Folha Vitória",
+    "sector": "fintech"
   },
   {
     "title": "Itaú's newest most exclusive card offers up to 8 points per dollar, unlimited VIP lounges and free companion flight - Seletronic",
@@ -214,7 +230,8 @@
     "region": "SA",
     "id": "abf5cf7984ab",
     "lang": "pt",
-    "titleOriginal": "Novo cartão mais exclusivo do Itaú dá até 8 pontos por dólar, salas VIP ilimitadas e passagem grátis para acompanhante - Seletronic"
+    "titleOriginal": "Novo cartão mais exclusivo do Itaú dá até 8 pontos por dólar, salas VIP ilimitadas e passagem grátis para acompanhante - Seletronic",
+    "sector": "bank"
   },
   {
     "title": "Nubank blocks crypto withdrawals and customers cannot withdraw tokens from the app - BeInCrypto",
@@ -227,7 +244,8 @@
     "region": "SA",
     "id": "5f89fe84b667",
     "lang": "es",
-    "titleOriginal": "Nubank bloquea los retiros de criptomonedas y los clientes no pueden retirar tokens de la app - BeInCrypto"
+    "titleOriginal": "Nubank bloquea los retiros de criptomonedas y los clientes no pueden retirar tokens de la app - BeInCrypto",
+    "sector": "fintech"
   },
   {
     "title": "Nequi officially enters the yield business: it will offer pockets with personalized returns - Valora Analitik",
@@ -240,7 +258,8 @@
     "region": "SA",
     "id": "700929651fdb",
     "lang": "es",
-    "titleOriginal": "Nequi entra oficialmente al negocio de las rentabilidades: ofrecerá bolsillos con rendimientos personalizados - Valora Analitik"
+    "titleOriginal": "Nequi entra oficialmente al negocio de las rentabilidades: ofrecerá bolsillos con rendimientos personalizados - Valora Analitik",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -252,7 +271,8 @@
     "category": "product",
     "date": "2026-11-06",
     "id": "647de1d489cf",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "JPMorgan Chase signs cybersecurity and coding deal with OpenAI",
@@ -264,7 +284,8 @@
     "bank": "JPMorgan",
     "region": "NA",
     "id": "b86101b1fcd4",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -276,7 +297,8 @@
     "category": "offer",
     "date": "2026-11-06",
     "id": "7ecd0190a84c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Nubank, Mercado Pago Halt Crypto Transfers: 2 Giants [2026] - https://tech-insider.org/",
@@ -288,7 +310,8 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "bd826cf2203c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "ABToken files two tokenization pilots with CVM, with Itaú and Inter participating - Valor Econômico",
@@ -301,7 +324,8 @@
     "region": "SA",
     "id": "59731fb7d9e1",
     "lang": "pt",
-    "titleOriginal": "ABToken protocola dois pilotos de tokenização na CVM com participação de Itaú e Inter - Valor Econômico"
+    "titleOriginal": "ABToken protocola dois pilotos de tokenização na CVM com participação de Itaú e Inter - Valor Econômico",
+    "sector": "bank"
   },
   {
     "title": "Pix users report system outage at several banks - Valor Investe",
@@ -314,7 +338,8 @@
     "region": "SA",
     "id": "17319fbe009e",
     "lang": "pt",
-    "titleOriginal": "Usuários de Pix relatam sistema fora do ar em diversos bancos - Valor Investe"
+    "titleOriginal": "Usuários de Pix relatam sistema fora do ar em diversos bancos - Valor Investe",
+    "sector": "bank"
   },
   {
     "title": "Nubank and Shoppe bring in Péricles for free 11.11 event - Meio e Mensagem",
@@ -327,7 +352,8 @@
     "region": "SA",
     "id": "7a8b7094a858",
     "lang": "pt",
-    "titleOriginal": "Nubank e Shoppe escalam Péricles para ação gratuita de 11.11 - Meio e Mensagem"
+    "titleOriginal": "Nubank e Shoppe escalam Péricles para ação gratuita de 11.11 - Meio e Mensagem",
+    "sector": "fintech"
   },
   {
     "title": "Interview | Banco do Brasil app down? Users complain of instability this Tuesday (3) - Estadão",
@@ -340,7 +366,8 @@
     "region": "SA",
     "id": "ef09605199dd",
     "lang": "pt",
-    "titleOriginal": "Entrevista | App do Banco do Brasil caiu? Usuários reclamam de instabilidade nesta terça (3) - Estadão"
+    "titleOriginal": "Entrevista | App do Banco do Brasil caiu? Usuários reclamam de instabilidade nesta terça (3) - Estadão",
+    "sector": "bank"
   },
   {
     "title": "Shopee and Nubank announce partnership offering up to 50% off in 11.11 sale - Estadão",
@@ -353,7 +380,8 @@
     "region": "SA",
     "id": "b7ed930ab27f",
     "lang": "pt",
-    "titleOriginal": "Shopee e Nubank anunciam parceria que dará até 50% de desconto no 11.11 - Estadão"
+    "titleOriginal": "Shopee e Nubank anunciam parceria que dará até 50% de desconto no 11.11 - Estadão",
+    "sector": "fintech"
   },
   {
     "title": "Itaú's new luxury card has R$ 12,000 annual fee and offers complimentary airfare - Estadão",
@@ -366,7 +394,8 @@
     "region": "SA",
     "id": "5d511d0d0d27",
     "lang": "pt",
-    "titleOriginal": "Novo cartão de luxo do Itaú tem anuidade de R$ 12 mil e oferece passagem aérea de cortesia - Estadão"
+    "titleOriginal": "Novo cartão de luxo do Itaú tem anuidade de R$ 12 mil e oferece passagem aérea de cortesia - Estadão",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil down? Pix outage hits users this Friday (6) - Estadão",
@@ -379,7 +408,8 @@
     "region": "SA",
     "id": "d3def9275847",
     "lang": "pt",
-    "titleOriginal": "Banco do Brasil caiu? Pix fora do ar atinge usuários nesta sexta-feira (6) - Estadão"
+    "titleOriginal": "Banco do Brasil caiu? Pix fora do ar atinge usuários nesta sexta-feira (6) - Estadão",
+    "sector": "bank"
   },
   {
     "title": "Mercado Pago restricts cryptocurrency transfers after incident at external provider - Seu Dinheiro",
@@ -392,7 +422,8 @@
     "region": "SA",
     "id": "51ed590222ae",
     "lang": "pt",
-    "titleOriginal": "Mercado Pago restringe transferências de criptomoedas após incidente em fornecedor externo - Seu Dinheiro"
+    "titleOriginal": "Mercado Pago restringe transferências de criptomoedas após incidente em fornecedor externo - Seu Dinheiro",
+    "sector": "fintech"
   },
   {
     "title": "Itaú launches World Legend Mastercard: 2027 requirements and benefits - ncnews.com.br",
@@ -405,7 +436,8 @@
     "region": "SA",
     "id": "5d254a45ad58",
     "lang": "pt",
-    "titleOriginal": "Itaú lança World Legend Mastercard: requisitos e benefícios 2027 - ncnews.com.br"
+    "titleOriginal": "Itaú lança World Legend Mastercard: requisitos e benefícios 2027 - ncnews.com.br",
+    "sector": "bank"
   },
   {
     "title": "Nubank suspends cryptocurrency deposits and withdrawals in app without explaining reason for halt - BlockTrends",
@@ -418,7 +450,8 @@
     "region": "SA",
     "id": "20ca351696ba",
     "lang": "pt",
-    "titleOriginal": "Nubank suspende depósitos e saques de criptomoedas no app e não explica motivo da paralisação - BlockTrends"
+    "titleOriginal": "Nubank suspende depósitos e saques de criptomoedas no app e não explica motivo da paralisação - BlockTrends",
+    "sector": "fintech"
   },
   {
     "title": "Pix down today: Banco do Brasil app freezes and affects Nubank and other banks - ncnews.com.br",
@@ -431,7 +464,8 @@
     "region": "SA",
     "id": "d00ca1836fec",
     "lang": "pt",
-    "titleOriginal": "Pix fora do ar hoje: app do BB trava e afeta Nubank e bancos - ncnews.com.br"
+    "titleOriginal": "Pix fora do ar hoje: app do BB trava e afeta Nubank e bancos - ncnews.com.br",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil Pix freezes payments and app logs more than 6,000 complaints - ncnews.com.br",
@@ -444,7 +478,8 @@
     "region": "SA",
     "id": "689e8dadb5be",
     "lang": "pt",
-    "titleOriginal": "Pix do Banco do Brasil trava pagamentos e app registra mais de 6 mil reclamações - ncnews.com.br"
+    "titleOriginal": "Pix do Banco do Brasil trava pagamentos e app registra mais de 6 mil reclamações - ncnews.com.br",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil app instability freezes Pix this morning - ncnews.com.br",
@@ -457,7 +492,8 @@
     "region": "SA",
     "id": "354f293e62e8",
     "lang": "pt",
-    "titleOriginal": "Instabilidade no app do Banco do Brasil trava Pix na manhã de hoje - ncnews.com.br"
+    "titleOriginal": "Instabilidade no app do Banco do Brasil trava Pix na manhã de hoje - ncnews.com.br",
+    "sector": "bank"
   },
   {
     "title": "Nubank and Shopee announce 11.11 with discounts of up to 50% and free Péricles show in São Paulo - nu.com",
@@ -470,7 +506,8 @@
     "region": "SA",
     "id": "ac4e275a3905",
     "lang": "pt",
-    "titleOriginal": "Nubank e Shopee anunciam o 11.11 com descontos de até 50% e show gratuito do Péricles em São Paulo - nu.com"
+    "titleOriginal": "Nubank e Shopee anunciam o 11.11 com descontos de até 50% e show gratuito do Péricles em São Paulo - nu.com",
+    "sector": "fintech"
   },
   {
     "title": "Banco do Brasil app unstable and Pix draws complaints - SpaceMoney",
@@ -483,7 +520,8 @@
     "region": "SA",
     "id": "b8db526885a9",
     "lang": "pt",
-    "titleOriginal": "App do Banco do Brasil fica instável e Pix tem reclamações - SpaceMoney"
+    "titleOriginal": "App do Banco do Brasil fica instável e Pix tem reclamações - SpaceMoney",
+    "sector": "bank"
   },
   {
     "title": "Nequi announces new feature: find out who can use it first and how the service works - Revista Semana",
@@ -496,7 +534,8 @@
     "region": "SA",
     "id": "4c6811a8d677",
     "lang": "es",
-    "titleOriginal": "Nequi anuncia nueva función: conozca quiénes podrán usarla primero y cómo funciona el servicio - Revista Semana"
+    "titleOriginal": "Nequi anuncia nueva función: conozca quiénes podrán usarla primero y cómo funciona el servicio - Revista Semana",
+    "sector": "fintech"
   },
   {
     "title": "Nequi debuts yield-bearing pockets for users to save: do you meet the requirements? - Noticias Caracol",
@@ -509,7 +548,8 @@
     "region": "SA",
     "id": "c24bd81aa3ef",
     "lang": "es",
-    "titleOriginal": "Nequi estrenó bolsillos rentables para que usuarios ahorren: ¿usted cumple con los requisitos? - Noticias Caracol"
+    "titleOriginal": "Nequi estrenó bolsillos rentables para que usuarios ahorren: ¿usted cumple con los requisitos? - Noticias Caracol",
+    "sector": "fintech"
   },
   {
     "title": "Nequi launches interesting Pockets that pay returns for saving - ABC Economía",
@@ -522,7 +562,8 @@
     "region": "SA",
     "id": "4ede5b99e34b",
     "lang": "es",
-    "titleOriginal": "Nequi lanza Bolsillos interesantes para pagar rentabilidad por ahorrar - ABC Economía"
+    "titleOriginal": "Nequi lanza Bolsillos interesantes para pagar rentabilidad por ahorrar - ABC Economía",
+    "sector": "fintech"
   },
   {
     "title": "Nequi launches pockets with returns: how they work and who can earn interest - Minuto60",
@@ -535,7 +576,8 @@
     "region": "SA",
     "id": "fcd5774a663c",
     "lang": "es",
-    "titleOriginal": "Nequi lanza bolsillos con rentabilidad: cómo funcionan y quiénes pueden ganar intereses - Minuto60"
+    "titleOriginal": "Nequi lanza bolsillos con rentabilidad: cómo funcionan y quiénes pueden ganar intereses - Minuto60",
+    "sector": "fintech"
   },
   {
     "title": "Nequi has new feature for users: they can now receive yields on their saved money - Portafolio.co",
@@ -548,7 +590,8 @@
     "region": "SA",
     "id": "3dab0e52de5e",
     "lang": "es",
-    "titleOriginal": "Nequi tiene nueva función para sus usuarios: ahora podrán recibir rendimientos por su plata ahorrada - Portafolio.co"
+    "titleOriginal": "Nequi tiene nueva función para sus usuarios: ahora podrán recibir rendimientos por su plata ahorrada - Portafolio.co",
+    "sector": "fintech"
   },
   {
     "title": "Nequi launches interesting Pockets to save with returns - Pluralidad Z",
@@ -561,7 +604,8 @@
     "region": "SA",
     "id": "c1d16f61ae34",
     "lang": "es",
-    "titleOriginal": "Nequi lanza Bolsillos interesantes para ahorrar con rentabilidad - Pluralidad Z"
+    "titleOriginal": "Nequi lanza Bolsillos interesantes para ahorrar con rentabilidad - Pluralidad Z",
+    "sector": "fintech"
   },
   {
     "title": "Huntington National Bank launches treasury management platform",
@@ -573,7 +617,8 @@
     "bank": "Huntington National Bank",
     "region": "NA",
     "id": "ea14e3748405",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "PayFacto intergrates Interac Konek digital wallet across merchant network",
@@ -585,7 +630,8 @@
     "bank": "Interac",
     "region": "NA",
     "id": "153ceaefab7f",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Finovate Global Canada: Agentic AI, Cross-Border Payments, and Partnering with the EU",
@@ -597,7 +643,8 @@
     "bank": "Wealthsimple",
     "region": "NA",
     "id": "fea406eb910d",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -609,7 +656,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "8387cca7847a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -621,7 +669,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "2284a64f0848",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -633,7 +682,8 @@
     "category": "offer",
     "date": "2026-11-05",
     "id": "f11d1831af45",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Everything unveiled at the highly anticipated ‘Wealthsimple Presents’ event - MoneySense",
@@ -645,7 +695,8 @@
     "bank": "Wealthsimple",
     "region": "NA",
     "id": "37bc242c8de6",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -657,7 +708,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "9bccf572331c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -669,7 +721,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "e1bf59e30064",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "PrefCG and Banco do Brasil sign partnership with urban mobility app – CGNotícias - Campo Grande City Hall",
@@ -682,7 +735,8 @@
     "region": "SA",
     "id": "6ab422e62dab",
     "lang": "pt",
-    "titleOriginal": "PrefCG e Banco do Brasil firmam parceria com App de mobilidade urbana – CGNotícias - Prefeitura de Campo Grande"
+    "titleOriginal": "PrefCG e Banco do Brasil firmam parceria com App de mobilidade urbana – CGNotícias - Prefeitura de Campo Grande",
+    "sector": "bank"
   },
   {
     "title": "A car for saving?: Banorte bets on raffling vehicles to compete for bank deposits - El Financiero",
@@ -695,7 +749,8 @@
     "region": "NA",
     "id": "2711618f2237",
     "lang": "es",
-    "titleOriginal": "¿Un auto por ahorrar?: Banorte apuesta por rifar vehículos para competir por depósitos bancarios - El Financiero"
+    "titleOriginal": "¿Un auto por ahorrar?: Banorte apuesta por rifar vehículos para competir por depósitos bancarios - El Financiero",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -707,7 +762,8 @@
     "category": "service",
     "date": "2026-11-05",
     "id": "18132ef95432",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -719,7 +775,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "8387cca7847a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -731,7 +788,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "9bccf572331c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -743,7 +801,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "0c61f546b448",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Banco Inter launches campaign to encourage families to invest in their children's education - Rádio Itatiaia",
@@ -756,7 +815,8 @@
     "region": "SA",
     "id": "15af9bcc37aa",
     "lang": "pt",
-    "titleOriginal": "Banco Inter lança campanha para incentivar famílias a investirem na educação dos filhos - Rádio Itatiaia"
+    "titleOriginal": "Banco Inter lança campanha para incentivar famílias a investirem na educação dos filhos - Rádio Itatiaia",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -768,7 +828,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "98e092ca25ad",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Capital One Outage Today: Is Capital One Down in the US? Customers Report App Crashes, Login Failures & Mobile Banking Problems as 71% of Complaints Point to App Issues | Latest Outage Status - The Sunday Guardian",
@@ -780,7 +841,8 @@
     "bank": "Capital One",
     "region": "NA",
     "id": "4cffb996e910",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Best Tax-Free Savings Account Rates in Canada - NerdWallet",
@@ -792,7 +854,8 @@
     "bank": null,
     "region": "NA",
     "id": "abc498a446b7",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -804,7 +867,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "9bccf572331c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -816,7 +880,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "18132ef95432",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -828,7 +893,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "86a427effd3e",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -840,7 +906,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "2284a64f0848",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Itaú Unibanco launches Itaú Pay to simplify the payments ecosystem in Brazilian e-commerce - Brasil Inovador",
@@ -853,7 +920,8 @@
     "region": "SA",
     "id": "d54b0d342090",
     "lang": "pt",
-    "titleOriginal": "Itaú Unibanco lança o Itaú Pay para simplificar o ecossistema de pagamentos no e-commerce brasileiro - Brasil Inovador"
+    "titleOriginal": "Itaú Unibanco lança o Itaú Pay para simplificar o ecossistema de pagamentos no e-commerce brasileiro - Brasil Inovador",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -865,7 +933,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "a24210dc10d1",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -877,7 +946,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "cc08cb92eef3",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -889,7 +959,8 @@
     "category": "product",
     "date": "2026-11-05",
     "id": "18132ef95432",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -901,7 +972,8 @@
     "category": "product",
     "date": "2026-11-04",
     "id": "903280b42ec1",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Revolut’s valuation jumps 53% to $115B in new share sale as it prepares to launch US bank - TechCrunch",
@@ -913,7 +985,8 @@
     "bank": "Revolut",
     "region": "NA",
     "id": "2b5a8cf41a78",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Revolut Hits $115B Valuation in 53% Jump Ahead of US Bank Launch - The Tech Buzz",
@@ -925,7 +998,8 @@
     "bank": "Revolut",
     "region": "NA",
     "id": "2f583e07bb9e",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Revolut Valuation Hits $115B, Up 53% as US Bank Nears - FinanceFeeds",
@@ -937,7 +1011,8 @@
     "bank": "Revolut",
     "region": "NA",
     "id": "d727f8cbdb0c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Best Scotiabank GIC Rates for November 2026 - NerdWallet",
@@ -949,7 +1024,8 @@
     "bank": "Scotiabank",
     "region": "NA",
     "id": "73d642c7934a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "City government advises employees on opening an Itaú account to receive salaries",
@@ -962,7 +1038,8 @@
     "region": "SA",
     "id": "468fc4f6a491",
     "lang": "pt",
-    "titleOriginal": "Prefeitura orienta servidores sobre abertura de conta no Itaú para recebimento de salários - Prefeitura de Caraguatatuba"
+    "titleOriginal": "Prefeitura orienta servidores sobre abertura de conta no Itaú para recebimento de salários - Prefeitura de Caraguatatuba",
+    "sector": "bank"
   },
   {
     "title": "OnePay Taps Stripe to Power Stablecoin Deposits",
@@ -974,7 +1051,8 @@
     "bank": "OnePay",
     "region": "NA",
     "id": "8adf2814e4ef",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Nubank unveils global brand refresh by Koto ahead of US launch - Design Week",
@@ -986,7 +1064,8 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "f15c3163b49a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Banco do Brasil website and app experience instability",
@@ -999,7 +1078,8 @@
     "region": "SA",
     "id": "129eaa946acc",
     "lang": "pt",
-    "titleOriginal": "Site e aplicativo do Banco do Brasil apresentam instabilidade - Agência Brasil"
+    "titleOriginal": "Site e aplicativo do Banco do Brasil apresentam instabilidade - Agência Brasil",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil app down? Users complain of instability this Tuesday (3)",
@@ -1012,7 +1092,8 @@
     "region": "SA",
     "id": "34cd33f06d3e",
     "lang": "pt",
-    "titleOriginal": "App do Banco do Brasil caiu? Usuários reclamam de instabilidade nesta terça (3) - Estadão"
+    "titleOriginal": "App do Banco do Brasil caiu? Usuários reclamam de instabilidade nesta terça (3) - Estadão",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil down? Users report failure to access the bank's app",
@@ -1025,7 +1106,8 @@
     "region": "SA",
     "id": "be225284dcf0",
     "lang": "pt",
-    "titleOriginal": "Banco do Brasil fora do ar? Usuários relatam falha para acessar aplicativo do banco - O GLOBO"
+    "titleOriginal": "Banco do Brasil fora do ar? Usuários relatam falha para acessar aplicativo do banco - O GLOBO",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil down? App has instability and customers complain on social networks",
@@ -1038,7 +1120,8 @@
     "region": "SA",
     "id": "baba0b8c6b85",
     "lang": "pt",
-    "titleOriginal": "Banco do Brasil fora do ar? Aplicativo tem instabilidade e clientes reclamam nas redes - G1"
+    "titleOriginal": "Banco do Brasil fora do ar? Aplicativo tem instabilidade e clientes reclamam nas redes - G1",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil website and app experience instability today",
@@ -1051,7 +1134,8 @@
     "region": "SA",
     "id": "de30f71bc182",
     "lang": "pt",
-    "titleOriginal": "Site e app do Banco do Brasil apresentam instabilidade hoje - SBT News"
+    "titleOriginal": "Site e app do Banco do Brasil apresentam instabilidade hoje - SBT News",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil faces instability in apps and customers report difficulties using Pix",
@@ -1064,7 +1148,8 @@
     "region": "SA",
     "id": "bf911cb87a79",
     "lang": "pt",
-    "titleOriginal": "Banco do Brasil enfrenta instabilidade em aplicativos e clientes relatam dificuldades em usar Pix - Seu Dinheiro"
+    "titleOriginal": "Banco do Brasil enfrenta instabilidade em aplicativos e clientes relatam dificuldades em usar Pix - Seu Dinheiro",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil website and app experience instability at login",
@@ -1077,7 +1162,8 @@
     "region": "SA",
     "id": "cd01a9a2aeaf",
     "lang": "pt",
-    "titleOriginal": "Site e app do Banco do Brasil apresentam instabilidade no login - BandNews"
+    "titleOriginal": "Site e app do Banco do Brasil apresentam instabilidade no login - BandNews",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil app down? Users report instability this Tuesday (3)",
@@ -1090,7 +1176,8 @@
     "region": "SA",
     "id": "38466dbd58f9",
     "lang": "pt",
-    "titleOriginal": "App Banco do Brasil fora do ar? Usuários relatam instabilidade nesta terça-feira (3) - Folha PE"
+    "titleOriginal": "App Banco do Brasil fora do ar? Usuários relatam instabilidade nesta terça-feira (3) - Folha PE",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil: website and app experience instability",
@@ -1103,7 +1190,8 @@
     "region": "SA",
     "id": "ad2ab2b9bfd6",
     "lang": "pt",
-    "titleOriginal": "Banco do Brasil: site e app apresentam instabilidade - Correio do Povo"
+    "titleOriginal": "Banco do Brasil: site e app apresentam instabilidade - Correio do Povo",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil app experiences instability and users report failures | Diário do Grande ABC - News and information - Diário do Grande ABC",
@@ -1116,7 +1204,8 @@
     "region": "SA",
     "id": "8a638d6a7af2",
     "lang": "pt",
-    "titleOriginal": "App do Banco do Brasil tem instabilidade e usuários relatam falhas | Diário do Grande ABC - Notícias e informações - Diário do Grande ABC"
+    "titleOriginal": "App do Banco do Brasil tem instabilidade e usuários relatam falhas | Diário do Grande ABC - Notícias e informações - Diário do Grande ABC",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil customers report app outage and Pix blocked this Tuesday - BPMoney",
@@ -1129,7 +1218,8 @@
     "region": "SA",
     "id": "728db3e24da1",
     "lang": "pt",
-    "titleOriginal": "Clientes do Banco do Brasil relatam app fora do ar e Pix travado nesta terça-feira - BPMoney"
+    "titleOriginal": "Clientes do Banco do Brasil relatam app fora do ar e Pix travado nesta terça-feira - BPMoney",
+    "sector": "bank"
   },
   {
     "title": "Banco do Brasil app shows instability and draws customer complaints - UOL Economia",
@@ -1142,7 +1232,8 @@
     "region": "SA",
     "id": "9aa87983cb02",
     "lang": "pt",
-    "titleOriginal": "App do Banco do Brasil apresenta instabilidade e gera queixas de clientes - UOL Economia"
+    "titleOriginal": "App do Banco do Brasil apresenta instabilidade e gera queixas de clientes - UOL Economia",
+    "sector": "bank"
   },
   {
     "title": "Revolut Secures New Zealand Banking License, Expanding Its Global Footprint",
@@ -1154,7 +1245,8 @@
     "bank": "Revolut",
     "region": "NA",
     "id": "e66e4f3f876f",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Best Credit Card Sign-Up Bonuses Of November 2026 - Forbes",
@@ -1166,7 +1258,8 @@
     "bank": null,
     "region": "NA",
     "id": "ef9601ee7172",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1178,7 +1271,8 @@
     "category": "service",
     "date": "2026-11-02",
     "id": "606dbc4de8ac",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Weekly Recap: BBD cut to Neutral and Bradesco expands crypto access - TradingView",
@@ -1190,7 +1284,8 @@
     "bank": "Bradesco",
     "region": "SA",
     "id": "191f3b252807",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1202,7 +1297,8 @@
     "category": "service",
     "date": "2026-11-02",
     "id": "de1fdab96119",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Nequi, the account that grows 8% a year while you sleep - Soy502",
@@ -1215,7 +1311,8 @@
     "region": "SA",
     "id": "5699f3107887",
     "lang": "es",
-    "titleOriginal": "Nequi la cuenta que crece 8% anual mientras tú duermes - Soy502"
+    "titleOriginal": "Nequi la cuenta que crece 8% anual mientras tú duermes - Soy502",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1227,7 +1324,8 @@
     "category": "offer",
     "date": "2026-11-02",
     "id": "da4a092e1615",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "title": "Nubank’s US Push and the Agentic Payments Liability Gap - The Fintech Times",
@@ -1239,7 +1337,8 @@
     "bank": "Nubank",
     "region": "SA",
     "id": "73291f2bb346",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "title": "Itaú launches new payment method for checkout, Itaú Pay - Valor Econômico",
@@ -1252,7 +1351,8 @@
     "region": "SA",
     "id": "d7f28a8448ee",
     "lang": "pt",
-    "titleOriginal": "Itaú lança novo meio de pagamento para checkout, o Itaú Pay - Valor Econômico"
+    "titleOriginal": "Itaú lança novo meio de pagamento para checkout, o Itaú Pay - Valor Econômico",
+    "sector": "bank"
   },
   {
     "title": "In the wave of frictionless payments, Itaú launches Itaú Pay to simplify digital purchases - O GLOBO",
@@ -1265,7 +1365,8 @@
     "region": "SA",
     "id": "8291740bf2a4",
     "lang": "pt",
-    "titleOriginal": "Na onda do pagamento sem fricção, Itaú lança Itaú Pay para simplificar compra digital - O GLOBO"
+    "titleOriginal": "Na onda do pagamento sem fricção, Itaú lança Itaú Pay para simplificar compra digital - O GLOBO",
+    "sector": "bank"
   },
   {
     "title": "Itaú launches payment method for e-commerce checkout - CNN Brasil",
@@ -1278,7 +1379,8 @@
     "region": "SA",
     "id": "21bbda372527",
     "lang": "pt",
-    "titleOriginal": "Itaú lança forma de pagamento para checkout de comércio eletrônico - CNN Brasil"
+    "titleOriginal": "Itaú lança forma de pagamento para checkout de comércio eletrônico - CNN Brasil",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1290,7 +1392,8 @@
     "category": "service",
     "date": "2026-10-28",
     "id": "af2c26587f6d",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1302,7 +1405,8 @@
     "category": "product",
     "date": "2026-10-27",
     "id": "594dd8f8b3ce",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "SA",
@@ -1314,7 +1418,8 @@
     "category": "product",
     "date": "2026-10-15",
     "id": "012652fa535c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1326,7 +1431,8 @@
     "category": "product",
     "date": "2026-10-13",
     "id": "7ed15edc304c",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1338,7 +1444,8 @@
     "category": "service",
     "date": "2026-10-13",
     "id": "02de466075e5",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1350,7 +1457,8 @@
     "category": "product",
     "date": "2026-10-13",
     "id": "02de466075e5",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1362,7 +1470,8 @@
     "category": "service",
     "date": "2026-10-13",
     "id": "8b51a1451e2e",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1374,7 +1483,8 @@
     "category": "product",
     "date": "2026-10-13",
     "id": "4e9ac9acb41e",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1386,7 +1496,8 @@
     "category": "offer",
     "date": "2026-10-08",
     "id": "9fb0a8c87503",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1398,7 +1509,8 @@
     "category": "offer",
     "date": "2026-10-08",
     "id": "9fb0a8c87503",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1410,7 +1522,8 @@
     "category": "offer",
     "date": "2026-10-08",
     "id": "9fb0a8c87503",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1422,7 +1535,8 @@
     "category": "offer",
     "date": "2026-10-05",
     "id": "82262092768a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1434,7 +1548,8 @@
     "category": "offer",
     "date": "2026-10-01",
     "id": "be152aa3e4fe",
-    "lang": "en"
+    "lang": "en",
+    "sector": "bank"
   },
   {
     "region": "NA",
@@ -1446,7 +1561,8 @@
     "category": "service",
     "date": "2026-09-13",
     "id": "d4d5a45c3ad8",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1458,7 +1574,8 @@
     "category": "service",
     "date": "2026-09-13",
     "id": "36ddefc7eed2",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "SA",
@@ -1470,7 +1587,8 @@
     "category": "product",
     "date": "2026-09-10",
     "id": "a56ca91ad0f5",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "SA",
@@ -1482,7 +1600,8 @@
     "category": "offer",
     "date": "2026-09-10",
     "id": "a96df31119b3",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "SA",
@@ -1494,7 +1613,8 @@
     "category": "service",
     "date": "2026-09-10",
     "id": "e48c3bca677a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "SA",
@@ -1506,7 +1626,8 @@
     "category": "product",
     "date": "2026-09-10",
     "id": "a56ca91ad0f5",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "SA",
@@ -1518,7 +1639,8 @@
     "category": "offer",
     "date": "2026-09-10",
     "id": "1fee2f7c37b7",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1530,7 +1652,8 @@
     "category": "product",
     "date": "2026-09-10",
     "id": "65eeb08e9daa",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1542,7 +1665,8 @@
     "category": "offer",
     "date": "2026-09-10",
     "id": "d4d5a45c3ad8",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   },
   {
     "region": "NA",
@@ -1554,6 +1678,7 @@
     "category": "service",
     "date": "2026-09-10",
     "id": "e48c3bca677a",
-    "lang": "en"
+    "lang": "en",
+    "sector": "fintech"
   }
 ]
