@@ -1,14 +1,37 @@
 name: Refresh dashboard data
 on:
+  # Daily at 4:30am Eastern, year-round. GitHub cron is UTC-only with no daylight saving, so both
+  # UTC times are scheduled and the `when` job keeps the one that is 4:30 in New York that day:
+  #   08:30 UTC = 4:30 EDT (summer)   09:30 UTC = 4:30 EST (winter)
   schedule:
-    - cron: "0 11 * * *"   # daily ~06:00 ET
-  workflow_dispatch: {}      # manual "Run workflow" button
+    - cron: "30 8 * * *"
+    - cron: "30 9 * * *"
+  workflow_dispatch: {}      # manual "Run workflow" button (always runs)
 
 permissions:
   contents: write
 
 jobs:
+  when:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - id: check
+        # decide by which cron fired (not the clock), so a late-starting run still counts
+        run: |
+          zone=$(TZ=America/New_York date +%Z)   # EDT or EST
+          if [ "${{ github.event_name }}" != "schedule" ] \
+            || { [ "$zone" = "EDT" ] && [ "${{ github.event.schedule }}" = "30 8 * * *" ]; } \
+            || { [ "$zone" = "EST" ] && [ "${{ github.event.schedule }}" = "30 9 * * *" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Skipping: '${{ github.event.schedule }}' isn't 4:30am in New York while on $zone"
+          fi
+
   refresh:
+    needs: when
+    if: needs.when.outputs.run == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
