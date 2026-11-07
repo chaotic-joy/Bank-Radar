@@ -194,7 +194,50 @@ function step(now) {
   });
   rafId = pieces.length ? requestAnimationFrame(step) : 0;
 }
+
+// "ka-ching": synthesized with Web Audio (no audio file). Drawer click, then two bell tones.
+let audio;
+function kaching() {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return;
+  audio ||= new AC(); // created on the first click, which browsers require before playing sound
+  audio.resume();
+  const t = audio.currentTime;
+  const out = audio.createGain();
+  out.gain.value = 0.25; // master volume
+  out.connect(audio.destination);
+
+  // "ka": short burst of filtered noise
+  const len = Math.round(0.06 * audio.sampleRate);
+  const buf = audio.createBuffer(1, len, audio.sampleRate);
+  const data = buf.getChannelData(0);
+  for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / len);
+  const noise = audio.createBufferSource();
+  const band = audio.createBiquadFilter();
+  noise.buffer = buf;
+  band.type = "bandpass"; band.frequency.value = 3000; band.Q.value = 1.5;
+  noise.connect(band).connect(out);
+  noise.start(t);
+
+  // "ching": bell = fundamental + inharmonic overtones, fast attack, long exponential ring-out
+  const bell = (freq, at, dur) => {
+    for (const [mult, vol] of [[1, 1], [2.76, 0.35], [5.4, 0.15]]) {
+      const osc = audio.createOscillator(), g = audio.createGain();
+      osc.frequency.value = freq * mult;
+      g.gain.setValueAtTime(0.0001, at);
+      g.gain.exponentialRampToValueAtTime(vol, at + 0.005);
+      g.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+      osc.connect(g).connect(out);
+      osc.start(at);
+      osc.stop(at + dur);
+    }
+  };
+  bell(1568, t + 0.07, 0.9); // G6
+  bell(2093, t + 0.13, 1.1); // C7
+}
+
 moneyBtn.addEventListener("click", () => {
+  kaching();
   moneyBtn.textContent = pickMoney();
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const r = moneyBtn.getBoundingClientRect();
