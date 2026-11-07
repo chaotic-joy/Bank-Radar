@@ -1,5 +1,9 @@
 // Static dashboard: reads data/*.json, renders news (filterable) + events.
-const state = { news: [], events: [], cat: "all", region: "all", focus: "all", bank: "all", q: "" };
+const state = { news: [], events: [], cat: "all", region: "all", focus: "all", bank: "all", q: "", evType: "all" };
+
+// event-type chip labels; unknown types fall back to a capitalized version
+const EV_LABELS = { conference: "Conferences", keynote: "Keynotes", earnings: "Earnings calls", "investor-call": "Investor calls" };
+const evLabel = (t) => EV_LABELS[t] || (t ? t[0].toUpperCase() + t.slice(1) : "Other");
 
 // own brand = Simplii (Ray's team); match on bank field or title
 const isOwn = (n) => /simplii/i.test(`${n.bank || ""} ${n.title || ""}`);
@@ -26,6 +30,7 @@ async function load() {
     : "Live data from RSS + AI aggregation. Click any card for the source.";
 
   populateBanks();
+  populateEventTypes();
   renderNews();
   renderEvents();
 }
@@ -85,15 +90,30 @@ function card(n) {
   </a>`;
 }
 
+// build event-type chips from the types actually present (most common first)
+function populateEventTypes() {
+  const counts = {};
+  state.events.forEach((e) => { if (e.type) counts[e.type] = (counts[e.type] || 0) + 1; });
+  const types = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+  const chip = (v, label, active) =>
+    `<button class="chip${active ? " active" : ""}" data-group="evType" data-value="${esc(v)}">${esc(label)}</button>`;
+  $("#eventControls").innerHTML =
+    chip("all", "All", true) + types.map((t) => chip(t, evLabel(t), false)).join("");
+}
+
 function renderEvents() {
   const today = new Date().toISOString().slice(0, 10);
-  const sorted = [...state.events].sort((a, b) => a.date.localeCompare(b.date));
+  const matched = state.evType === "all"
+    ? state.events
+    : state.events.filter((e) => (e.type || "") === state.evType);
+  const sorted = [...matched].sort((a, b) => a.date.localeCompare(b.date));
   const upcoming = sorted.filter((e) => (e.endDate || e.date) >= today);
   const recent = sorted.filter((e) => (e.endDate || e.date) < today).reverse();
   const section = (label, list, past) =>
     list.length ? `<div class="ev-group">${label}</div>` + list.map((e) => eventRow(e, past)).join("") : "";
   const html = section("Upcoming", upcoming, false) + section("Recent", recent, true);
-  $("#events").innerHTML = html || `<div class="empty">No events yet.</div>`;
+  $("#events").innerHTML = html
+    || `<div class="empty">${state.evType === "all" ? "No events yet." : "No events match this filter."}</div>`;
 }
 
 function eventRow(e, past) {
@@ -121,6 +141,16 @@ $("#controls").addEventListener("click", (ev) => {
   btn.classList.add("active");
   state[group] = btn.dataset.value;
   renderNews();
+});
+// event-type chips (same data-group/data-value pattern, scoped to the events column)
+$("#eventControls").addEventListener("click", (ev) => {
+  const btn = ev.target.closest(".chip[data-group]");
+  if (!btn) return;
+  const group = btn.dataset.group;
+  btn.parentElement.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) => c.classList.remove("active"));
+  btn.classList.add("active");
+  state[group] = btn.dataset.value;
+  renderEvents();
 });
 $("#bankFilter").addEventListener("change", (e) => { state.bank = e.target.value; renderNews(); });
 $("#search").addEventListener("input", (e) => { state.q = e.target.value; renderNews(); });
