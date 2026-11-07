@@ -82,12 +82,54 @@ body {
 
 .topbar-right { display: flex; align-items: center; gap: 14px; }
 .meta { font-family: var(--mono); font-size: 10.5px; line-height: 1.5; color: var(--muted); text-align: right; letter-spacing: .03em; }
-.theme-toggle {
-  background: var(--panel); border: 1px solid var(--line); color: var(--text);
-  width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 16px;
-  display: grid; place-items: center; transition: .15s;
+/* sky toggle: sun on a day sky (light) <-> moon on a starry night (dark) */
+.theme-switch {
+  position: relative; flex: 0 0 auto; width: 58px; height: 30px; padding: 0;
+  border-radius: 999px; border: 1px solid #22345c; cursor: pointer; overflow: hidden;
+  background: linear-gradient(180deg, #2b3d66, #15213c); /* night (default/dark) */
+  transition: background .3s ease, border-color .3s ease;
+  -webkit-appearance: none; appearance: none;
 }
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+html[data-theme="light"] .theme-switch {
+  background: linear-gradient(180deg, #6fc3ef, #a9ddf5); /* day */
+  border-color: #8ccaec;
+}
+.theme-switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ts-knob {
+  position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%;
+  transform: translateX(28px); /* dark: moon sits on the right */
+  background: radial-gradient(circle at 35% 30%, #f6f5ef, #cecbc2);
+  box-shadow: 0 0 6px rgba(255, 255, 255, .45);
+  transition: transform .35s cubic-bezier(.4, .15, .2, 1), background .3s ease, box-shadow .3s ease;
+}
+html[data-theme="light"] .ts-knob {
+  transform: translateX(0); /* light: sun sits on the left */
+  background: radial-gradient(circle at 35% 30%, #ffe279, #f4b31a);
+  box-shadow: 0 0 9px rgba(245, 185, 26, .7);
+}
+.ts-knob::before, .ts-knob::after { /* moon craters, hidden in light */
+  content: ""; position: absolute; border-radius: 50%; background: rgba(60, 60, 70, .18);
+  transition: opacity .3s ease;
+}
+.ts-knob::before { width: 6px; height: 6px; top: 5px; left: 13px; }
+.ts-knob::after  { width: 4px; height: 4px; top: 14px; left: 6px; }
+html[data-theme="light"] .ts-knob::before,
+html[data-theme="light"] .ts-knob::after { opacity: 0; }
+.ts-stars { /* visible in dark, on the left */
+  position: absolute; inset: 0; transition: opacity .3s ease;
+  background-image:
+    radial-gradient(1px 1px at 9px 8px, #fff, transparent),
+    radial-gradient(1px 1px at 19px 17px, #fff, transparent),
+    radial-gradient(1.4px 1.4px at 25px 9px, #fff, transparent),
+    radial-gradient(1px 1px at 8px 21px, rgba(255, 255, 255, .85), transparent);
+}
+html[data-theme="light"] .ts-stars { opacity: 0; }
+.ts-clouds { /* visible in light, on the right */
+  position: absolute; right: 7px; bottom: 6px; width: 12px; height: 5px; border-radius: 999px;
+  background: #fff; box-shadow: -4px -2px 0 -1px #fff, 4px -1px 0 -1px #fff; opacity: 0;
+  transition: opacity .3s ease;
+}
+html[data-theme="light"] .ts-clouds { opacity: .95; }
 
 main {
   display: grid; grid-template-columns: 1.7fr 1fr; gap: 24px;

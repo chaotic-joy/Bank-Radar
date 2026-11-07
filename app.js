@@ -159,7 +159,7 @@ $("#search").addEventListener("input", (e) => { state.q = e.target.value; render
 const toggle = $("#themeToggle");
 function syncToggle() {
   const dark = (document.documentElement.getAttribute("data-theme") || "dark") !== "light";
-  toggle.textContent = dark ? "☀" : "☾";
+  toggle.setAttribute("aria-checked", String(dark)); // on = dark
   toggle.title = dark ? "Switch to light" : "Switch to dark";
 }
 toggle.addEventListener("click", () => {
