@@ -1,2 +1,11 @@
+# Link-preview bots may fetch the page + og-image.jpg so shared links unfurl.
+# They don't index; search engines stay blocked below (and _headers sends X-Robots-Tag: noindex).
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: facebookexternalhit
+User-agent: Slackbot-LinkExpanding
+User-agent: Discordbot
+Allow: /
+
 User-agent: *
 Disallow: /

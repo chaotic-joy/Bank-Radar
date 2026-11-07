@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Source for /og-image.jpg (the 1200x630 social preview). Re-render after editing:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+       --force-device-scale-factor=1 --window-size=1200,630 --virtual-time-budget=4000 \
+       --screenshot=og-image.png docs/og-image.html
+     then: sips -s format jpeg -s formatOptions 88 og-image.png --out og-image.jpg -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Bank Radar social preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet" />
+<style>
+  :root { --bg: #0f141c; --text: #f2f0e8; --muted: #a7b0bd; --lime: #d4fd5c; --ring: rgba(212, 253, 92, .3); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    /* same backdrop as the site's dark theme: grainy image under a dark tint */
+    background: linear-gradient(rgba(10, 13, 19, .7), rgba(10, 13, 19, .7)), url("../light.webp") center / cover, var(--bg);
+    color: var(--text); font-family: "JetBrains Mono", monospace;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 80px;
+  }
+  .copy { width: 640px; }
+  .label { display: flex; align-items: center; gap: 14px; font-size: 20px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--lime); }
+  .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 22px var(--lime); }
+  h1 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 124px; line-height: 1; letter-spacing: -.02em; margin: 26px 0 22px; }
+  p { margin: 0 0 40px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 30px; line-height: 1.35; color: var(--muted); }
+  .chips { display: flex; gap: 12px; }
+  .chip { font-size: 18px; font-weight: 500; padding: 9px 18px; border-radius: 999px; border: 1px solid rgba(242, 240, 232, .22); color: var(--text); }
+  .chip.on { background: var(--lime); border-color: var(--lime); color: #141a07; font-weight: 600; }
+
+  /* static radar, matching the site's loading screen */
+  .radar {
+    position: relative; width: 380px; height: 380px; border-radius: 50%; overflow: hidden; flex: none;
+    border: 2px solid var(--ring); box-shadow: 0 0 60px rgba(212, 253, 92, .16);
+    background:
+      linear-gradient(var(--ring), var(--ring)) center / 2px 100% no-repeat,
+      linear-gradient(var(--ring), var(--ring)) center / 100% 2px no-repeat,
+      repeating-radial-gradient(circle closest-side, transparent 0 24.4%, var(--ring) 24.6% 25%),
+      radial-gradient(circle closest-side, rgba(212, 253, 92, .1), transparent);
+  }
+  .sweep { position: absolute; inset: 0; border-radius: 50%; transform: rotate(52deg);
+    background: conic-gradient(from 0deg, transparent 0 270deg, rgba(212, 253, 92, .45) 360deg); }
+  .sweep::after { content: ""; position: absolute; left: 50%; top: 0; width: 3px; height: 50%; transform: translateX(-50%);
+    background: linear-gradient(to top, var(--lime), transparent); box-shadow: 0 0 12px var(--lime); }
+  .center { position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; border-radius: 50%; transform: translate(-50%, -50%); background: var(--lime); }
+  .blip { position: absolute; width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%); background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="label"><span class="dot"></span>Competitive intel</div>
+    <h1>Bank Radar</h1>
+    <p>Bank &amp; fintech product news &amp; events from across the Americas</p>
+    <div class="chips">
+      <span class="chip on">Product updates</span>
+      <span class="chip">Offers</span>
+      <span class="chip">Events</span>
+    </div>
+  </div>
+  <div class="radar">
+    <div class="sweep"></div>
+    <!-- blips: the one just behind the sweep is bright, older ones fade -->
+    <span class="blip" style="left:66%;top:24%"></span>
+    <span class="blip" style="left:82%;top:64%;opacity:.35"></span>
+    <span class="blip" style="left:40%;top:72%;opacity:.25"></span>
+    <span class="blip" style="left:20%;top:40%;opacity:.3"></span>
+    <span class="center"></span>
+  </div>
+</body>
+</html>
