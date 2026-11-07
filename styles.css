@@ -256,6 +256,23 @@ main {
 #brief, #news-stream, #events-calendar { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
+/* back-to-top: bottom center, fades in after scrolling down; hidden on phones (they have the tab bar) */
+.to-top {
+  position: fixed; left: 50%; bottom: 24px; z-index: 20;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 16px 9px 13px; border-radius: 999px; cursor: pointer;
+  font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--accent-ink);
+  background: var(--accent); border: 1px solid var(--accent); box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; transform: translate(-50%, 12px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.to-top:hover { filter: brightness(1.06); }
+.to-top:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.to-top svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 640px) { .to-top { display: none; } }
+@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+
 /* mobile tab bar: fixed to the bottom of the screen, shown only on narrow screens */
 .jump-menu { display: none; }
 .jump-menu {

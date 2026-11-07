@@ -249,6 +249,16 @@ addEventListener("resize", markTab);
 const topbar = $(".topbar");
 new ResizeObserver(() => document.documentElement.style.setProperty("--header-h", topbar.offsetHeight + "px")).observe(topbar);
 
+// back-to-top button (desktop): shown once the reader has scrolled a screenful-ish down
+const toTop = $("#toTop");
+const syncToTop = () => toTop.classList.toggle("show", scrollY > 300);
+addEventListener("scroll", syncToTop, { passive: true });
+syncToTop();
+toTop.addEventListener("click", () => {
+  scrollTo({ top: 0 }); // smooth via html { scroll-behavior } unless reduced motion is on
+  toTop.blur();
+});
+
 // money button: shows a random money emoji, bursts emoji confetti on click
 const MONEY = ["💰", "💵", "💸", "🤑", "💴", "💶", "💷", "🪙", "🏦", "💎"];
 const rand = (a, b) => a + Math.random() * (b - a);
