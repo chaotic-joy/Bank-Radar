@@ -113,5 +113,6 @@ set which Claude models are used.
 - Light/dark theme toggle, with the choice saved per browser.
 - A radar loading screen shows until the data has rendered. It stays still if the visitor has
   reduced motion turned on.
-- The header money emoji plays a "ching" and bursts emoji confetti on click. It's hidden on windows
-  narrower than 1100px, where it would collide with the subtitle.
+- **Easter egg:** the money emoji in the middle of the header (a random one on each load: 💰 💵 💸 🤑
+  🏦 …) plays a "ching" and bursts emoji confetti on click. It's hidden on windows narrower than
+  1100px, where it would collide with the subtitle.
