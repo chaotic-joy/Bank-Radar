@@ -82,6 +82,59 @@ body {
 
 .topbar-right { display: flex; align-items: center; gap: 14px; }
 
+/* loading overlay: radar sweep (one turn = 2.4s; blips flash as the sweep passes them) */
+.loader {
+  position: fixed; inset: 0; z-index: 1000;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(12px);
+  transition: opacity .45s ease, visibility .45s;
+  --radar: var(--header); /* bright lime in dark mode, deep green in light mode */
+  --ring: color-mix(in srgb, var(--radar) 32%, transparent);
+}
+.loader.done { opacity: 0; visibility: hidden; }
+.radar {
+  position: relative; width: min(200px, 56vw); aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  margin-bottom: 18px; border: 1px solid var(--ring);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--radar) 18%, transparent);
+  background:
+    linear-gradient(var(--ring), var(--ring)) center / 1px 100% no-repeat,
+    linear-gradient(var(--ring), var(--ring)) center / 100% 1px no-repeat,
+    repeating-radial-gradient(circle closest-side, transparent 0 24.4%, var(--ring) 24.6% 25%),
+    radial-gradient(circle closest-side, color-mix(in srgb, var(--radar) 10%, transparent), transparent);
+}
+.radar::before { /* center dot */
+  content: ""; position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; border-radius: 50%;
+  transform: translate(-50%, -50%); background: var(--radar); z-index: 2;
+}
+.radar-sweep {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 270deg, color-mix(in srgb, var(--radar) 45%, transparent) 360deg);
+  animation: radar-spin 2.4s linear infinite;
+}
+.radar-sweep::after { /* leading edge */
+  content: ""; position: absolute; left: 50%; top: 0; width: 2px; height: 50%; transform: translateX(-50%);
+  background: linear-gradient(to top, var(--radar), transparent); box-shadow: 0 0 8px var(--radar);
+}
+@keyframes radar-spin { to { transform: rotate(360deg); } }
+.blip {
+  position: absolute; width: 8px; height: 8px; border-radius: 50%; z-index: 1;
+  background: var(--radar); box-shadow: 0 0 10px var(--radar);
+  transform: translate(-50%, -50%); opacity: .12;
+  animation: blip 2.4s linear infinite; animation-delay: var(--d);
+}
+@keyframes blip {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1.6); }
+  25% { opacity: .7; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: .12; transform: translate(-50%, -50%) scale(1); }
+}
+.loader-title { margin: 0; font-family: var(--mono); font-size: 15px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--header); }
+.loader-sub { margin: 0; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) {
+  .radar-sweep, .blip { animation: none; }
+  .blip { opacity: .6; }
+  .loader { transition: none; }
+}
+
 /* centered money button + emoji confetti */
 .money-btn {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
@@ -91,6 +144,8 @@ body {
 .money-btn:hover { transform: translate(-50%, -50%) scale(1.18); }
 .money-btn:active { transform: translate(-50%, -50%) scale(.9); }
 .money-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.money-btn:has(canvas) { padding: 0; }
+.money-btn canvas { display: block; }
 @media (max-width: 620px) { .money-btn { display: none; } } /* no room on narrow screens */
 
 /* positioned each frame by the physics loop in app.js */

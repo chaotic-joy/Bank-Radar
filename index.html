@@ -26,6 +26,21 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- loading overlay: removed by app.js once the data has rendered -->
+  <div id="loader" class="loader" role="status" aria-label="Loading Bank Radar">
+    <div class="radar" aria-hidden="true">
+      <div class="radar-sweep"></div>
+      <!-- blips: position = angle/distance from center; --d = when the sweep reaches that angle (angle/360 × 2.4s) -->
+      <span class="blip" style="left:69%;top:27%;--d:.27s"></span>
+      <span class="blip" style="left:84%;top:66%;--d:.77s"></span>
+      <span class="blip" style="left:42%;top:71%;--d:1.33s"></span>
+      <span class="blip" style="left:17%;top:41%;--d:1.9s"></span>
+      <span class="blip" style="left:43%;top:38%;--d:2.2s"></span>
+    </div>
+    <p class="loader-title">Bank Radar</p>
+    <p class="loader-sub">Scanning the Americas…</p>
+  </div>
+
   <header class="topbar">
     <div class="brand">
       <span class="dot"></span>
@@ -91,5 +106,12 @@
   </footer>
 
   <script src="app.js"></script>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script type="module" src="head3d.js"></script>
 </body>
 </html>

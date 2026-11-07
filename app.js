@@ -33,6 +33,16 @@ async function load() {
   populateEventTypes();
   renderNews();
   renderEvents();
+  hideLoader();
+}
+
+// fade out the radar loading overlay; held for at least one sweep so a fast load doesn't just flash it
+function hideLoader() {
+  const el = $("#loader");
+  setTimeout(() => {
+    el.classList.add("done");
+    setTimeout(() => el.remove(), 500);
+  }, Math.max(0, 2400 - performance.now()));
 }
 
 // daily AI brief above the news stream (hidden if none was generated)
@@ -195,7 +205,7 @@ function step(now) {
   rafId = pieces.length ? requestAnimationFrame(step) : 0;
 }
 moneyBtn.addEventListener("click", () => {
-  moneyBtn.textContent = pickMoney();
+  if (!moneyBtn.querySelector("canvas")) moneyBtn.textContent = pickMoney(); // keep the 3D head if it loaded
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const r = moneyBtn.getBoundingClientRect();
   const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
