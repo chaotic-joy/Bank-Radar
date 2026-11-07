@@ -4,8 +4,9 @@
 
 A dashboard for the Simplii Financial product team that tracks:
 
-1. **News stream:** product, offer and service news from banks and fintechs across the Americas.
-   Filter by type, bank, region, or Simplii vs competitors, and search.
+1. **News stream:** product, offer and service news from banks, fintechs, and trading exchanges and
+   platforms (stock, crypto, derivatives) across the Americas. Filter by type, sector, company, region,
+   or Simplii vs competitors, and search.
 2. **Events calendar:** recent and upcoming conferences, keynotes, earnings calls and investor calls,
    with filter chips by type.
 3. **Daily brief:** an AI summary of the common themes and the news worth reacting to.
@@ -25,8 +26,9 @@ web search ──► discover ─────┘
 ```
 
 - **RSS** pulls every headline from the feeds in `feeds.json`. It's the "don't miss anything" layer.
-- **Classify** (Claude Haiku) tags each item `product` / `offer` / `service`, sets the bank and region,
-  and drops noise, including banks based outside the Americas.
+- **Classify** (Claude Haiku) tags each item `product` / `offer` / `service`, sets the company, its
+  sector (`bank` / `fintech` / `exchange`) and region, and drops noise, including companies based
+  outside the Americas and plain price or market moves.
 - **Discover** (Claude Sonnet with web search) finds offers and events that have no RSS feed.
 - **Merge + dedupe** combines today's items with the existing board. The same story is merged when
   it arrives from several sources with the same title, or as reworded copies of one article (same
@@ -43,10 +45,21 @@ headlines are too noisy to show unclassified.
 
 | File | Contents |
 |---|---|
-| `data/news.json` | Board items: `title`, `summary`, `url`, `source`, `bank`, `category`, `region`, `date`, `lang`; translated items also have `titleOriginal` |
+| `data/news.json` | Board items: `title`, `summary`, `url`, `source`, `bank` (the company name, whatever its sector), `sector`, `category`, `region`, `date`, `lang`; translated items also have `titleOriginal` |
 | `data/events.json` | Events: `name`, `type`, `organizer`, `location`, `region`, `date`, `endDate`, `url` |
 | `data/summary.json` | The daily brief: `tldr`, `themes`, `highlights` |
 | `data/meta.json` | Last update time and counts |
+
+## Tuning what's tracked
+
+Everything is in `feeds.json`, no code changes needed:
+
+- `feeds`: RSS/Atom URLs. Google News search feeds cover Canadian, US and LatAm banks, fintechs, and
+  exchanges and trading platforms, in English, Portuguese and Spanish.
+- `companies`: names to watch, grouped by sector (`bank`, `fintech`, `exchange`). They steer
+  classification and discovery, and give a sector to any item the model didn't tag. The model also
+  picks up companies that aren't listed.
+- `topics`: what counts as relevant news.
 
 ## Daily refresh
 
