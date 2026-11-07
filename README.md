@@ -5,8 +5,8 @@
 A dashboard for the Simplii Financial product team that tracks:
 
 1. **News stream:** product, offer and service news from banks, fintechs, and trading exchanges and
-   platforms (stock, crypto, derivatives) across the Americas. Filter by type, sector, company, region,
-   or Simplii vs competitors, and search.
+   platforms (stock, crypto, derivatives) across the Americas. Filter by type, sector, company (Simplii
+   Financial is always first in the list), region, and search.
 2. **Events calendar:** recent and upcoming conferences, keynotes, earnings calls and investor calls,
    with filter chips by type.
 3. **Daily brief:** an AI summary of the common themes and the news worth reacting to.
