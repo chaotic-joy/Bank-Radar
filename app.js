@@ -52,7 +52,9 @@ function hideLoader() {
 // daily AI brief above the news stream (hidden if none was generated)
 function renderBrief(b) {
   const el = $("#brief");
-  if (!b || (!b.tldr && !(b.themes || []).length && !(b.highlights || []).length)) { el.innerHTML = ""; return; }
+  const empty = !b || (!b.tldr && !(b.themes || []).length && !(b.highlights || []).length);
+  $('#jumpMenu a[href="#brief"]').hidden = empty; // no brief today -> nothing to jump to
+  if (empty) { el.innerHTML = ""; return; }
   const when = b.updated ? new Date(b.updated).toLocaleDateString("en-CA", { weekday: "long", year: "numeric", month: "long", day: "numeric" }) : "";
   const themes = (b.themes || []).map((t) => `<span class="theme">${esc(t)}</span>`).join("");
   const highlights = (b.highlights || [])
@@ -224,6 +226,24 @@ toggle.addEventListener("click", () => {
   syncToggle();
 });
 syncToggle();
+
+// mobile jump menu: links to the brief, news stream and events calendar
+const menuBtn = $("#menuBtn"), jumpMenu = $("#jumpMenu");
+function setMenu(open) {
+  jumpMenu.hidden = !open;
+  menuBtn.setAttribute("aria-expanded", String(open));
+}
+menuBtn.addEventListener("click", () => setMenu(jumpMenu.hidden));
+jumpMenu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("click", (e) => {
+  if (!jumpMenu.hidden && !jumpMenu.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false);
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !jumpMenu.hidden) { setMenu(false); menuBtn.focus(); }
+});
+// the header is sticky, so jump targets land below it: keep --header-h at its current height
+const topbar = $(".topbar");
+new ResizeObserver(() => document.documentElement.style.setProperty("--header-h", topbar.offsetHeight + "px")).observe(topbar);
 
 // money button: shows a random money emoji, bursts emoji confetti on click
 const MONEY = ["💰", "💵", "💸", "🤑", "💴", "💶", "💷", "🪙", "🏦", "💎"];

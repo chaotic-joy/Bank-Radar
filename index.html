@@ -75,15 +75,24 @@
         <span class="ts-clouds"></span>
         <span class="ts-knob"></span>
       </button>
+      <!-- phones only: opens the jump menu below -->
+      <button id="menuBtn" class="menu-btn" type="button" aria-label="Jump to a section" aria-expanded="false" aria-controls="jumpMenu">
+        <span></span><span></span><span></span>
+      </button>
       <div class="meta" id="meta">loading…</div>
     </div>
+    <nav id="jumpMenu" class="jump-menu" aria-label="Sections" hidden>
+      <a href="#brief">Daily brief</a>
+      <a href="#news-stream">News stream</a>
+      <a href="#events-calendar">Events calendar</a>
+    </nav>
   </header>
 
   <main>
     <section class="col news-col">
       <div id="brief" class="brief"></div>
 
-      <div class="col-head">
+      <div class="col-head" id="news-stream">
         <h2>News stream</h2>
         <input id="search" type="search" placeholder="Search companies, features, offers…" />
       </div>
@@ -115,7 +124,7 @@
     </section>
 
     <section class="col events-col">
-      <div class="col-head"><h2>Events calendar</h2></div>
+      <div class="col-head" id="events-calendar"><h2>Events calendar</h2></div>
       <div id="eventControls" class="filters"></div>
       <div id="events" class="list"></div>
     </section>
