@@ -62,7 +62,7 @@ function renderBrief(b) {
     .map((h) => `<li><span class="hl-head">${esc(h.headline)}</span>${h.why ? ` <span class="hl-why">${esc(h.why)}</span>` : ""}</li>`)
     .join("");
   el.innerHTML = `
-    <div class="brief-head"><span class="label">Daily brief${when ? ` · ${esc(when)}` : ""}</span></div>
+    <div class="brief-head"><span class="label">Daily brief${when ? `<span class="brief-sep"> · </span><span class="brief-date">${esc(when)}</span>` : ""}</span></div>
     ${b.tldr ? `<p class="brief-tldr">${esc(b.tldr)}</p>` : ""}
     ${themes ? `<div class="brief-themes">${themes}</div>` : ""}
     ${highlights ? `<ul class="brief-highlights">${highlights}</ul>` : ""}`;
