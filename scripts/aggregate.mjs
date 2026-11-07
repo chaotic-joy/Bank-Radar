@@ -60,6 +60,43 @@ function extractJson(text) {
 // Translated items are keyed by their ORIGINAL title, so the same story arriving
 // again untranslated from its RSS feed merges into it and keeps the English text.
 const isDirect = (u) => u && !/news\.google\./.test(u);
+
+// Combine two copies of one story, keeping the best of each field.
+function combine(prev, it) {
+  const keepXlat = prev.lang && !it.lang; // already translated; don't let a raw re-fetch undo it
+  const merged = {
+    ...prev, ...it,
+    category: it.category !== "news" ? it.category : prev.category,
+    url: isDirect(it.url) ? it.url : (isDirect(prev.url) ? prev.url : (it.url || prev.url)),
+    summary: keepXlat ? prev.summary
+      : (it.summary || "").length >= (prev.summary || "").length ? it.summary : prev.summary,
+    bank: it.bank || prev.bank,
+    region: it.region || prev.region,
+    ...(keepXlat && { title: prev.title, titleOriginal: prev.titleOriginal, lang: prev.lang }),
+  };
+  merged.id = idFor(merged);
+  return merged;
+}
+
+// Words that don't identify a story, ignored when comparing headlines.
+const STOP = new Set(("a an and the of for to in on at by with from as is are its it new now via " +
+  "launch launches launched announce announces announced unveil unveils unveiled introduce introduces " +
+  "introduced plan plans offer offers make makes add adds roll rolls out").split(" "));
+const headlineWords = (it) => {
+  const bank = new Set(normTitle(it.bank).split(" "));
+  return new Set(normTitle(cleanTitle(it.title)).split(" ").filter((w) => w && !STOP.has(w) && !bank.has(w)));
+};
+// Same story if they share at least half of the shorter headline's distinctive words.
+// ponytail: word-overlap heuristic; swap for embeddings if it starts merging distinct stories.
+function sameStory(a, b) {
+  const A = headlineWords(a), B = headlineWords(b);
+  const small = Math.min(A.size, B.size);
+  if (!small) return false;
+  let shared = 0;
+  for (const w of A) if (B.has(w)) shared++;
+  return shared / small >= 0.5;
+}
+
 function mergeNews(existing, incoming, { maxAgeDays, limit }) {
   const byKey = new Map();
   for (const it of [...existing, ...incoming]) {
@@ -68,23 +105,18 @@ function mergeNews(existing, incoming, { maxAgeDays, limit }) {
     const key = normTitle(cleanTitle(it.titleOriginal || it.title)).slice(0, 80);
     if (!key) continue;
     const prev = byKey.get(key);
-    const keepXlat = prev?.lang && !it.lang; // already translated; don't let a raw re-fetch undo it
-    const merged = prev
-      ? {
-          ...prev, ...it,
-          category: it.category !== "news" ? it.category : prev.category,
-          url: isDirect(it.url) ? it.url : (isDirect(prev.url) ? prev.url : (it.url || prev.url)),
-          summary: keepXlat ? prev.summary
-            : (it.summary || "").length >= (prev.summary || "").length ? it.summary : prev.summary,
-          bank: it.bank || prev.bank,
-          region: it.region || prev.region,
-          ...(keepXlat && { title: prev.title, titleOriginal: prev.titleOriginal, lang: prev.lang }),
-        }
-      : { ...it };
-    merged.id = idFor(merged);
-    byKey.set(key, merged);
+    byKey.set(key, prev ? combine(prev, it) : { ...it, id: idFor(it) });
   }
-  return [...byKey.values()]
+  // Second pass: web-search discovery can return one article several times under reworded
+  // headlines (same URL, different titles). Collapse those, but keep genuinely different
+  // stories from one roundup article (e.g. two separate product launches) as separate cards.
+  const out = [];
+  for (const it of byKey.values()) {
+    const twin = out.findIndex((o) => o.url && o.url === it.url && sameStory(o, it));
+    if (twin === -1) out.push(it);
+    else out[twin] = combine(out[twin], it);
+  }
+  return out
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, limit);
 }
@@ -488,6 +520,22 @@ function selftest() {
   assert(again.length === 1, "translated item and its untranslated re-fetch dedupe");
   assert(again[0].title.startsWith("Itaú launches") && again[0].lang === "pt", "re-fetch doesn't overwrite the English title");
   assert(again[0].summary === "The bank launched a card", "re-fetch doesn't overwrite the English summary (even if longer)");
+
+  // same URL: reworded copies of one story collapse; different stories from one roundup article stay
+  const ws = "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant";
+  const roundup = mergeNews([], [
+    { title: "Wealthsimple to launch CADD stablecoin with 3.25% annual reward", url: ws, date: "2026-11-05", category: "product", bank: "Wealthsimple" },
+    { title: "Wealthsimple announces CADD, a Canadian-dollar-backed stablecoin with 3.25% reward", url: ws, date: "2026-11-05", category: "product", bank: "Wealthsimple" },
+    { title: "Wealthsimple unveils Penny AI assistant at 'Wealthsimple Presents'", url: ws, date: "2026-11-05", category: "product", bank: "Wealthsimple" },
+    { title: "Wealthsimple launches Penny, an AI assistant for banking and trading", url: ws, date: "2026-11-05", category: "product", bank: "Wealthsimple" },
+  ], { maxAgeDays: 999999, limit: 10 });
+  assert(roundup.length === 2, `reworded same-URL copies collapse to one card per story (got ${roundup.length})`);
+  assert(roundup.some((n) => /CADD/.test(n.title)) && roundup.some((n) => /Penny/.test(n.title)), "distinct stories in one roundup stay separate");
+  const otherUrl = mergeNews([], [
+    { title: "Wealthsimple to launch CADD stablecoin", url: "https://a.example", date: "2026-11-05", category: "product", bank: "Wealthsimple" },
+    { title: "Wealthsimple to launch CADD stablecoin soon", url: "https://b.example", date: "2026-11-05", category: "product", bank: "Wealthsimple" },
+  ], { maxAgeDays: 999999, limit: 10 });
+  assert(otherUrl.length === 2, "similar headlines at different URLs are not merged by the URL pass");
 
   // events: dedupe same name+month, keep chronological
   const evs = mergeEvents([], [
