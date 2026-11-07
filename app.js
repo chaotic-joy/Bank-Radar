@@ -37,6 +37,7 @@ async function load() {
   populateEventTypes();
   renderNews();
   renderEvents();
+  markTab();
   hideLoader();
 }
 
@@ -52,7 +53,9 @@ function hideLoader() {
 // daily AI brief above the news stream (hidden if none was generated)
 function renderBrief(b) {
   const el = $("#brief");
-  if (!b || (!b.tldr && !(b.themes || []).length && !(b.highlights || []).length)) { el.innerHTML = ""; return; }
+  const empty = !b || (!b.tldr && !(b.themes || []).length && !(b.highlights || []).length);
+  $('#jumpMenu a[href="#brief"]').hidden = empty; // no brief today -> nothing to jump to
+  if (empty) { el.innerHTML = ""; return; }
   const when = b.updated ? new Date(b.updated).toLocaleDateString("en-CA", { weekday: "long", year: "numeric", month: "long", day: "numeric" }) : "";
   const themes = (b.themes || []).map((t) => `<span class="theme">${esc(t)}</span>`).join("");
   const highlights = (b.highlights || [])
@@ -224,6 +227,27 @@ toggle.addEventListener("click", () => {
   syncToggle();
 });
 syncToggle();
+
+// mobile tab bar: highlight the section currently under the header
+const TABS = [...document.querySelectorAll("#jumpMenu a")];
+function markTab() {
+  const line = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 80) + 40;
+  let current = null;
+  for (const a of TABS) {
+    const el = !a.hidden && document.querySelector(a.getAttribute("href"));
+    if (el && el.getBoundingClientRect().top <= line) current = a;
+  }
+  // at the very bottom the last section may never reach the line; it's the one on screen
+  if (scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 2) current = TABS.filter((a) => !a.hidden).at(-1);
+  current ||= TABS.find((a) => !a.hidden);
+  TABS.forEach((a) => a === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current"));
+}
+addEventListener("scroll", markTab, { passive: true });
+addEventListener("resize", markTab);
+
+// the header is sticky, so jump targets land below it: keep --header-h at its current height
+const topbar = $(".topbar");
+new ResizeObserver(() => document.documentElement.style.setProperty("--header-h", topbar.offsetHeight + "px")).observe(topbar);
 
 // money button: shows a random money emoji, bursts emoji confetti on click
 const MONEY = ["💰", "💵", "💸", "🤑", "💴", "💶", "💷", "🪙", "🏦", "💎"];

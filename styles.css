@@ -252,6 +252,29 @@ main {
 .chip:hover { color: var(--text); border-color: var(--muted); }
 .chip.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
 
+/* jump targets (mobile menu) land just below the sticky header */
+#brief, #news-stream, #events-calendar { scroll-margin-top: calc(var(--header-h, 80px) + 12px); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* mobile tab bar: fixed to the bottom of the screen, shown only on narrow screens */
+.jump-menu { display: none; }
+.jump-menu {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  grid-auto-flow: column; grid-auto-columns: 1fr;
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+}
+.jump-menu a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  min-height: 48px; border-radius: 12px; color: var(--muted); text-decoration: none;
+  font-size: 11.5px; letter-spacing: .02em; -webkit-tap-highlight-color: transparent;
+}
+.jump-menu a[hidden] { display: none; }
+.jump-menu svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.jump-menu a[aria-current] { color: var(--header); background: var(--accent-soft); font-weight: 600; }
+.jump-menu a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
 /* chip dropdowns: built by mirrorChips() in app.js, shown only on narrow screens */
 .chip-select { display: none; }
 
@@ -316,6 +339,9 @@ footer code { font-family: var(--mono); color: var(--text); }
   .brand h1 { font-size: 20px; }
   .brand .sub { font-size: 11.5px; line-height: 1.3; }
   /* the two halves sit on one line, and the second drops below when there's no room */
+  .jump-menu { display: grid; }
+  /* keep the last content clear of the tab bar */
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
   .meta { flex-basis: 100%; display: flex; flex-wrap: wrap; column-gap: .6em; text-align: left; }
   .meta span { white-space: nowrap; }
 
