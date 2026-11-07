@@ -26,12 +26,13 @@ async function load() {
   renderBrief(brief);
 
   const when = meta.updated ? new Date(meta.updated).toLocaleString("en-CA") : "—";
-  $("#meta").innerHTML = `Updated ${esc(when)}<br>${news.length} news · ${events.length} events · AI ${meta.aiEnabled ? "on" : "off"}`;
+  $("#meta").innerHTML = `<span>Updated ${esc(when)}</span><span>${news.length} news · ${events.length} events · AI ${meta.aiEnabled ? "on" : "off"}</span>`;
   $("#footnote").innerHTML = meta.seed
     ? `<span class="seedbadge">SAMPLE DATA</span> Seeded for demo. Add an ANTHROPIC_API_KEY and run <code>npm run refresh</code> for live aggregation.`
     : "Live data from RSS + AI aggregation. Click any card for the source.";
 
   populateBanks();
+  mirrorChips($("#controls"));
   populateEventTypes();
   renderNews();
   renderEvents();
@@ -61,6 +62,40 @@ function renderBrief(b) {
     ${b.tldr ? `<p class="brief-tldr">${esc(b.tldr)}</p>` : ""}
     ${themes ? `<div class="brief-themes">${themes}</div>` : ""}
     ${highlights ? `<ul class="brief-highlights">${highlights}</ul>` : ""}`;
+}
+
+// On narrow screens each chip group shows as a dropdown instead (styles.css swaps them).
+// The chips stay the source of truth: a dropdown change clicks the matching chip, and
+// the chip click handlers keep the dropdown in step.
+const ALL_LABELS = { cat: "All types", focus: "Everyone", region: "All regions", sector: "All sectors", evType: "All event types" };
+const GROUP_NAMES = { cat: "type", focus: "audience", region: "region", sector: "sector", evType: "event type" };
+function mirrorChips(container) {
+  container.querySelectorAll(".chip-select").forEach((s) => s.remove());
+  const groups = new Set([...container.querySelectorAll(".chip[data-group]")].map((c) => c.dataset.group));
+  for (const g of groups) {
+    const chips = [...container.querySelectorAll(`.chip[data-group="${g}"]`)];
+    const sel = document.createElement("select");
+    sel.className = "select chip-select";
+    sel.dataset.group = g;
+    sel.setAttribute("aria-label", `Filter by ${GROUP_NAMES[g] || g}`);
+    sel.innerHTML = chips.map((c) => {
+      const label = c.dataset.value === "all" ? ALL_LABELS[g] || c.textContent : c.textContent;
+      return `<option value="${esc(c.dataset.value)}"${c.classList.contains("active") ? " selected" : ""}>${esc(label)}</option>`;
+    }).join("");
+    sel.addEventListener("change", () => chips.find((c) => c.dataset.value === sel.value)?.click());
+    chips[0].before(sel);
+  }
+}
+
+// mark a chip active within its group and keep that group's dropdown in step
+function activateChip(btn) {
+  const group = btn.dataset.group;
+  btn.parentElement.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) => c.classList.remove("active"));
+  btn.classList.add("active");
+  const sel = btn.parentElement.querySelector(`.chip-select[data-group="${group}"]`);
+  if (sel) sel.value = btn.dataset.value;
+  state[group] = btn.dataset.value;
+  return group;
 }
 
 // fill the company dropdown from companies present in the data (Simplii pinned first),
@@ -122,6 +157,7 @@ function populateEventTypes() {
     `<button class="chip${active ? " active" : ""}" data-group="evType" data-value="${esc(v)}">${esc(label)}</button>`;
   $("#eventControls").innerHTML =
     chip("all", "All", true) + types.map((t) => chip(t, evLabel(t), false)).join("");
+  mirrorChips($("#eventControls"));
 }
 
 function renderEvents() {
@@ -159,21 +195,14 @@ function eventRow(e, past) {
 $("#controls").addEventListener("click", (ev) => {
   const btn = ev.target.closest(".chip[data-group]");
   if (!btn) return;
-  const group = btn.dataset.group;
-  btn.parentElement.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) => c.classList.remove("active"));
-  btn.classList.add("active");
-  state[group] = btn.dataset.value;
-  if (group === "sector") populateBanks();
+  if (activateChip(btn) === "sector") populateBanks();
   renderNews();
 });
 // event-type chips (same data-group/data-value pattern, scoped to the events column)
 $("#eventControls").addEventListener("click", (ev) => {
   const btn = ev.target.closest(".chip[data-group]");
   if (!btn) return;
-  const group = btn.dataset.group;
-  btn.parentElement.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) => c.classList.remove("active"));
-  btn.classList.add("active");
-  state[group] = btn.dataset.value;
+  activateChip(btn);
   renderEvents();
 });
 $("#bankFilter").addEventListener("change", (e) => { state.bank = e.target.value; renderNews(); });
