@@ -37,7 +37,7 @@ async function load() {
   populateEventTypes();
   renderNews();
   renderEvents();
-  markTab();
+  showView(viewFromHash());
   hideLoader();
 }
 
@@ -228,22 +228,35 @@ toggle.addEventListener("click", () => {
 });
 syncToggle();
 
-// mobile tab bar: highlight the section currently under the header
+// mobile views: on phones the tab bar shows one section at a time (brief, news or events).
+// The view lives in the URL hash, so the back button steps between views. Each view keeps
+// its own scroll position. On desktop body[data-view] is ignored and both columns show.
 const TABS = [...document.querySelectorAll("#jumpMenu a")];
-function markTab() {
-  const line = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 80) + 40;
-  let current = null;
-  for (const a of TABS) {
-    const el = !a.hidden && document.querySelector(a.getAttribute("href"));
-    if (el && el.getBoundingClientRect().top <= line) current = a;
-  }
-  // at the very bottom the last section may never reach the line; it's the one on screen
-  if (scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 2) current = TABS.filter((a) => !a.hidden).at(-1);
-  current ||= TABS.find((a) => !a.hidden);
-  TABS.forEach((a) => a === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current"));
+const VIEWS = { "#brief": "brief", "#news-stream": "news", "#events-calendar": "events" };
+const isPhone = () => matchMedia("(max-width: 640px)").matches;
+const scrollPos = {};
+history.scrollRestoration = "manual"; // views restore their own scroll position
+function showView(view) {
+  if (view === "brief" && $('#jumpMenu a[href="#brief"]').hidden) view = "news"; // no brief today
+  const prev = document.body.dataset.view;
+  if (prev === view) return;
+  if (prev) scrollPos[prev] = scrollY;
+  document.body.dataset.view = view;
+  TABS.forEach((a) => VIEWS[a.getAttribute("href")] === view ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  // next frame, so it lands after the browser's own jump to the #hash target
+  if (isPhone()) requestAnimationFrame(() => scrollTo({ top: scrollPos[view] || 0, behavior: "instant" }));
 }
-addEventListener("scroll", markTab, { passive: true });
-addEventListener("resize", markTab);
+const viewFromHash = () => VIEWS[location.hash] || "brief";
+$("#jumpMenu").addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (!a) return;
+  e.preventDefault();
+  const view = VIEWS[a.getAttribute("href")];
+  if (view === document.body.dataset.view) { scrollTo({ top: 0 }); return; } // tapping the current tab goes to its top
+  history.pushState(null, "", a.getAttribute("href"));
+  showView(view);
+});
+addEventListener("popstate", () => showView(viewFromHash()));
 
 // the header is sticky, so jump targets land below it: keep --header-h at its current height
 const topbar = $(".topbar");
