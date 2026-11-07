@@ -33,6 +33,16 @@ async function load() {
   populateEventTypes();
   renderNews();
   renderEvents();
+  hideLoader();
+}
+
+// fade out the radar loading overlay; held for at least one sweep so a fast load doesn't just flash it
+function hideLoader() {
+  const el = $("#loader");
+  setTimeout(() => {
+    el.classList.add("done");
+    setTimeout(() => el.remove(), 500);
+  }, Math.max(0, 2400 - performance.now()));
 }
 
 // daily AI brief above the news stream (hidden if none was generated)
