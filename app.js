@@ -170,4 +170,50 @@ toggle.addEventListener("click", () => {
 });
 syncToggle();
 
+// money button: shows a random money emoji, bursts emoji confetti on click
+const MONEY = ["💰", "💵", "💸", "🤑", "💴", "💶", "💷", "🪙", "🏦", "💎"];
+const rand = (a, b) => a + Math.random() * (b - a);
+const pickMoney = () => MONEY[Math.floor(Math.random() * MONEY.length)];
+const moneyBtn = $("#moneyBtn");
+moneyBtn.textContent = pickMoney();
+// explosion physics: radial launch velocity, then gravity + air drag until off-screen
+const GRAVITY = 1500; // px/s², tune for heavier/lighter feel
+const DRAG = 0.6;     // fraction of velocity kept per second
+let pieces = [], rafId = 0;
+function step(now) {
+  const t = Math.min((now - step.last) / 1000, 0.05); // clamp so a hidden tab doesn't teleport pieces
+  step.last = now;
+  const drag = DRAG ** t;
+  pieces = pieces.filter((p) => {
+    p.vy += GRAVITY * t;
+    p.vx *= drag; p.vy *= drag;
+    p.x += p.vx * t; p.y += p.vy * t; p.rot += p.spin * t;
+    p.el.style.transform = `translate(${p.x}px, ${p.y}px) translate(-50%, -50%) rotate(${p.rot}deg)`;
+    if (p.y > innerHeight + 80) { p.el.remove(); return false; }
+    return true;
+  });
+  rafId = pieces.length ? requestAnimationFrame(step) : 0;
+}
+moneyBtn.addEventListener("click", () => {
+  moneyBtn.textContent = pickMoney();
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const r = moneyBtn.getBoundingClientRect();
+  const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+  for (let i = 0; i < 112; i++) {
+    const el = document.createElement("span");
+    el.className = "money-piece";
+    el.textContent = pickMoney();
+    el.style.fontSize = Math.round(rand(32, 60)) + "px";
+    document.body.appendChild(el);
+    // ponytail: fan sideways/down since the button sits at the top edge; widen to full 2π if it moves
+    const angle = rand(-0.2, 1.2) * Math.PI, speed = rand(450, 1200);
+    pieces.push({
+      el, x: cx, y: cy, rot: rand(0, 360), spin: rand(-540, 540),
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - rand(150, 350), // upward kick so it pops before falling
+    });
+  }
+  if (!rafId) { step.last = performance.now(); rafId = requestAnimationFrame(step); }
+});
+
 load();
