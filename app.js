@@ -39,13 +39,13 @@ async function load() {
 function renderBrief(b) {
   const el = $("#brief");
   if (!b || (!b.tldr && !(b.themes || []).length && !(b.highlights || []).length)) { el.innerHTML = ""; return; }
-  const when = b.updated ? new Date(b.updated).toLocaleDateString("en-CA", { weekday: "short", month: "short", day: "numeric" }) : "";
+  const when = b.updated ? new Date(b.updated).toLocaleDateString("en-CA", { weekday: "long", year: "numeric", month: "long", day: "numeric" }) : "";
   const themes = (b.themes || []).map((t) => `<span class="theme">${esc(t)}</span>`).join("");
   const highlights = (b.highlights || [])
     .map((h) => `<li><span class="hl-head">${esc(h.headline)}</span>${h.why ? ` <span class="hl-why">${esc(h.why)}</span>` : ""}</li>`)
     .join("");
   el.innerHTML = `
-    <div class="brief-head"><span class="label">Daily brief</span>${when ? `<span class="brief-date">${esc(when)}</span>` : ""}</div>
+    <div class="brief-head"><span class="label">Daily brief${when ? ` · ${esc(when)}` : ""}</span></div>
     ${b.tldr ? `<p class="brief-tldr">${esc(b.tldr)}</p>` : ""}
     ${themes ? `<div class="brief-themes">${themes}</div>` : ""}
     ${highlights ? `<ul class="brief-highlights">${highlights}</ul>` : ""}`;
