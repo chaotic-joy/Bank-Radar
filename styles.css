@@ -58,6 +58,10 @@ body {
   -webkit-font-smoothing: antialiased;
   transition: background .25s ease, color .25s ease;
 }
+/* animated ShaderGradient layer (bg-gradient.js) sits behind all content; the body's static image shows if it fails.
+   The same theme tint goes on top so text contrast matches the static version. */
+#bg-gradient { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+#bg-gradient::after { content: ""; position: absolute; inset: 0; background: var(--bg-overlay); }
 
 /* micro-label: uppercase mono, wide tracking (Wealthora's "RETIRE 67" labels) */
 .label {

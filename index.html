@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="bg-gradient" aria-hidden="true"></div>
   <header class="topbar">
     <div class="brand">
       <span class="dot"></span>
@@ -91,5 +92,18 @@
   </footer>
 
   <script src="app.js"></script>
+  <!-- animated background: ShaderGradient (React + three.js) loaded straight from the CDN, no build step -->
+  <script type="importmap">
+    { "imports": {
+      "react": "https://esm.sh/react@18.3.1",
+      "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+      "react-dom": "https://esm.sh/react-dom@18.3.1?external=react",
+      "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?external=react",
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.17.14?external=react,react-dom,three",
+      "@shadergradient/react": "https://esm.sh/@shadergradient/react@2.4.20?external=react,react-dom,three,@react-three/fiber"
+    } }
+  </script>
+  <script type="module" src="bg-gradient.js"></script>
 </body>
 </html>
