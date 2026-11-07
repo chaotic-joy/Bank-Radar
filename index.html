@@ -75,17 +75,8 @@
         <span class="ts-clouds"></span>
         <span class="ts-knob"></span>
       </button>
-      <!-- phones only: opens the jump menu below -->
-      <button id="menuBtn" class="menu-btn" type="button" aria-label="Jump to a section" aria-expanded="false" aria-controls="jumpMenu">
-        <span></span><span></span><span></span>
-      </button>
       <div class="meta" id="meta">loading…</div>
     </div>
-    <nav id="jumpMenu" class="jump-menu" aria-label="Sections" hidden>
-      <a href="#brief">Daily brief</a>
-      <a href="#news-stream">News stream</a>
-      <a href="#events-calendar">Events calendar</a>
-    </nav>
   </header>
 
   <main>
@@ -133,6 +124,22 @@
   <footer>
     <span id="footnote"></span>
   </footer>
+
+  <!-- phones only: tab bar fixed to the bottom of the screen -->
+  <nav id="jumpMenu" class="jump-menu" aria-label="Sections">
+    <a href="#brief">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+      <span>Daily brief</span>
+    </a>
+    <a href="#news-stream">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+      <span>News</span>
+    </a>
+    <a href="#events-calendar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
+      <span>Events</span>
+    </a>
+  </nav>
 
   <script src="app.js"></script>
 </body>

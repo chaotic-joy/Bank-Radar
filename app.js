@@ -37,6 +37,7 @@ async function load() {
   populateEventTypes();
   renderNews();
   renderEvents();
+  markTab();
   hideLoader();
 }
 
@@ -227,20 +228,23 @@ toggle.addEventListener("click", () => {
 });
 syncToggle();
 
-// mobile jump menu: links to the brief, news stream and events calendar
-const menuBtn = $("#menuBtn"), jumpMenu = $("#jumpMenu");
-function setMenu(open) {
-  jumpMenu.hidden = !open;
-  menuBtn.setAttribute("aria-expanded", String(open));
+// mobile tab bar: highlight the section currently under the header
+const TABS = [...document.querySelectorAll("#jumpMenu a")];
+function markTab() {
+  const line = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 80) + 40;
+  let current = null;
+  for (const a of TABS) {
+    const el = !a.hidden && document.querySelector(a.getAttribute("href"));
+    if (el && el.getBoundingClientRect().top <= line) current = a;
+  }
+  // at the very bottom the last section may never reach the line; it's the one on screen
+  if (scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 2) current = TABS.filter((a) => !a.hidden).at(-1);
+  current ||= TABS.find((a) => !a.hidden);
+  TABS.forEach((a) => a === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current"));
 }
-menuBtn.addEventListener("click", () => setMenu(jumpMenu.hidden));
-jumpMenu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
-document.addEventListener("click", (e) => {
-  if (!jumpMenu.hidden && !jumpMenu.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false);
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !jumpMenu.hidden) { setMenu(false); menuBtn.focus(); }
-});
+addEventListener("scroll", markTab, { passive: true });
+addEventListener("resize", markTab);
+
 // the header is sticky, so jump targets land below it: keep --header-h at its current height
 const topbar = $(".topbar");
 new ResizeObserver(() => document.documentElement.style.setProperty("--header-h", topbar.offsetHeight + "px")).observe(topbar);
