@@ -59,11 +59,22 @@
     "name": "Money20/20 USA 2026",
     "type": "conference",
     "organizer": "Money20/20",
-    "location": "The Venetian Expo, Las Vegas, NV, USA",
+    "location": "The Venetian, Las Vegas, USA",
     "region": "NA",
-    "url": "https://us.money2020.com",
+    "url": "https://money2020.com",
     "date": "2026-10-18",
     "endDate": "2026-10-21"
+  },
+  {
+    "name": "Colombia 4.0 (digital economy and fintech)",
+    "type": "conference",
+    "organizer": "Colombia Ministry of ICT",
+    "url": "https://aiandtractors.com/tech-events-2026/",
+    "location": "Bogotá, Colombia",
+    "region": "SA",
+    "date": "2026-10-25",
+    "endDate": "2026-10-27",
+    "id": "cb05a9960f3e"
   },
   {
     "name": "Mexico Tech Week 2026",
@@ -99,6 +110,17 @@
     "id": "a1bd4bc03427"
   },
   {
+    "name": "Blockchain Summit Latam Bogotá",
+    "type": "conference",
+    "organizer": "Blockchain Summit Latam",
+    "url": "https://www.latamfintech.co/activities",
+    "location": "Universidad Externado de Colombia, Bogotá, Colombia",
+    "region": "SA",
+    "date": "2026-11-04",
+    "endDate": "2026-11-04",
+    "id": "1266253bf8e9"
+  },
+  {
     "name": "Wealthsimple Presents: Something Good Is Going to Happen",
     "type": "keynote",
     "organizer": "Wealthsimple",
@@ -121,6 +143,17 @@
     "id": "ec270661f66e"
   },
   {
+    "name": "Wealthsimple Presents: Something Good Is Going to Happen (4th showcase)",
+    "type": "keynote",
+    "organizer": "Wealthsimple",
+    "url": "https://www.iphoneincanada.ca/2026/11/05/wealthsimple-penny-ai-12-new-features/",
+    "location": "Massey Hall, Toronto, Canada",
+    "region": "NA",
+    "date": "2026-11-05",
+    "endDate": "2026-11-05",
+    "id": "f3bb92ec6a53"
+  },
+  {
     "name": "Banking Transformation Summit USA",
     "type": "conference",
     "organizer": "Banking Transformation Summit",
@@ -130,6 +163,28 @@
     "date": "2026-11-09",
     "endDate": "2026-11-10",
     "id": "51dd70235373"
+  },
+  {
+    "name": "El Salvador Fintech Forum 2026",
+    "type": "conference",
+    "organizer": "LatAm Fintech community",
+    "url": "https://www.latamfintech.co/activities",
+    "location": "Hotel Hilton, San Salvador, El Salvador",
+    "region": "NA",
+    "date": "2026-11-10",
+    "endDate": "2026-11-10",
+    "id": "76c705d327bd"
+  },
+  {
+    "name": "FinTech & AI Unconference México 2026",
+    "type": "conference",
+    "organizer": "The Unconferences",
+    "url": "https://finpublic.ru/en/calendar",
+    "location": "Mexico City, Mexico",
+    "region": "NA",
+    "date": "2026-11-11",
+    "endDate": "2026-11-11",
+    "id": "4456555df689"
   },
   {
     "name": "NextGen Payments & RegTech Forum",
@@ -145,9 +200,9 @@
   {
     "name": "CrossTech World 2026",
     "type": "conference",
-    "organizer": "CrossTech",
-    "url": "https://www.fintechweekly.com/fintech-conferences?region=americas&variant=redesign",
-    "location": "Davie, FL",
+    "organizer": "CrossTech World",
+    "url": "https://www.latamfintech.co/activities",
+    "location": "Nobu Hotel, Miami Beach, USA",
     "region": "NA",
     "date": "2026-11-17",
     "endDate": "2026-11-17",
@@ -176,6 +231,17 @@
     "id": "d70f03b1bb74"
   },
   {
+    "name": "StartCo 2026 (Mexico City edition)",
+    "type": "conference",
+    "organizer": "StartCo",
+    "url": "https://www.startupblink.com/blog/top-startup-events-in-latin-america/",
+    "location": "Mexico City, Mexico",
+    "region": "NA",
+    "date": "2026-11-19",
+    "endDate": "2026-11-20",
+    "id": "c36f20774b1b"
+  },
+  {
     "name": "CASE26 (São Paulo)",
     "type": "conference",
     "organizer": "CASE26 / FEA-USP",
@@ -185,6 +251,28 @@
     "date": "2026-11-26",
     "endDate": "2026-11-27",
     "id": "cc49525dfae2"
+  },
+  {
+    "name": "Open Summit Awards 2026 (Open Finance)",
+    "type": "conference",
+    "organizer": "LatAm Fintech community",
+    "url": "https://www.latamfintech.co/activities",
+    "location": "São Paulo, Brazil",
+    "region": "SA",
+    "date": "2026-11-26",
+    "endDate": "2026-11-26",
+    "id": "dbc5976c7851"
+  },
+  {
+    "name": "Venezuela Fintech Forum 2026",
+    "type": "conference",
+    "organizer": "LatAm Fintech community",
+    "url": "https://www.latamfintech.co/activities",
+    "location": "Hotel Eurobuilding, Caracas, Venezuela",
+    "region": "SA",
+    "date": "2026-11-28",
+    "endDate": "2026-11-28",
+    "id": "8eb7613379c7"
   },
   {
     "id": "f899dbda10aa",
@@ -264,6 +352,17 @@
     "id": "c28a0d327b92"
   },
   {
+    "name": "Scotiabank Q4 / fiscal 2026 earnings call",
+    "type": "earnings",
+    "organizer": "Scotiabank",
+    "url": "https://www.scotiabank.com/ca/en/about/investors-shareholders/financial-result.html",
+    "location": "Toronto, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-02",
+    "endDate": "2026-12-02",
+    "id": "8057928edca8"
+  },
+  {
     "name": "EQB (EQ Bank) Q4 and fiscal 2026 earnings call (10:30 a.m. ET; results Dec 2 after close)",
     "type": "earnings",
     "organizer": "EQB Inc.",
@@ -319,6 +418,28 @@
     "id": "0c6644c47f89"
   },
   {
+    "name": "CIBC Q4 / fiscal 2026 earnings (7:30 am ET)",
+    "type": "earnings",
+    "organizer": "CIBC",
+    "url": "https://www.cibc.com/en/about-cibc/investor-relations/quarterly-results.html",
+    "location": "Toronto, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "18d45820b950"
+  },
+  {
+    "name": "Royal Bank of Canada Q4 / fiscal 2026 earnings",
+    "type": "earnings",
+    "organizer": "Royal Bank of Canada",
+    "url": "https://www.tipranks.com/stocks/tse:ry/earnings",
+    "location": "Toronto, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-03",
+    "endDate": "2026-12-03",
+    "id": "96ba32334e17"
+  },
+  {
     "name": "National Bank of Canada Q4 2026 results and strategic update (90-minute call, 8:00 a.m. ET)",
     "type": "investor-call",
     "organizer": "National Bank of Canada",
@@ -350,6 +471,17 @@
     "date": "2026-12-04",
     "endDate": "2026-12-04",
     "id": "12af0486ae45"
+  },
+  {
+    "name": "National Bank of Canada Q4 / fiscal 2026 results and strategic update (8:00 am ET call)",
+    "type": "investor-call",
+    "organizer": "National Bank of Canada",
+    "url": "https://www.nbc.ca/about-us/news-media/press-release/2026/20261029-nbc-report-q4-results.html",
+    "location": "Montreal, Canada (webcast)",
+    "region": "NA",
+    "date": "2026-12-04",
+    "endDate": "2026-12-04",
+    "id": "59f749f3be06"
   },
   {
     "name": "U.S. BankTech Summit 2026",
