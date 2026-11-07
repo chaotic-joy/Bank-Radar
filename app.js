@@ -195,7 +195,7 @@ function step(now) {
   rafId = pieces.length ? requestAnimationFrame(step) : 0;
 }
 
-// "ka-ching": synthesized with Web Audio (no audio file). Drawer click, then two bell tones.
+// "ching": synthesized with Web Audio (no audio file). Two bell tones.
 let audio;
 function kaching() {
   const AC = window.AudioContext || window.webkitAudioContext;
@@ -206,18 +206,6 @@ function kaching() {
   const out = audio.createGain();
   out.gain.value = 0.25; // master volume
   out.connect(audio.destination);
-
-  // "ka": short burst of filtered noise
-  const len = Math.round(0.06 * audio.sampleRate);
-  const buf = audio.createBuffer(1, len, audio.sampleRate);
-  const data = buf.getChannelData(0);
-  for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / len);
-  const noise = audio.createBufferSource();
-  const band = audio.createBiquadFilter();
-  noise.buffer = buf;
-  band.type = "bandpass"; band.frequency.value = 3000; band.Q.value = 1.5;
-  noise.connect(band).connect(out);
-  noise.start(t);
 
   // "ching": bell = fundamental + inharmonic overtones, fast attack, long exponential ring-out
   const bell = (freq, at, dur) => {
@@ -232,8 +220,8 @@ function kaching() {
       osc.stop(at + dur);
     }
   };
-  bell(1568, t + 0.07, 0.9); // G6
-  bell(2093, t + 0.13, 1.1); // C7
+  bell(1568, t, 0.9); // G6
+  bell(2093, t + 0.06, 1.1); // C7
 }
 
 moneyBtn.addEventListener("click", () => {
