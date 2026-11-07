@@ -1,5 +1,5 @@
 // Static dashboard: reads data/*.json, renders news (filterable) + events.
-const state = { news: [], events: [], cat: "all", region: "all", focus: "all", sector: "all", bank: "all", q: "", evType: "all" };
+const state = { news: [], events: [], cat: "all", region: "all", sector: "all", bank: "all", q: "", evType: "all" };
 
 // event-type chip labels; unknown types fall back to a capitalized version
 const EV_LABELS = { conference: "Conferences", keynote: "Keynotes", earnings: "Earnings calls", "investor-call": "Investor calls" };
@@ -8,6 +8,7 @@ const evLabel = (t) => EV_LABELS[t] || (t ? t[0].toUpperCase() + t.slice(1) : "O
 // own brand = Simplii (Ray's team); match on bank field or title
 const SECTOR_LABELS = { bank: "Bank", fintech: "Fintech", exchange: "Exchange" };
 
+const OWN = "Simplii Financial";
 const isOwn = (n) => /simplii/i.test(`${n.bank || ""} ${n.title || ""}`);
 
 const $ = (s) => document.querySelector(s);
@@ -67,8 +68,8 @@ function renderBrief(b) {
 // On narrow screens each chip group shows as a dropdown instead (styles.css swaps them).
 // The chips stay the source of truth: a dropdown change clicks the matching chip, and
 // the chip click handlers keep the dropdown in step.
-const ALL_LABELS = { cat: "All types", focus: "Everyone", region: "All regions", sector: "All sectors", evType: "All event types" };
-const GROUP_NAMES = { cat: "type", focus: "audience", region: "region", sector: "sector", evType: "event type" };
+const ALL_LABELS = { cat: "All types", region: "All regions", sector: "All sectors", evType: "All event types" };
+const GROUP_NAMES = { cat: "type", region: "region", sector: "sector", evType: "event type" };
 function mirrorChips(container) {
   container.querySelectorAll(".chip-select").forEach((s) => s.remove());
   const groups = new Set([...container.querySelectorAll(".chip[data-group]")].map((c) => c.dataset.group));
@@ -98,11 +99,13 @@ function activateChip(btn) {
   return group;
 }
 
-// fill the company dropdown from companies present in the data (Simplii pinned first),
-// limited to the selected sector so the list stays short
+// fill the company dropdown from companies present in the data, limited to the selected
+// sector so the list stays short. Simplii Financial is always listed first under banks,
+// even on a day with no Simplii news.
 function populateBanks() {
-  const banks = [...new Set(state.news.filter(inSector).map((n) => n.bank).filter(Boolean))];
-  banks.sort((a, b) => (/simplii/i.test(b) ? 1 : 0) - (/simplii/i.test(a) ? 1 : 0) || a.localeCompare(b));
+  const banks = [...new Set(state.news.filter(inSector).map((n) => n.bank).filter((b) => b && !/simplii/i.test(b)))]
+    .sort((a, b) => a.localeCompare(b));
+  if (state.sector === "all" || state.sector === "bank") banks.unshift(OWN);
   $("#bankFilter").innerHTML =
     `<option value="all">All companies</option>` +
     banks.map((b) => `<option value="${esc(b)}"${b === state.bank ? " selected" : ""}>${esc(b)}</option>`).join("");
@@ -118,10 +121,9 @@ function renderNews() {
   const items = state.news.filter((n) => {
     if (state.cat !== "all" && n.category !== state.cat) return false;
     if (state.region !== "all" && n.region !== state.region) return false;
-    if (state.focus === "own" && !isOwn(n)) return false;
-    if (state.focus === "competitors" && isOwn(n)) return false;
     if (!inSector(n)) return false;
-    if (state.bank !== "all" && (n.bank || "") !== state.bank) return false;
+    // Simplii also matches stories that only mention it in the headline
+    if (state.bank === OWN ? !isOwn(n) : state.bank !== "all" && (n.bank || "") !== state.bank) return false;
     if (q && !(`${n.title} ${n.titleOriginal || ""} ${n.summary} ${n.bank} ${n.source}`.toLowerCase().includes(q))) return false;
     return true;
   });
@@ -191,7 +193,7 @@ function eventRow(e, past) {
   return e.url ? `<a class="card" href="${esc(e.url)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="card">${inner}</div>`;
 }
 
-// filter wiring: chip groups (cat / focus / region) via data-group + data-value
+// filter wiring: chip groups (cat / sector / region) via data-group + data-value
 $("#controls").addEventListener("click", (ev) => {
   const btn = ev.target.closest(".chip[data-group]");
   if (!btn) return;
