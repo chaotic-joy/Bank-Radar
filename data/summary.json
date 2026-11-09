@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-08T16:10:32.681Z",
-  "tldr": "Wealthsimple launched Penny, an AI assistant that can take actions across banking and trading, while BMO put agentic AI into its credit card contact centre and Anthropic added a personal finance tool to Claude. Elsewhere, Nequi launched yield-bearing savings pockets, and crypto outages and Pix downtime in Brazil put third-party dependency and reliability in focus.",
+  "updated": "2026-11-09T19:58:29.090Z",
+  "tldr": "Canada's Real-Time Rail went live, and Wealthsimple and KOHO were quickly named as adopters, which puts instant payments on the table for Simplii. Elsewhere, BMO deployed agentic AI in its contact centre, and tokenized and 24-hour trading plans advanced at NYSE and B3.",
   "themes": [
-    "Agentic AI in banking and trading",
-    "Third-party provider risk and outages",
-    "Savings yield for everyday users",
-    "Premium travel-rewards cards",
-    "Tokenization and 24-hour trading"
+    "Canada's Real-Time Rail and instant payments",
+    "AI in service operations",
+    "Tokenization and 24-hour trading",
+    "Crypto rails and operational risk",
+    "Travel-rewards card and sign-up bonus competition"
   ],
   "highlights": [
     {
-      "headline": "Wealthsimple launches Penny, an AI assistant that can prepare e-transfers, pay invoices, flag duplicate card charges and help self-directed investors buy and sell. It never acts without client confirmation, and it connects to ChatGPT and Claude.",
-      "why": "A direct competitor now offers an assistant that takes actions across banking and trading, not just answers questions. It sets a new bar for digital self-serve experiences, and the confirm-before-acting design and the ChatGPT/Claude links are worth studying."
+      "headline": "Canada's Real-Time Rail has launched after years of delays. Wealthsimple and KOHO announced participation on day one, and Interac issued a statement.",
+      "why": "Fintech rivals are already marketing instant payments. Simplii needs a clear RTR timeline and a customer-facing position, since the rail will reset expectations for speed of money movement."
     },
     {
-      "headline": "Anthropic adds a personal finance tool to Claude that lets users connect bank and card accounts and ask questions about their money.",
-      "why": "General-purpose AI assistants are moving into money management, so customers may start asking questions about their finances outside our app. We should decide how we show up in those channels."
+      "headline": "BMO launched AI Agent Assist, an internal agentic AI tool for its Virtual Connect credit card contact centre. It does transaction matching, policy retrieval and case preparation, and BMO targets up to 30% shorter call times.",
+      "why": "A direct Canadian competitor is using AI to speed up service resolution. Simplii can benchmark its own contact-centre tooling against this and consider similar agent-assist use cases."
     },
     {
-      "headline": "BMO rolls out AI Agent Assist in its Virtual Connect contact centre. The internal agentic tool does transaction matching, policy retrieval and case preparation, and targets up to 30% shorter call times.",
-      "why": "A big-bank peer is using agentic AI to speed up credit card service. This is a benchmark for service-cost and resolution-time targets, and the rollout is limited to agent-assist, with no customer-facing agent yet."
+      "headline": "NYSE will settle tokenized stocks on Avalanche (WSJ). B3 in Brazil presented a project for 24-hour blockchain-based stock trading.",
+      "why": "Major exchanges are moving toward tokenized and round-the-clock trading. That could eventually shape what self-directed investors expect from Simplii's trading platform, even though it is early."
     },
     {
-      "headline": "Nubank and Mercado Pago suspended crypto deposits and withdrawals after an external verification provider failed. Separate Pix outages hit Banco do Brasil and affected other banks.",
-      "why": "The outages show how a single third-party vendor can freeze a core feature. It is a useful prompt to review our vendor dependencies, failover plans and customer communication during incidents."
+      "headline": "RBC's Avion Visa Infinite offers up to 70,000 points (apply by Nov 25, 2026). Chase's Marriott Bonvoy Boundless card has a 200K welcome offer.",
+      "why": "Big-bank travel cards are still competing on large sign-up bonuses. This is the benchmark for Simplii's card acquisition offers heading into the holiday period."
     }
   ]
 }
