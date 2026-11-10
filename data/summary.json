@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-10T17:12:56.368Z",
-  "tldr": "Canada's Real-Time Rail went live, with Wealthsimple and KOHO already announcing adoption, so instant payments become a baseline expectation. BMO is also pushing AI into servicing, and Venmo's bill-splitting and stablecoin moves are raising the bar on peer-to-peer and payments features.",
+  "updated": "2026-11-10T17:43:22.472Z",
+  "tldr": "Canada's Real-Time Rail went live, with Wealthsimple and KOHO among the early adopters, which resets expectations for instant payments. Elsewhere, tokenized and 24-hour trading, stablecoin rails and in-app bill splitting are gaining ground.",
   "themes": [
     "Canada's Real-Time Rail goes live",
-    "AI assistants in servicing and business apps",
-    "Stablecoins and tokenized assets moving into mainstream finance",
-    "Peer-to-peer payments and bill-splitting features",
-    "Premium card and sign-up bonus competition"
+    "Stablecoins moving into mainstream banking",
+    "Tokenized and 24-hour stock trading",
+    "Peer-to-peer payments and bill splitting",
+    "AI assistants in banking apps"
   ],
   "highlights": [
     {
-      "headline": "Canada's Real-Time Rail launched, and Wealthsimple and KOHO are already announcing adoption; Interac issued a statement on the launch",
-      "why": "Instant payments are now live in Canada and direct competitor Wealthsimple is publicly claiming a place on the rail. Simplii needs a clear RTR timeline and customer messaging, since faster-payments expectations will reset quickly."
+      "headline": "Canada's Real-Time Rail launched, with Wealthsimple joining at go-live and KOHO bringing instant payments to its users; Interac also issued a statement on the launch.",
+      "why": "Instant payments are now table stakes in Canada. Direct competitor Wealthsimple is already on the rail, so Simplii needs a clear RTR timeline and customer messaging."
     },
     {
-      "headline": "BMO launched AI Agent Assist for its credit card contact centre (Nov 6)",
-      "why": "A big-bank peer is using generative AI to speed up service resolution. Simplii's servicing and contact-centre teams should compare it against their own AI roadmap, though this is an agent-assist tool rather than a customer-facing assistant."
+      "headline": "Venmo launched receipt scanning to split bills by item. Cash App also added a Pay by Bandana tag collaboration with Nahmias.",
+      "why": "US peer-to-peer apps keep adding social and everyday-spending features. This raises expectations for how easy splitting and sending money should be, especially alongside Interac e-Transfer and RTR."
     },
     {
-      "headline": "Venmo added receipt scanning to split bills by item, with wide coverage from Engadget, Fast Company and USA Today",
-      "why": "Itemized bill splitting is becoming standard in peer-to-peer payments. Simplii could consider a similar feature alongside Interac e-Transfer and RTR."
+      "headline": "PNC is launching stablecoin payments for corporate clients with Coinbase, which has also received a full US national trust charter. Stripe and miPlata launched a stablecoin Visa card.",
+      "why": "Stablecoins are moving from crypto-native firms into regulated banks and card products. Simplii should watch whether Canadian banks and fintechs follow."
     },
     {
-      "headline": "PNC is launching incoming stablecoin payments for corporate clients with Coinbase, and Coinbase received a US national trust charter",
-      "why": "Stablecoin and crypto activity is moving into regulated banking. It is mostly a corporate and US story for now, but it signals where payments and custody are heading, so Simplii should keep it on its watchlist."
+      "headline": "NYSE plans to settle tokenized stocks on Avalanche. B3 is preparing tokenized share trading for 2027 and has presented a project for 24-hour blockchain trading.",
+      "why": "Exchanges are signalling a shift toward tokenized, always-on trading. That could shape future expectations for Simplii's self-directed investing."
     }
   ]
 }
