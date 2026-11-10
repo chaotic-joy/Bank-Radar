@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-09T19:58:29.090Z",
-  "tldr": "Canada's Real-Time Rail went live, and Wealthsimple and KOHO were quickly named as adopters, which puts instant payments on the table for Simplii. Elsewhere, BMO deployed agentic AI in its contact centre, and tokenized and 24-hour trading plans advanced at NYSE and B3.",
+  "updated": "2026-11-10T17:12:56.368Z",
+  "tldr": "Canada's Real-Time Rail went live, with Wealthsimple and KOHO already announcing adoption, so instant payments become a baseline expectation. BMO is also pushing AI into servicing, and Venmo's bill-splitting and stablecoin moves are raising the bar on peer-to-peer and payments features.",
   "themes": [
-    "Canada's Real-Time Rail and instant payments",
-    "AI in service operations",
-    "Tokenization and 24-hour trading",
-    "Crypto rails and operational risk",
-    "Travel-rewards card and sign-up bonus competition"
+    "Canada's Real-Time Rail goes live",
+    "AI assistants in servicing and business apps",
+    "Stablecoins and tokenized assets moving into mainstream finance",
+    "Peer-to-peer payments and bill-splitting features",
+    "Premium card and sign-up bonus competition"
   ],
   "highlights": [
     {
-      "headline": "Canada's Real-Time Rail has launched after years of delays. Wealthsimple and KOHO announced participation on day one, and Interac issued a statement.",
-      "why": "Fintech rivals are already marketing instant payments. Simplii needs a clear RTR timeline and a customer-facing position, since the rail will reset expectations for speed of money movement."
+      "headline": "Canada's Real-Time Rail launched, and Wealthsimple and KOHO are already announcing adoption; Interac issued a statement on the launch",
+      "why": "Instant payments are now live in Canada and direct competitor Wealthsimple is publicly claiming a place on the rail. Simplii needs a clear RTR timeline and customer messaging, since faster-payments expectations will reset quickly."
     },
     {
-      "headline": "BMO launched AI Agent Assist, an internal agentic AI tool for its Virtual Connect credit card contact centre. It does transaction matching, policy retrieval and case preparation, and BMO targets up to 30% shorter call times.",
-      "why": "A direct Canadian competitor is using AI to speed up service resolution. Simplii can benchmark its own contact-centre tooling against this and consider similar agent-assist use cases."
+      "headline": "BMO launched AI Agent Assist for its credit card contact centre (Nov 6)",
+      "why": "A big-bank peer is using generative AI to speed up service resolution. Simplii's servicing and contact-centre teams should compare it against their own AI roadmap, though this is an agent-assist tool rather than a customer-facing assistant."
     },
     {
-      "headline": "NYSE will settle tokenized stocks on Avalanche (WSJ). B3 in Brazil presented a project for 24-hour blockchain-based stock trading.",
-      "why": "Major exchanges are moving toward tokenized and round-the-clock trading. That could eventually shape what self-directed investors expect from Simplii's trading platform, even though it is early."
+      "headline": "Venmo added receipt scanning to split bills by item, with wide coverage from Engadget, Fast Company and USA Today",
+      "why": "Itemized bill splitting is becoming standard in peer-to-peer payments. Simplii could consider a similar feature alongside Interac e-Transfer and RTR."
     },
     {
-      "headline": "RBC's Avion Visa Infinite offers up to 70,000 points (apply by Nov 25, 2026). Chase's Marriott Bonvoy Boundless card has a 200K welcome offer.",
-      "why": "Big-bank travel cards are still competing on large sign-up bonuses. This is the benchmark for Simplii's card acquisition offers heading into the holiday period."
+      "headline": "PNC is launching incoming stablecoin payments for corporate clients with Coinbase, and Coinbase received a US national trust charter",
+      "why": "Stablecoin and crypto activity is moving into regulated banking. It is mostly a corporate and US story for now, but it signals where payments and custody are heading, so Simplii should keep it on its watchlist."
     }
   ]
 }
