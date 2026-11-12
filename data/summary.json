@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-12T09:33:19.173Z",
-  "tldr": "Canada's Real-Time Rail went live, with KOHO and Interac already announcing instant-payment support, and BMO listed a new TSX ETF. Elsewhere, fintechs kept adding yield, stocks, stablecoin and bill-splitting features that raise baseline customer expectations.",
+  "updated": "2026-11-12T17:41:49.034Z",
+  "tldr": "The one direct-competitor item today is CIBC adding another U.S. Canadian Depositary Receipt (CDR) offering. The larger signals come from outside Canada: 24/7 tokenized trading at NYSE and Nubank, bank-issued stablecoins and tokenized deposits at SoFi, and AI/voice-first banking from Starling and Banco do Brasil.",
   "themes": [
-    "Real-Time Rail and instant payments",
-    "Stablecoin payments going mainstream",
-    "Fintechs adding yield and investing to retain deposits",
-    "Social and everyday-payment UX (bill splitting, tap to pay)",
-    "AI assistants in banking apps (SME-focused)"
+    "24/7 and tokenized trading",
+    "Stablecoins and tokenized deposits going mainstream",
+    "AI and voice-driven banking interfaces",
+    "Yield-bearing and savings features",
+    "Everyday P2P and payments convenience (bill splitting, tap to pay)"
   ],
   "highlights": [
     {
-      "headline": "KOHO announces instant payments on Canada's Real-Time Rail, and Interac issues a statement on the rail's launch",
-      "why": "A direct Canadian fintech rival is already marketing real-time payments to millions. Simplii needs a clear RTR timeline, since instant money movement will quickly become table stakes."
+      "headline": "CIBC is launching an additional U.S. Canadian Depositary Receipt (CDR), extending its CDR program.",
+      "why": "CIBC is the only direct Canadian competitor in today's items. CDRs give Canadian investors currency-hedged exposure to U.S. stocks, so Simplii's self-directed investing team should check what CDR access and coverage its own platform offers."
     },
     {
-      "headline": "Wise launches Wise Interest and Stocks for US customers",
-      "why": "A money-transfer player is bundling interest and investing to hold customer deposits. This is the same hold-your-whole-balance playbook Wealthsimple and EQ Bank use, so it is worth watching for a Canadian rollout."
+      "headline": "NYSE affiliate plans to launch 24/7 tokenized stock trading this month, and Binance is opening 24/7 perpetual trading on Nubank.",
+      "why": "Round-the-clock trading from a major exchange and a large digital bank is starting to set a new customer expectation. Simplii Direct Investing should look at its own hours and settlement roadmap."
     },
     {
-      "headline": "BMO lists the Credit Stress Opportunities ETF (ZCDX) on the TSX",
-      "why": "A direct competitor is expanding its niche ETF shelf. It is a reminder to review the range of products available to Simplii self-directed investors."
+      "headline": "SoFi's SoFiUSD, billed as the first tokenized deposit product at a US bank, is now live on Polygon, its third blockchain. Separately, PNC is piloting stablecoin payments for corporate clients with Coinbase.",
+      "why": "A digital-first bank is putting regulated tokenized money on public chains, and a large incumbent is accepting stablecoin payments. That makes stablecoin and tokenized-deposit strategy a live roadmap question for Canadian digital banks."
     },
     {
-      "headline": "Venmo adds receipt scanning to split bills by item, while SoFi launches a USD stablecoin and PNC rolls out Coinbase-powered stablecoin payments for corporate clients",
-      "why": "Peer-to-peer splitting is getting smarter, and stablecoins are moving from crypto niche to bank and fintech infrastructure. Both set expectations for payments UX and future rails."
+      "headline": "Starling launched an AI 'talk to transact' feature that lets customers set up payments by speaking to the app. Banco do Brasil added voice calls inside its app and Itaú brought an AI assistant to its SME app.",
+      "why": "Conversational and voice-first servicing is moving from pilot to shipped product across several banks, which raises the bar for app UX and AI assistance."
     }
   ]
 }
