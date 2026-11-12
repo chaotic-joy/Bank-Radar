@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-11T17:21:11.948Z",
-  "tldr": "Canada's Real-Time Rail went live, with Wealthsimple and KOHO already on board, so instant payments are now table stakes for Canadian digital banking. Elsewhere, Venmo's receipt-based bill splitting, Wise's new US savings and stocks products, and stablecoin payments pilots (PNC/Coinbase, Stripe) are shaping new customer expectations.",
+  "updated": "2026-11-12T09:33:19.173Z",
+  "tldr": "Canada's Real-Time Rail went live, with KOHO and Interac already announcing instant-payment support, and BMO listed a new TSX ETF. Elsewhere, fintechs kept adding yield, stocks, stablecoin and bill-splitting features that raise baseline customer expectations.",
   "themes": [
-    "Canada's Real-Time Rail goes live",
-    "Bill splitting and peer-to-peer payments",
-    "Stablecoin and tokenized-asset infrastructure",
-    "Fintechs bundling savings and investing",
-    "AI assistants in banking apps"
+    "Real-Time Rail and instant payments",
+    "Stablecoin payments going mainstream",
+    "Fintechs adding yield and investing to retain deposits",
+    "Social and everyday-payment UX (bill splitting, tap to pay)",
+    "AI assistants in banking apps (SME-focused)"
   ],
   "highlights": [
     {
-      "headline": "Canada's Real-Time Rail launched after years of delay. Wealthsimple joined as instant payments went live, and KOHO announced real-time rail adoption. Interac issued a statement on the launch.",
-      "why": "Direct fintech competitors are already positioning on instant payments, so Simplii needs a clear RTR timeline and customer messaging on speed, limits and fees."
+      "headline": "KOHO announces instant payments on Canada's Real-Time Rail, and Interac issues a statement on the rail's launch",
+      "why": "A direct Canadian fintech rival is already marketing real-time payments to millions. Simplii needs a clear RTR timeline, since instant money movement will quickly become table stakes."
     },
     {
-      "headline": "Venmo launched in-app receipt scanning to split bills by item, drawing wide coverage.",
-      "why": "It raises the bar for everyday P2P experience; Simplii should check whether Interac e-Transfer flows offer anything comparable for group payments."
+      "headline": "Wise launches Wise Interest and Stocks for US customers",
+      "why": "A money-transfer player is bundling interest and investing to hold customer deposits. This is the same hold-your-whole-balance playbook Wealthsimple and EQ Bank use, so it is worth watching for a Canadian rollout."
     },
     {
-      "headline": "Wise expanded its US offering with Wise Interest and Wise Stocks.",
-      "why": "A transfer-first fintech is adding savings and investing to keep deposits on platform, which is the same bundled-money approach that Wealthsimple and EQ Bank use against Simplii's account base."
+      "headline": "BMO lists the Credit Stress Opportunities ETF (ZCDX) on the TSX",
+      "why": "A direct competitor is expanding its niche ETF shelf. It is a reminder to review the range of products available to Simplii self-directed investors."
     },
     {
-      "headline": "PNC is rolling out incoming stablecoin payments for corporate clients with Coinbase. Coinbase also won a full US national trust bank charter, and NYSE plans to settle tokenized stocks on Avalanche.",
-      "why": "Crypto and tokenization are moving into mainstream bank and exchange infrastructure. This is not an immediate retail issue, but it is a category shift to watch for payments and trading roadmaps."
+      "headline": "Venmo adds receipt scanning to split bills by item, while SoFi launches a USD stablecoin and PNC rolls out Coinbase-powered stablecoin payments for corporate clients",
+      "why": "Peer-to-peer splitting is getting smarter, and stablecoins are moving from crypto niche to bank and fintech infrastructure. Both set expectations for payments UX and future rails."
     }
   ]
 }
