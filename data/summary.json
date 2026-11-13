@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-12T17:41:49.034Z",
-  "tldr": "The one direct-competitor item today is CIBC adding another U.S. Canadian Depositary Receipt (CDR) offering. The larger signals come from outside Canada: 24/7 tokenized trading at NYSE and Nubank, bank-issued stablecoins and tokenized deposits at SoFi, and AI/voice-first banking from Starling and Banco do Brasil.",
+  "updated": "2026-11-13T09:29:52.261Z",
+  "tldr": "No direct Canadian competitor moved in a big way today (CIBC added another U.S. CDR and BMO listed a TSX ETF), so the signal comes from category shifts: tokenized money and 24/7 trading are going mainstream, and banks are adding voice and AI interfaces to their apps.",
   "themes": [
-    "24/7 and tokenized trading",
     "Stablecoins and tokenized deposits going mainstream",
-    "AI and voice-driven banking interfaces",
-    "Yield-bearing and savings features",
-    "Everyday P2P and payments convenience (bill splitting, tap to pay)"
+    "24/7 trading of tokenized stocks and perpetuals",
+    "Voice and AI-driven banking interfaces",
+    "Yield-bearing pockets and savings features in fintech apps",
+    "Cross-border and global equity access for retail investors"
   ],
   "highlights": [
     {
-      "headline": "CIBC is launching an additional U.S. Canadian Depositary Receipt (CDR), extending its CDR program.",
-      "why": "CIBC is the only direct Canadian competitor in today's items. CDRs give Canadian investors currency-hedged exposure to U.S. stocks, so Simplii's self-directed investing team should check what CDR access and coverage its own platform offers."
+      "headline": "CIBC is launching an additional U.S. Canadian Depositary Receipt (CDR).",
+      "why": "CIBC is the only direct Canadian competitor with a retail-relevant investing move today. CDRs give clients CAD-priced, currency-hedged exposure to U.S. stocks, which Simplii's self-directed investing clients may start to expect."
     },
     {
-      "headline": "NYSE affiliate plans to launch 24/7 tokenized stock trading this month, and Binance is opening 24/7 perpetual trading on Nubank.",
-      "why": "Round-the-clock trading from a major exchange and a large digital bank is starting to set a new customer expectation. Simplii Direct Investing should look at its own hours and settlement roadmap."
+      "headline": "NYSE affiliate plans 24/7 tokenized stock trading this month (WSJ), and Binance is opening 24/7 perpetual trading on Nubank and Freedom Holding stock.",
+      "why": "Round-the-clock trading is starting to look like a baseline expectation. It puts pressure on Simplii's trading hours and Direct Investing roadmap."
     },
     {
-      "headline": "SoFi's SoFiUSD, billed as the first tokenized deposit product at a US bank, is now live on Polygon, its third blockchain. Separately, PNC is piloting stablecoin payments for corporate clients with Coinbase.",
-      "why": "A digital-first bank is putting regulated tokenized money on public chains, and a large incumbent is accepting stablecoin payments. That makes stablecoin and tokenized-deposit strategy a live roadmap question for Canadian digital banks."
+      "headline": "SoFi took its bank-issued stablecoin SoFiUSD live on Polygon, reaching its 17M members. It is also described as the first tokenized deposit product at a US bank.",
+      "why": "A consumer bank is now offering tokenized deposits as a retail product. Simplii should decide whether faster, programmable money is on its radar, especially for cross-border transfers and USD accounts."
     },
     {
-      "headline": "Starling launched an AI 'talk to transact' feature that lets customers set up payments by speaking to the app. Banco do Brasil added voice calls inside its app and Itaú brought an AI assistant to its SME app.",
-      "why": "Conversational and voice-first servicing is moving from pilot to shipped product across several banks, which raises the bar for app UX and AI assistance."
+      "headline": "Starling launched an AI 'talk to transact' feature for setting up payments by voice. Banco do Brasil launched in-app voice calling ('Telefone BB'), and Itaú put its ia.i AI assistant in its business app.",
+      "why": "Voice and conversational AI are becoming standard in banking apps. Simplii's digital-only model is well placed to test an assistant for payments and support."
     }
   ]
 }
