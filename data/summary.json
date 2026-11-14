@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-13T17:19:25.758Z",
-  "tldr": "No direct Canadian competitor made a major retail move today. The notable signals come from adjacent players: 24/7 tokenized trading at NYSE and Binance, SoFi's tokenized deposit and stablecoin rollout, and voice and AI-driven banking in apps. CIBC and BMO only had investment-product listings (a CDR and an ETF).",
+  "updated": "2026-11-14T15:56:36.172Z",
+  "tldr": "Wealthsimple is the most direct competitor mover today, opening a CADD beta with 3.25% promotional rewards and a retail beta for a Canadian-dollar stablecoin. Elsewhere, stablecoins and tokenized deposits, 24/7 trading and AI or voice-led banking are moving from experiments to live products.",
   "themes": [
-    "24/7 and tokenized trading",
-    "Bank-issued stablecoins and tokenized deposits",
-    "Voice and AI-driven app interactions",
-    "Earlier access to paychecks via direct deposit partnerships",
-    "Investment product launches (CDRs, ETFs)"
+    "Stablecoins and tokenized deposits going mainstream",
+    "24/7 trading and tokenized equities",
+    "Voice and AI agents in banking and payments",
+    "Fintechs becoming banks / bundling account, card and remittances",
+    "Cross-border depositary receipts and market access"
   ],
   "highlights": [
     {
-      "headline": "NYSE affiliate to launch 24/7 tokenized stock trading this month (WSJ); Binance to open 24/7 perpetual trading on Nubank and Freedom Holding stock",
-      "why": "Round-the-clock equity access is moving from crypto into mainstream exchanges, and it will reset expectations for Direct Investing hours and settlement. The product team should assess where Simplii's trading offer stands."
+      "headline": "Wealthsimple opens a CADD beta with 3.25% promotional rewards and a retail beta for Tetra's Canadian dollar stablecoin",
+      "why": "The most direct competitor in the feed is pairing a promotional rewards rate with a CAD stablecoin, which sets new expectations for CAD digital-dollar products and could pull in rate-sensitive and crypto-curious Canadian customers."
     },
     {
-      "headline": "SoFi's SoFiUSD, billed as the first tokenized deposit product at a US bank, is now live on Polygon, its third chain, with reach to 17M members",
-      "why": "A bank-issued stablecoin and tokenized deposits at a consumer-facing digital bank is a category signal for Simplii's longer-term payments and cross-border roadmap, even though it is US-only for now."
+      "headline": "SoFi's bank-issued stablecoin SoFiUSD is live on Polygon (its third chain) and is described as the first tokenized deposit product at a US bank",
+      "why": "A bank-issued, regulated digital dollar offered to 17M members shows incumbent-style banks can ship tokenized money, which is a template Simplii and CIBC could be measured against in CAD."
     },
     {
-      "headline": "CIBC launches an additional US Canadian Depositary Receipt (CDR)",
-      "why": "CIBC, a sister brand and direct competitor in the same market, is widening low-friction CAD access to US equities. This is the most relevant Canadian move today and a benchmark for Simplii's Direct Investing offer."
+      "headline": "CIBC is launching an additional U.S. Canadian Depositary Receipt",
+      "why": "CIBC, a direct sibling competitor, is expanding access to US equities for Canadian investors, so Simplii's investing offer should be checked against it."
     },
     {
-      "headline": "Banco do Brasil adds in-app voice calling ('Telefone BB'), and Starling launches an AI 'talk to transact' feature for setting up payments by voice",
-      "why": "Voice and conversational interfaces are showing up in banking apps in two markets. This is worth considering for Simplii's digital-first support and payments flows."
+      "headline": "NYSE affiliate plans 24/7 tokenized stock trading this month, and Coinbase launched 24/7 USDC-settled equity perpetuals",
+      "why": "Round-the-clock equity trading is shifting from crypto venues toward traditional exchanges, which will raise customer expectations for trading hours and settlement speed."
     }
   ]
 }
