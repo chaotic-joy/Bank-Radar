@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-14T15:56:36.172Z",
-  "tldr": "Wealthsimple is the most direct competitor mover today, opening a CADD beta with 3.25% promotional rewards and a retail beta for a Canadian-dollar stablecoin. Elsewhere, stablecoins and tokenized deposits, 24/7 trading and AI or voice-led banking are moving from experiments to live products.",
+  "updated": "2026-11-15T16:30:57.481Z",
+  "tldr": "Canadian signals are thin but meaningful: Wealthsimple is opening betas for a CAD cash product with 3.25% promo rewards and for a Canadian-dollar stablecoin, and CIBC is adding a U.S. CDR. Elsewhere, stablecoins, AI-driven payments and 24/7 trading are setting new customer expectations, while Nubank's Brazil banking license and U.S. launch show a fintech moving toward full-bank status.",
   "themes": [
-    "Stablecoins and tokenized deposits going mainstream",
-    "24/7 trading and tokenized equities",
-    "Voice and AI agents in banking and payments",
-    "Fintechs becoming banks / bundling account, card and remittances",
-    "Cross-border depositary receipts and market access"
+    "Stablecoins and tokenized money going mainstream",
+    "AI/agentic payments and voice interfaces",
+    "24/7 trading and perpetuals",
+    "Fintechs becoming full banks and expanding cross-border",
+    "Promo-led acquisition (rewards, card bonuses, Buen Fin)"
   ],
   "highlights": [
     {
-      "headline": "Wealthsimple opens a CADD beta with 3.25% promotional rewards and a retail beta for Tetra's Canadian dollar stablecoin",
-      "why": "The most direct competitor in the feed is pairing a promotional rewards rate with a CAD stablecoin, which sets new expectations for CAD digital-dollar products and could pull in rate-sensitive and crypto-curious Canadian customers."
+      "headline": "Wealthsimple opens a CADD beta with 3.25% promotional rewards and a retail beta for Tetra's Canadian-dollar stablecoin",
+      "why": "Our most direct digital rival is pairing a promo-rate cash product with CAD stablecoin access, which raises expectations for rates and for crypto-adjacent features among self-directed Canadians."
     },
     {
-      "headline": "SoFi's bank-issued stablecoin SoFiUSD is live on Polygon (its third chain) and is described as the first tokenized deposit product at a US bank",
-      "why": "A bank-issued, regulated digital dollar offered to 17M members shows incumbent-style banks can ship tokenized money, which is a template Simplii and CIBC could be measured against in CAD."
+      "headline": "CIBC to launch an additional U.S. Canadian Depositary Receipt",
+      "why": "A direct competitor (and our parent's peer set) is widening cross-border equity access through CDRs, which could set a benchmark for Canadian investors who want U.S. stock exposure without currency conversion."
     },
     {
-      "headline": "CIBC is launching an additional U.S. Canadian Depositary Receipt",
-      "why": "CIBC, a direct sibling competitor, is expanding access to US equities for Canadian investors, so Simplii's investing offer should be checked against it."
+      "headline": "OpenAI launches ChatGPT Wallet so AI agents can pay on users' behalf without seeing card details, and Starling ships an AI 'talk to transact' feature",
+      "why": "Agentic and voice-driven payments are moving from concept to product, so we should consider how our cards and app will work with AI agents and conversational payment flows."
     },
     {
-      "headline": "NYSE affiliate plans 24/7 tokenized stock trading this month, and Coinbase launched 24/7 USDC-settled equity perpetuals",
-      "why": "Round-the-clock equity trading is shifting from crypto venues toward traditional exchanges, which will raise customer expectations for trading hours and settlement speed."
+      "headline": "SoFi takes SoFiUSD, a bank-issued stablecoin and the first tokenized deposit product at a US bank, live on Polygon, its third blockchain, reaching 17M members",
+      "why": "A bank-licensed player is treating tokenized deposits as a core product, a category shift that could eventually pressure Canadian banks to offer similar rails."
     }
   ]
 }
