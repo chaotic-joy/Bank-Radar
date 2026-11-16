@@ -1,29 +1,30 @@
 {
-  "updated": "2026-11-16T09:32:34.349Z",
-  "tldr": "Wealthsimple is the most direct competitor mover today, with a CAD stablecoin beta, a 3.25% promo on its CADD beta and new kids and teens accounts. Elsewhere, stablecoins and tokenized deposits are moving into mainstream banking, and AI agents and voice are reshaping app interactions.",
+  "updated": "2026-11-16T19:46:50.399Z",
+  "tldr": "Canadian competitors are moving on new asset classes and acquisition offers: CIBC keeps expanding its CDR lineup (now 145, including a U.S. Anthropic IPO-linked receipt) and Wealthsimple is beta-testing a CAD stablecoin and a 3.25% promotional CADD. Meanwhile BMO and Scotiabank are running big chequing cash bonuses, and OpenAI's ChatGPT Wallet and Kalshi's night and weekend stock perps point to new expectations around agentic payments and off-hours trading.",
   "themes": [
-    "Stablecoins and tokenized deposits going mainstream",
-    "AI agents and voice in banking apps",
-    "Wealthsimple broadening its product shelf",
-    "Fintechs becoming full banks (Nubank)",
-    "Payroll and direct deposit as a primary-account wedge"
+    "Canadian chequing switch bonuses",
+    "Access to U.S. and hot-IPO stocks for Canadians (CDRs)",
+    "CAD stablecoins and digital-dollar products",
+    "Agentic AI payments",
+    "Extended-hours and 24/7 trading",
+    "Fintechs becoming full banks (Nubank)"
   ],
   "highlights": [
     {
-      "headline": "Wealthsimple opened a retail beta for Tetra's Canadian-dollar stablecoin and a CADD beta with 3.25% promotional rewards.",
-      "why": "The closest Canadian rival is putting a CAD-denominated digital dollar and a rewards promo in front of retail users. Simplii should decide its position on stablecoin and digital-cash features and on competing with the 3.25% promo."
+      "headline": "CIBC adds a CDR tied to the Anthropic U.S. IPO and takes its CDR lineup to 145, with another U.S. CDR announced a day earlier",
+      "why": "CIBC is turning CDRs into a fast channel for Canadians to get hot U.S. names in CAD without FX friction. Simplii, as a CIBC brand, should check whether its self-directed investing clients get these, and how that experience compares with Wealthsimple."
     },
     {
-      "headline": "Wealthsimple launched kids and teens accounts.",
-      "why": "This is a direct play for the next generation of customers and household relationships. Simplii should check its youth and family offering and its long-term acquisition funnel."
+      "headline": "Wealthsimple opens retail betas for Tetra's CAD stablecoin and a CADD offering with 3.25% promotional rewards",
+      "why": "The closest direct rival is testing CAD-denominated digital money and a promo-rate hook at once. Simplii should decide whether it needs a response on CAD stablecoin access or a rate/rewards counter."
     },
     {
-      "headline": "SoFi took its bank-issued stablecoin SoFiUSD live on Polygon, billed as the first tokenized deposit product at a US bank.",
-      "why": "A regulated bank is offering tokenized deposits to a base of 17M members, which sets a precedent for what customers may expect from a digital bank. Simplii should watch for Canadian regulatory and competitor follow-through."
+      "headline": "BMO Performance Chequing offers up to $1,100 cash plus Walmart+ for up to 12 months, while Scotiabank offers up to $1,000 for moving pay and $175 for students",
+      "why": "Big-bank switch bonuses at this level, tied to direct deposit, raise the bar for Simplii's own acquisition offers. Walmart+ bundling also shows partner perks are being used as a differentiator."
     },
     {
-      "headline": "OpenAI launched ChatGPT Wallet so AI agents can pay on users' behalf without seeing card details, and Starling launched an AI 'talk to transact' payments feature.",
-      "why": "Agent-initiated and conversational payments are becoming a new expectation. Simplii should consider how its cards, payments and app experience would work with agents and voice."
+      "headline": "OpenAI launches ChatGPT Wallet, letting AI agents pay on users' behalf without seeing card details; Kalshi's U.S.-regulated stock perps traded $1.75B in week one, with ~39% of volume outside regular hours",
+      "why": "These show two expectation shifts: AI agents initiating payments, and trading outside the 9:30–4:00 session. Simplii's cards and trading roadmap should consider both: agent-ready tokenized payments and extended-hours trading."
     }
   ]
 }

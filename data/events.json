@@ -55,13 +55,24 @@
     "id": "7fc5d6090a7d"
   },
   {
+    "name": "HOOD Summit 2026: Engines of Creation",
+    "type": "conference",
+    "organizer": "Robinhood",
+    "url": "https://robinhood.com/newsroom/hood-summit-2026/",
+    "location": "George R. Brown Convention Center, Houston, TX",
+    "region": "NA",
+    "date": "2026-09-29",
+    "endDate": "2026-09-30",
+    "id": "1c680c6bf89b"
+  },
+  {
     "id": "f52c5e81a6ce",
     "name": "Money20/20 USA 2026",
     "type": "conference",
     "organizer": "Money20/20",
-    "location": "The Venetian, Las Vegas, NV, USA",
+    "location": "The Venetian, Las Vegas, NV",
     "region": "NA",
-    "url": "https://us.money2020.com",
+    "url": "https://aspirescapital.com/conferences/money2020-usa",
     "date": "2026-10-18",
     "endDate": "2026-10-21"
   },
@@ -124,8 +135,8 @@
     "name": "Wealthsimple Presents: Something Good Is Going to Happen",
     "type": "keynote",
     "organizer": "Wealthsimple",
-    "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/05/wealthsimple-launches-ai-banking-assistant-that-can-help-move-money-place-trades/",
-    "location": "Toronto, Vancouver, Montréal and Calgary, Canada",
+    "url": "https://www.fintech.ca/2026/11/05/wealthsimple-unveils-penny-ai-assistant/",
+    "location": "Toronto (also Vancouver, Montréal, Calgary)",
     "region": "NA",
     "date": "2026-11-05",
     "endDate": "2026-11-05",
@@ -515,5 +526,16 @@
     "date": "2027-03-16",
     "endDate": "2027-03-18",
     "id": "3143f1e08bce"
+  },
+  {
+    "name": "Money20/20 USA 2027",
+    "type": "conference",
+    "organizer": "Money20/20",
+    "url": "https://aspirescapital.com/conferences/money2020-usa",
+    "location": "Las Vegas Convention Center and Resorts World, Las Vegas, NV",
+    "region": "NA",
+    "date": "2027-10-19",
+    "endDate": "2027-10-21",
+    "id": "03e4e896c776"
   }
 ]
