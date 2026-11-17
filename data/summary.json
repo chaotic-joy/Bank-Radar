@@ -1,29 +1,30 @@
 {
-  "updated": "2026-11-17T09:32:39.860Z",
-  "tldr": "Canadian competitors are pushing on investing breadth and switching incentives. CIBC is adding Canadian Depositary Receipts (CDRs), including one on Anthropic after its U.S. IPO, while Wealthsimple tests a CAD stablecoin and a promotional-rate product. Elsewhere, OpenAI's ChatGPT Wallet and Kalshi's stock perpetuals point to agentic payments and trading outside regular hours.",
+  "updated": "2026-11-17T18:43:03.373Z",
+  "tldr": "CIBC is set to offer Canadian retail investors access to the Anthropic IPO through a CDR, while B3 in Brazil already lists a sub-R$100 BDR. Wealthsimple is also opening a CAD stablecoin beta with 3.25% promotional rewards, and Canadian banks continue to pay big cash bonuses for new chequing customers.",
   "themes": [
-    "Expanding retail investing access (CDRs, ETFs, fractional global exposure)",
-    "Stablecoins and new money rails",
-    "AI agents entering payments",
-    "Extended-hours and 24/7 trading",
-    "Switching bonuses and promotional rates"
+    "Retail access to hot US IPOs via local depositary receipts",
+    "Fractional, low-minimum investing for retail users",
+    "Chequing acquisition bonuses",
+    "Fintechs gaining bank status and expanding products",
+    "Digital wallets and stablecoins",
+    "Bank app outages"
   ],
   "highlights": [
     {
-      "headline": "CIBC will launch a CDR on Anthropic following its U.S. IPO and is adding another CDR, taking its lineup to 145 across six countries.",
-      "why": "A direct competitor is making access to hot U.S. names a differentiator, and it sets a bar for how quickly Simplii can offer comparable exposure to its self-directed investors."
+      "headline": "CIBC will launch an Anthropic Canadian Depositary Receipt following the US IPO, and its CDR lineup now stands at 145. B3 in Brazil is launching an Anthropic BDR at the same time as the Nasdaq debut, with a minimum investment under R$100.",
+      "why": "A direct competitor is turning access to a marquee US IPO into a Canadian-dollar, low-ticket product. Simplii customers will expect similar access, so the team should check what CDR and IPO access its trading platform offers."
     },
     {
-      "headline": "Wealthsimple opened a retail beta for Tetra's Canadian-dollar stablecoin and a CADD beta with 3.25% promotional rewards.",
-      "why": "Wealthsimple is testing CAD-denominated digital money and promotional yield at the same time, which could reset customer expectations for cash products and moving money."
+      "headline": "Wealthsimple opened a beta for CADD with 3.25% promotional rewards.",
+      "why": "Wealthsimple is a direct competitor pairing a new CAD-denominated digital product with a rewards rate. This sets a new benchmark for yield and product novelty among digitally minded Canadians."
     },
     {
-      "headline": "OpenAI launched ChatGPT Wallet, letting AI agents pay for purchases without seeing card details.",
-      "why": "Agent-initiated payments could change how customers pay and which accounts and cards sit behind the wallet, so the team should consider how Simplii products would work in that flow."
+      "headline": "BMO is offering up to $1,100 in cash plus Walmart+ for up to 12 months on Performance Chequing. Scotiabank is offering up to $1,000 for moving pay, and $175 for students.",
+      "why": "Big-bank chequing acquisition offers are escalating, with bonuses tied to payroll switching. This is a direct benchmark for Simplii's own welcome and payroll-switch incentives."
     },
     {
-      "headline": "Kalshi's U.S.-regulated stock perpetuals passed $1.75B traded in their first week, with about 39% of volume outside regular weekday hours. Kalshi has also bought a securities firm to move into stock trading.",
-      "why": "Strong off-hours demand shows appetite for night, Sunday and leveraged trading, a category shift that puts pressure on traditional brokerage hours."
+      "headline": "Nubank received Brazilian Central Bank approval for a banking charter through the Banco Porto Real acquisition, keeping its brand. It also reportedly reached all 50 US states in the first weeks of Nubank U.S.",
+      "why": "A digital-first challenger is gaining full bank status and expanding into the US market. This reinforces the category shift toward fintechs holding charters, and Nubank's entry into North America is worth watching."
     }
   ]
 }
