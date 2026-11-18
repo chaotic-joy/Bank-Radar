@@ -1,30 +1,29 @@
 {
-  "updated": "2026-11-17T18:43:03.373Z",
-  "tldr": "CIBC is set to offer Canadian retail investors access to the Anthropic IPO through a CDR, while B3 in Brazil already lists a sub-R$100 BDR. Wealthsimple is also opening a CAD stablecoin beta with 3.25% promotional rewards, and Canadian banks continue to pay big cash bonuses for new chequing customers.",
+  "updated": "2026-11-18T09:34:27.752Z",
+  "tldr": "Anthropic's IPO is the dominant story. CIBC is launching a Canadian Depositary Receipt (CDR) for it, and Brazil's B3 is listing a sub-R$100 BDR at the same time as the Nasdaq debut. Elsewhere, Nubank is now a licensed bank in Brazil and has launched in the US, Mercado Pago is adding US-stock access, and large US banks suffered outages.",
   "themes": [
-    "Retail access to hot US IPOs via local depositary receipts",
-    "Fractional, low-minimum investing for retail users",
-    "Chequing acquisition bonuses",
-    "Fintechs gaining bank status and expanding products",
-    "Digital wallets and stablecoins",
-    "Bank app outages"
+    "Fractional, low-minimum access to hot US IPOs via local receipts (CDR/BDR/CEDEAR)",
+    "Fintechs getting bank charters (Nubank, Dave)",
+    "Fintechs expanding into investing and credit (Mercado Pago, Kalshi stock trading, Coinbase USDC loans)",
+    "Outages and security incidents as a trust risk (US bank outages, Mercado Bitcoin hack)",
+    "Card and travel-reward promotions"
   ],
   "highlights": [
     {
-      "headline": "CIBC will launch an Anthropic Canadian Depositary Receipt following the US IPO, and its CDR lineup now stands at 145. B3 in Brazil is launching an Anthropic BDR at the same time as the Nasdaq debut, with a minimum investment under R$100.",
-      "why": "A direct competitor is turning access to a marquee US IPO into a Canadian-dollar, low-ticket product. Simplii customers will expect similar access, so the team should check what CDR and IPO access its trading platform offers."
+      "headline": "CIBC will launch an Anthropic Canadian Depositary Receipt after the US IPO and has expanded its CDR lineup to 145",
+      "why": "A direct competitor is turning CDRs into a fast way for Canadian retail investors to get day-one access to marquee US listings. Simplii should check how quickly it can offer comparable access and what its brokerage offers around hot IPOs."
     },
     {
-      "headline": "Wealthsimple opened a beta for CADD with 3.25% promotional rewards.",
-      "why": "Wealthsimple is a direct competitor pairing a new CAD-denominated digital product with a rewards rate. This sets a new benchmark for yield and product novelty among digitally minded Canadians."
+      "headline": "B3 launched an Anthropic BDR (ANTH34) for under R$100, trading at the same time as the Nasdaq debut",
+      "why": "Simultaneous local listing with a low minimum shows how fast customer expectations for IPO access are rising. It is also a template for CDR-style products in Canada."
     },
     {
-      "headline": "BMO is offering up to $1,100 in cash plus Walmart+ for up to 12 months on Performance Chequing. Scotiabank is offering up to $1,000 for moving pay, and $175 for students.",
-      "why": "Big-bank chequing acquisition offers are escalating, with bonuses tied to payroll switching. This is a direct benchmark for Simplii's own welcome and payroll-switch incentives."
+      "headline": "Nubank became a licensed bank in Brazil, keeping its brand and account terms unchanged, and its US launch reportedly reached all 50 states in its first weeks",
+      "why": "A scaled digital challenger is moving from fintech to full bank and into North America. This is a category-shift signal for a digital-first bank like Simplii, worth watching for any move toward Canada."
     },
     {
-      "headline": "Nubank received Brazilian Central Bank approval for a banking charter through the Banco Porto Real acquisition, keeping its brand. It also reportedly reached all 50 US states in the first weeks of Nubank U.S.",
-      "why": "A digital-first challenger is gaining full bank status and expanding into the US market. This reinforces the category shift toward fintechs holding charters, and Nubank's entry into North America is worth watching."
+      "headline": "Chase, Bank of America, Wells Fargo and US Bank all reported online and mobile banking outages",
+      "why": "Widespread outages at large banks show how quickly reliability becomes a customer-trust issue. Simplii can use this as a prompt to review its own resilience and outage-communication plans."
     }
   ]
 }
