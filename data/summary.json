@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-19T09:27:40.003Z",
-  "tldr": "None of the direct Canadian competitors (CIBC, RBC, TD, Scotiabank, BMO, Wealthsimple, EQ Bank, Tangerine) made a tracked move today. The news was dominated by Brazil's B3 pushing low-cost access to the Anthropic IPO, Latin American fintechs pushing into investing and banking licences, and a run of outages and security incidents at large banks and exchanges.",
+  "updated": "2026-11-19T18:28:42.238Z",
+  "tldr": "Canadian competitor news is thin today: BMO's quantum/AI claim is the only direct-competitor move, and the rest of the Canadian items are rate and card roundups. The bigger signals are elsewhere: investing access is widening (Kalshi moving into stocks, B3 listing a low-minimum Anthropic BDR, Mercado Pago embedding investing in its app), while outages and data leaks keep reliability and security in focus.",
   "themes": [
-    "Fractional, low-minimum access to hot IPOs and assets",
-    "Fintechs becoming chartered banks",
-    "Super-app brokerage (Mercado Pago, Kalshi)",
-    "Outages, breaches and trust",
-    "Canadian rate-comparison shopping (GICs, TFSAs)"
+    "Low-barrier access to investing and hot IPOs",
+    "Non-bank players moving into brokerage and banking",
+    "Outages and data-security incidents",
+    "AI and agentic tech positioning",
+    "Seasonal promotions and rate comparisons"
   ],
   "highlights": [
     {
-      "headline": "B3 listed an Anthropic BDR (ANTH34) for under R$100, trading at the same time as the Nasdaq IPO.",
-      "why": "Brazilian retail investors get same-day, small-ticket access to a marquee US IPO. Canadian self-directed customers may come to expect the same, so the team should check how Simplii handles IPO access and fractional or CDR-style products."
+      "headline": "Kalshi is buying New York broker FB Securities to launch stock and ETF trading.",
+      "why": "A prediction-market exchange is becoming a full broker, so more non-bank platforms will compete for the same self-directed investors Simplii's trading offer serves."
     },
     {
-      "headline": "Mercado Pago launched CEDEAR investing, letting users buy US stocks in pesos from inside its app, and is taking on Cocos.",
-      "why": "A payments and wallet app is turning into a full retail broker. This is the same convergence that Wealthsimple and Kalshi represent, and it raises the bar for in-app investing from a bank account."
+      "headline": "B3 listed an Anthropic BDR (ANTH34) to trade alongside the company's Nasdaq IPO, with a minimum investment reported at under R$100.",
+      "why": "Local, same-day, small-ticket access to a high-profile US IPO sets an expectation that Canadian self-directed investors may start to share."
     },
     {
-      "headline": "Kalshi is buying broker FB Securities to launch stock and ETF trading, and Dave has applied for a US national bank charter. Nubank also gained a Brazilian banking licence.",
-      "why": "Prediction markets, neobanks and fintechs are all moving to own the regulated stack and offer broader product sets. Competition for primary-account and trading relationships will come from non-traditional players."
+      "headline": "Mercado Pago now lets users invest in pesos in its app via CEDEARs, taking on the broker Cocos.",
+      "why": "A payments app is adding investing to its everyday money tools, a pattern to watch for Wealthsimple-style bundling of spending, saving and investing."
     },
     {
-      "headline": "Itaú had app, login and Pix failures, Wells Fargo and Chase had outages, Banco do Brasil confirmed a customer data leak, and Mercado Bitcoin resumed trading after a US$49M hack.",
-      "why": "Reliability and security remain key reasons customers distrust or leave a bank. Simplii should check its own incident communication, status transparency and scam-warning playbooks."
+      "headline": "BMO claims a quantum computing breakthrough, saying it could help AI models find the most relevant information in complex datasets.",
+      "why": "This is a direct Canadian competitor positioning itself as a tech and AI leader. It is an early claim with no customer-facing product yet, but it is worth tracking."
     }
   ]
 }
