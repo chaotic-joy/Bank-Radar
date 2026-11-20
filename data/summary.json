@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-19T18:28:42.238Z",
-  "tldr": "Canadian competitor news is thin today: BMO's quantum/AI claim is the only direct-competitor move, and the rest of the Canadian items are rate and card roundups. The bigger signals are elsewhere: investing access is widening (Kalshi moving into stocks, B3 listing a low-minimum Anthropic BDR, Mercado Pago embedding investing in its app), while outages and data leaks keep reliability and security in focus.",
+  "updated": "2026-11-20T09:27:55.868Z",
+  "tldr": "Today's news is mostly Brazil and LatAm: card-rewards launches, Black Friday offers, and outages and breaches at Itaú, Banco do Brasil and Mercado Bitcoin. The items most relevant to Simplii are Mercado Pago's push into investing, Kalshi's move into stocks and ETFs, N26's premium tier, and Anthropic's IPO reaching retail investors through B3. None of the tracked Canadian competitors (CIBC, RBC, TD, Scotiabank, Wealthsimple, EQ Bank, Tangerine) made a notable move today. BMO's quantum-computing claim is the only one from that group.",
   "themes": [
-    "Low-barrier access to investing and hot IPOs",
-    "Non-bank players moving into brokerage and banking",
-    "Outages and data-security incidents",
-    "AI and agentic tech positioning",
-    "Seasonal promotions and rate comparisons"
+    "Premium and rewards card arms race",
+    "Black Friday cashback and points offers",
+    "Fintechs adding retail investing (stocks, ETFs, CEDEARs)",
+    "Outages and data breaches testing trust",
+    "Retail access to hot IPOs and thematic ETFs"
   ],
   "highlights": [
     {
-      "headline": "Kalshi is buying New York broker FB Securities to launch stock and ETF trading.",
-      "why": "A prediction-market exchange is becoming a full broker, so more non-bank platforms will compete for the same self-directed investors Simplii's trading offer serves."
+      "headline": "Mercado Pago launches in-app investing in CEDEARs, letting Argentine users invest in pesos and take on broker Cocos. Kalshi is buying broker FB Securities to launch stock and ETF trading.",
+      "why": "Payments and prediction-market players are adding brokerage to their apps. It's a reminder that Wealthsimple-style one-app money and investing is becoming a baseline expectation, which pressures Simplii's trading and investing experience."
     },
     {
-      "headline": "B3 listed an Anthropic BDR (ANTH34) to trade alongside the company's Nasdaq IPO, with a minimum investment reported at under R$100.",
-      "why": "Local, same-day, small-ticket access to a high-profile US IPO sets an expectation that Canadian self-directed investors may start to share."
+      "headline": "Anthropic's IPO reached Brazilian retail investors on day one through a B3 BDR priced at about R$60. B3 is also listing a wave of thematic ETFs, including a crypto ETF slated for Nov 24.",
+      "why": "Fractional, low-ticket access to marquee global IPOs and niche ETFs is setting a new bar for self-directed investing. Simplii should check how quickly it can offer new listings and thematic products."
     },
     {
-      "headline": "Mercado Pago now lets users invest in pesos in its app via CEDEARs, taking on the broker Cocos.",
-      "why": "A payments app is adding investing to its everyday money tools, a pattern to watch for Wealthsimple-style bundling of spending, saving and investing."
+      "headline": "N26 launches Aura, a premium account aimed at higher-value customers. Banco do Brasil launches a top-tier World Legend card, Nubank is offering a free metal Black card to selected customers, and Bradesco is raising its Centurion fee while cutting benefits.",
+      "why": "Digital-first banks are moving upmarket with premium tiers and rewards. Simplii should consider whether it needs a premium or high-engagement offer to keep and grow valuable customers."
     },
     {
-      "headline": "BMO claims a quantum computing breakthrough, saying it could help AI models find the most relevant information in complex datasets.",
-      "why": "This is a direct Canadian competitor positioning itself as a tech and AI leader. It is an early claim with no customer-facing product yet, but it is worth tracking."
+      "headline": "Itaú had repeated app, login and Pix outages on Nov 18-19 with no cause disclosed. Banco do Brasil confirmed a customer data leak and warned of scam risk. Mercado Bitcoin took two weeks to resume trading after a hack.",
+      "why": "Reliability and transparent incident communication are differentiators, especially during peak periods like Black Friday. It's a prompt to review Simplii's incident messaging, fraud and scam warnings, and peak-load resilience."
     }
   ]
 }
