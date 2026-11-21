@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-21T09:28:28.040Z",
-  "tldr": "Almost no direct Canadian competitor news today beyond BMO's quantum-AI claim; the action is in Brazil (premium cards, Black Friday, Anthropic's B3 listing) and in payments/wallets setting new expectations, such as agentic checkout and Google Wallet on iOS.",
+  "updated": "2026-11-21T16:54:58.990Z",
+  "tldr": "No direct Canadian competitor product moves today, apart from BMO's quantum-computing claim. The signal comes from elsewhere: Nasdaq is preparing for 23/5 trading, Klarna is now selectable in AI-agent checkout, N26 is going upmarket with a premium account, and Brazil is in a Black Friday card-rewards push alongside a heavily traded Anthropic listing.",
   "themes": [
-    "Premium and metal card wars",
+    "Extended-hours / 23-5 trading",
+    "Agentic AI and wallet payments",
+    "Premium tiers and card-rewards competition",
     "Black Friday cashback and points offers",
-    "AI in payments and markets",
-    "Digital wallets and embedded payments",
-    "Fintechs becoming banks, and outages"
+    "Fintechs becoming full banks"
   ],
   "highlights": [
     {
-      "headline": "Klarna is now payable inside AI-agent checkout via Adyen Agentic",
-      "why": "Agent-initiated purchases are becoming a real payment channel, so we should consider how our cards, wallets and authentication will work when an AI agent, not the customer, is checking out."
+      "headline": "Nasdaq has published a 23/5 Trading Information Hub, signalling near-round-the-clock US equity trading is coming.",
+      "why": "Simplii's self-directed investing clients may soon expect overnight access to US stocks, so we should check platform, order-handling and support readiness."
     },
     {
-      "headline": "Google Wallet launches on iOS across the US",
-      "why": "Cross-platform wallets raise customer expectations for passes, cards and tickets in one place, and put pressure on our own Apple Pay and Google Pay experience."
+      "headline": "Klarna is now available as a payment option when an AI agent checks out for shoppers through Adyen Agentic.",
+      "why": "Agent-driven checkout is moving from concept to live payment rails. Simplii should consider how its cards and accounts will be recognised and chosen when an AI agent makes the purchase."
     },
     {
-      "headline": "BMO claims a 'quantum utility' breakthrough that helps AI models find the most relevant information in complex datasets",
-      "why": "BMO is a direct competitor positioning itself as a leader in advanced AI and data, so we should watch whether this reaches fraud, risk or personalization."
+      "headline": "N26 launched Aura, its 'most exclusive' account, to pursue higher-value customers, adding to its four existing personal tiers.",
+      "why": "A digital-first bank is monetising affluent users with a premium tier. This is a reference point for how Simplii might package benefits for high-balance or high-engagement clients."
     },
     {
-      "headline": "N26 launches Aura, a premium account aimed at higher-value customers, after offering four main plans",
-      "why": "A digital-first bank is moving upmarket with an 'exclusive' tier, which tests whether Simplii needs a premium or higher-value digital offering."
+      "headline": "Anthropic's shares began trading on Nasdaq and, via a BDR, on Brazil's B3, with R$460M traded on day one, about triple SpaceX's BDR debut.",
+      "why": "Retail demand for access to marquee US listings is strong, and local-market wrappers are one way to deliver it. Simplii's investing team should review how quickly clients can reach hot US IPOs."
     }
   ]
 }
