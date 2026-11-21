@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-20T17:56:38.504Z",
-  "tldr": "Almost no Canadian big-bank or Wealthsimple news today; BMO's quantum/AI claim is the only direct-competitor item. The notable signals come from fintechs and exchanges: agentic checkout, Google Wallet on iOS, N26's premium tier, Kalshi moving into equities, and Mercado Pago/Mercado Bitcoin operational changes.",
+  "updated": "2026-11-21T09:28:28.040Z",
+  "tldr": "Almost no direct Canadian competitor news today beyond BMO's quantum-AI claim; the action is in Brazil (premium cards, Black Friday, Anthropic's B3 listing) and in payments/wallets setting new expectations, such as agentic checkout and Google Wallet on iOS.",
   "themes": [
-    "Agentic AI commerce and payments",
-    "Premium and high-value customer tiers",
-    "Retail access to equities and new asset types",
-    "Wallet and payment-rail expansion",
-    "Operational reliability and trust (outages, hacks, funding-method cuts)"
+    "Premium and metal card wars",
+    "Black Friday cashback and points offers",
+    "AI in payments and markets",
+    "Digital wallets and embedded payments",
+    "Fintechs becoming banks, and outages"
   ],
   "highlights": [
     {
-      "headline": "Klarna is now available in Adyen's AI agent checkout (Adyen Agentic), so shoppers can pay with Klarna when an AI agent buys for them.",
-      "why": "Payment methods are being built into agent-led shopping, so Simplii's cards and payment options will need to work when an AI agent, not a person, is checking out."
+      "headline": "Klarna is now payable inside AI-agent checkout via Adyen Agentic",
+      "why": "Agent-initiated purchases are becoming a real payment channel, so we should consider how our cards, wallets and authentication will work when an AI agent, not the customer, is checking out."
     },
     {
-      "headline": "Google Wallet launched on iOS across the US, bringing payments, tickets and boarding passes into one app.",
-      "why": "It raises the bar for wallet experience on iPhone and could pull card use away from bank apps. Simplii should check its own wallet and card provisioning."
+      "headline": "Google Wallet launches on iOS across the US",
+      "why": "Cross-platform wallets raise customer expectations for passes, cards and tickets in one place, and put pressure on our own Apple Pay and Google Pay experience."
     },
     {
-      "headline": "N26 launched Aura, a premium account described as its 'most exclusive' tier, to go after higher-value customers.",
-      "why": "A digital-first bank is moving up-market with a paid tier, which is a model Simplii could test for its own affluent segment."
+      "headline": "BMO claims a 'quantum utility' breakthrough that helps AI models find the most relevant information in complex datasets",
+      "why": "BMO is a direct competitor positioning itself as a leader in advanced AI and data, so we should watch whether this reaches fraud, risk or personalization."
     },
     {
-      "headline": "Kalshi bought broker FB Securities to launch stock and ETF trading. Separately, Mercado Pago added CEDEAR investing in pesos in its app.",
-      "why": "Exchanges and wallets are adding brokerage features, so Simplii's trading offer may face more competition for retail investors' attention."
+      "headline": "N26 launches Aura, a premium account aimed at higher-value customers, after offering four main plans",
+      "why": "A digital-first bank is moving upmarket with an 'exclusive' tier, which tests whether Simplii needs a premium or higher-value digital offering."
     }
   ]
 }
