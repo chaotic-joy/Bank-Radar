@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-21T16:54:58.990Z",
-  "tldr": "No direct Canadian competitor product moves today, apart from BMO's quantum-computing claim. The signal comes from elsewhere: Nasdaq is preparing for 23/5 trading, Klarna is now selectable in AI-agent checkout, N26 is going upmarket with a premium account, and Brazil is in a Black Friday card-rewards push alongside a heavily traded Anthropic listing.",
+  "updated": "2026-11-22T09:29:29.653Z",
+  "tldr": "No major moves from Simplii's direct Canadian competitors today, apart from a BMO quantum-computing claim. The news that sets customer expectations comes from fintechs and exchanges: AI-agent checkout, near-round-the-clock trading, and retail access to a marquee IPO. Much of the rest is Latin American card and Black Friday promotions.",
   "themes": [
-    "Extended-hours / 23-5 trading",
-    "Agentic AI and wallet payments",
-    "Premium tiers and card-rewards competition",
-    "Black Friday cashback and points offers",
-    "Fintechs becoming full banks"
+    "Agentic AI in payments and checkout",
+    "Extended-hours trading (23/5)",
+    "Retail access to hot IPOs and new ETFs",
+    "Digital banks moving upmarket and into charters",
+    "Card rewards and Black Friday promotions"
   ],
   "highlights": [
     {
-      "headline": "Nasdaq has published a 23/5 Trading Information Hub, signalling near-round-the-clock US equity trading is coming.",
-      "why": "Simplii's self-directed investing clients may soon expect overnight access to US stocks, so we should check platform, order-handling and support readiness."
+      "headline": "Klarna is now payable when an AI agent checks out for shoppers via Adyen Agentic",
+      "why": "Payment choice is being built into AI-agent shopping flows. Simplii should consider how its cards and wallet-linked products would show up when an agent, not a person, completes the purchase."
     },
     {
-      "headline": "Klarna is now available as a payment option when an AI agent checks out for shoppers through Adyen Agentic.",
-      "why": "Agent-driven checkout is moving from concept to live payment rails. Simplii should consider how its cards and accounts will be recognised and chosen when an AI agent makes the purchase."
+      "headline": "Nasdaq has published a 23/5 Trading Information Hub",
+      "why": "This signals that near-round-the-clock US equity trading is becoming a real offering. Simplii's investing product team should check how its order handling, market-data and customer messaging would cope with extended hours."
     },
     {
-      "headline": "N26 launched Aura, its 'most exclusive' account, to pursue higher-value customers, adding to its four existing personal tiers.",
-      "why": "A digital-first bank is monetising affluent users with a premium tier. This is a reference point for how Simplii might package benefits for high-balance or high-engagement clients."
+      "headline": "Anthropic's IPO debuted on Nasdaq and B3 the same day, with the Brazilian BDR at about R$60 and R$460M traded on day one",
+      "why": "Retail demand for same-day access to a marquee IPO is strong, and a local exchange wrapper met it. Simplii should look at how quickly it could give self-directed investors access to major US listings."
     },
     {
-      "headline": "Anthropic's shares began trading on Nasdaq and, via a BDR, on Brazil's B3, with R$460M traded on day one, about triple SpaceX's BDR debut.",
-      "why": "Retail demand for access to marquee US listings is strong, and local-market wrappers are one way to deliver it. Simplii's investing team should review how quickly clients can reach hot US IPOs."
+      "headline": "N26 launched Aura, its most exclusive premium account, to pursue higher-value customers",
+      "why": "A digital-first bank is adding a premium tier above its four existing personal plans. Simplii should consider whether it needs a higher-value proposition or whether it is leaving affluent digital customers to others."
     }
   ]
 }
