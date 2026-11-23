@@ -1,29 +1,30 @@
 {
-  "updated": "2026-11-22T17:17:27.022Z",
-  "tldr": "No moves from Simplii's direct Canadian competitors except BMO's quantum-computing claim, which is not customer-facing. The news is mostly Brazilian and LatAm Black Friday card offers, plus signals on AI-agent checkout, 23/5 trading and wallet reach.",
+  "updated": "2026-11-23T09:34:07.197Z",
+  "tldr": "No direct Canadian competitor moves today except BMO's quantum-computing claim. The more relevant signals are agentic checkout (Klarna x Adyen), Google Wallet's iOS launch and Nasdaq's 23/5 trading hub. Brazil and LatAm news is mostly Black Friday card offers, fee changes and Nubank's push to become a licensed bank.",
   "themes": [
-    "Black Friday card and cashback promos",
-    "AI in payments and markets (agentic checkout, quantum, AI-stock access)",
-    "Extended-hours trading",
-    "Fintechs becoming banks and shifting fees",
-    "Premium card perks being tightened"
+    "Agentic/AI-driven checkout and AI-linked investing",
+    "Extended-hours trading (Nasdaq 23/5)",
+    "Wallet and payments ecosystem expansion",
+    "Card rewards and Black Friday promotions",
+    "Fee and benefit tightening (Mercado Bitcoin, Mercado Pago, Bradesco, Itaú)",
+    "Fintechs moving toward bank charters (Nubank, OakNorth)"
   ],
   "highlights": [
     {
-      "headline": "Klarna is now available when an AI agent checks out for a shopper through Adyen Agentic.",
-      "why": "Agent-initiated payments are moving into production. Simplii should check whether its cards and wallets, and its fraud and authorization rules, can handle purchases made by an agent rather than a person."
+      "headline": "Klarna is now payable when an AI agent checks out for shoppers via Adyen Agentic.",
+      "why": "Payments are moving toward agent-initiated purchases, so we should consider how our cards, wallets and credentials would work when an AI agent, not the customer, pays."
     },
     {
-      "headline": "Nasdaq has published a 23/5 Trading Information Hub, a sign that near-round-the-clock trading is being prepared.",
-      "why": "If US markets move toward 23/5, Simplii's self-directed investing clients will expect extended-hours access. That affects order handling, funding cut-offs and support hours."
+      "headline": "Nasdaq published a 23/5 Trading Information Hub.",
+      "why": "Near-round-the-clock trading is becoming a formal exchange offering, which could raise customer expectations for extended-hours access on our direct investing platform."
     },
     {
-      "headline": "Google Wallet has launched on iOS across the US.",
-      "why": "Wallet apps are broadening their reach beyond a single phone platform. Simplii should review its own wallet provisioning and the experience for iOS users."
+      "headline": "Google Wallet launched on iOS across the US.",
+      "why": "It adds a cross-platform wallet option on iPhone and could shift expectations for in-wallet cards, tickets and passes; we should check our own wallet and provisioning experience."
     },
     {
-      "headline": "BMO says it has reached 'quantum utility', with quantum techniques helping AI models pick out the most relevant information in complex datasets.",
-      "why": "This is the only item from a direct Canadian competitor. It is an R&D claim with no customer-facing product yet, but it shows how BMO is positioning on AI and data capability."
+      "headline": "BMO claims a quantum computing breakthrough, saying it could help AI models find the most relevant information in complex datasets.",
+      "why": "BMO is the only Canadian bank in today's feed, and it is positioning itself as an AI and data innovator. We should watch whether that shows up in customer-facing features."
     }
   ]
 }
