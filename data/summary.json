@@ -1,30 +1,29 @@
 {
-  "updated": "2026-11-23T09:34:07.197Z",
-  "tldr": "No direct Canadian competitor moves today except BMO's quantum-computing claim. The more relevant signals are agentic checkout (Klarna x Adyen), Google Wallet's iOS launch and Nasdaq's 23/5 trading hub. Brazil and LatAm news is mostly Black Friday card offers, fee changes and Nubank's push to become a licensed bank.",
+  "updated": "2026-11-23T21:37:32.550Z",
+  "tldr": "No direct Canadian competitor moved on product today; RBC Insurance's Men's Health Program was the only item from the named peer set, and it is a benefits play. The news that matters comes from the edges: tokenized stocks, AI-agent checkout, extended-hours trading and US charters for digital lenders, plus Latin American card-rewards and fee changes.",
   "themes": [
-    "Agentic/AI-driven checkout and AI-linked investing",
-    "Extended-hours trading (Nasdaq 23/5)",
-    "Wallet and payments ecosystem expansion",
-    "Card rewards and Black Friday promotions",
-    "Fee and benefit tightening (Mercado Bitcoin, Mercado Pago, Bradesco, Itaú)",
-    "Fintechs moving toward bank charters (Nubank, OakNorth)"
+    "Tokenized and extended-hours trading",
+    "AI agents in payments and analytics",
+    "Digital players winning bank charters",
+    "Card rewards and Black Friday promos",
+    "Fees and friction on funding and accounts"
   ],
   "highlights": [
     {
-      "headline": "Klarna is now payable when an AI agent checks out for shoppers via Adyen Agentic.",
-      "why": "Payments are moving toward agent-initiated purchases, so we should consider how our cards, wallets and credentials would work when an AI agent, not the customer, pays."
+      "headline": "OKX and NYSE parent ICE launch a tokenized stock venue with 113 assets lined up, while Nasdaq publishes a 23/5 trading information hub.",
+      "why": "Tokenized equities and near-round-the-clock trading are becoming mainstream exchange offerings, which will raise customer expectations for Simplii's self-directed trading hours and asset access."
     },
     {
-      "headline": "Nasdaq published a 23/5 Trading Information Hub.",
-      "why": "Near-round-the-clock trading is becoming a formal exchange offering, which could raise customer expectations for extended-hours access on our direct investing platform."
+      "headline": "Klarna is now available inside Adyen's AI agent checkout (Adyen Agentic), and Expensify launched AI-powered Insights analytics.",
+      "why": "Payments and spend tools are starting to build in agent-led purchasing and AI analysis of spending, which gives Simplii a reference point for how AI could show up in its payments and money-management features."
     },
     {
-      "headline": "Google Wallet launched on iOS across the US.",
-      "why": "It adds a cross-platform wallet option on iPhone and could shift expectations for in-wallet cards, tickets and passes; we should check our own wallet and provisioning experience."
+      "headline": "Payoneer received preliminary OCC approval for a stablecoin national trust bank, and OakNorth secured a US national banking charter.",
+      "why": "Fintechs are gaining regulated status and stablecoin infrastructure. This is a category shift that points to more regulated, low-cost cross-border and digital-bank rivals."
     },
     {
-      "headline": "BMO claims a quantum computing breakthrough, saying it could help AI models find the most relevant information in complex datasets.",
-      "why": "BMO is the only Canadian bank in today's feed, and it is positioning itself as an AI and data innovator. We should watch whether that shows up in customer-facing features."
+      "headline": "RBC Insurance launched a Men's Health Program, extending its personalized Group Benefit Solutions.",
+      "why": "It's the only item from a named Canadian peer, and it shows RBC deepening its employer-benefits and wellness offering beyond core banking. It's worth a quick look, though it has little direct bearing on Simplii's retail products."
     }
   ]
 }
