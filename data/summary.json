@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-24T09:28:19.353Z",
-  "tldr": "No direct Canadian-bank moves today besides a minor RBC Insurance benefits launch. The news that matters comes from the edges: tokenized stocks, agentic checkout, longer trading hours and wallet expansion are all raising customer expectations, while Latin American players tinker with fees and card perks.",
+  "updated": "2026-11-24T20:17:26.746Z",
+  "tldr": "No moves from Simplii's direct Canadian competitors today. The one Canadian bank item is an RBC Insurance group-benefits launch, which is not relevant to Simplii. The useful signals come from exchanges and fintechs: low-minimum global ETFs, extended trading hours, tokenized stocks, and new payment rails. Mercado Bitcoin's fee change is a notable pricing move.",
   "themes": [
-    "Tokenized and extended-hours trading",
-    "AI agents in payments and analytics",
-    "Fee restructuring (flat annual fees, funding-method cuts)",
-    "Travel-points and Black Friday card offers",
-    "Fintech charters and wallet expansion"
+    "Low-minimum, fractional-style access to global ETFs",
+    "Extended-hours and tokenized trading",
+    "Agentic and card-free payment experiences",
+    "Fee restructuring and removing funding options",
+    "Premium card points and travel-perk arms race"
   ],
   "highlights": [
     {
-      "headline": "OKX and NYSE parent ICE launch a tokenized stock venue with 113 assets lined up; Nasdaq is also publishing a 23/5 trading information hub",
-      "why": "Tokenized equities and near-round-the-clock trading are becoming mainstream. This is a signal for Simplii's brokerage roadmap (Direct Investing hours, product scope) to consider."
+      "headline": "Itaú launched a Vanguard-linked global stock ETF covering about 98% of global equities, with investments starting at R$50 (about C$13).",
+      "why": "A bank packaging a one-click global equity ETF at a tiny entry point resets expectations for low-minimum, diversified investing. Simplii's investing and self-directed offering should be benchmarked against this."
     },
     {
-      "headline": "Klarna is now available when an AI agent checks out through Adyen Agentic, and Expensify launched AI-powered Insights",
-      "why": "Agent-initiated payments and AI analytics are moving from concept to live product. Simplii should consider how its cards and accounts will work in agentic checkout, and whether to offer spend insights."
+      "headline": "Nasdaq published a 23/5 trading information hub, and OKX and ICE (NYSE's parent) are launching a tokenized-stock venue with 113 assets lined up.",
+      "why": "Near-around-the-clock and tokenized equity trading is moving from concept to infrastructure. Simplii should decide on its position on extended-hours trading before customers start asking for it."
     },
     {
-      "headline": "Google Wallet launched on iOS across the US",
-      "why": "Wallet competition on iPhone is widening. It is worth checking how Simplii's cards provision and perform across wallets, and whether wallet features could pull customers away from bank apps."
+      "headline": "Klarna is now payable inside Adyen's agentic AI checkout, and Mercado Pago launched 'Quick Payments' for buying without presenting a card.",
+      "why": "Payments are moving toward agent-driven and card-free flows. This could change how Simplii's debit and credit products show up at checkout, so tokenization and wallet readiness matter."
     },
     {
-      "headline": "Mercado Bitcoin is replacing its inactivity fee with a flat R$46.80 annual fee for all customers, and Mercado Pago is dropping debit cards as a way to add funds from December",
-      "why": "Fee and funding-method changes at fintechs show how providers are cutting cost-to-serve. They also show the customer backlash risk Simplii should weigh before changing no-fee positioning or funding options."
+      "headline": "Mercado Bitcoin will charge every customer a R$46.80 annual fee in place of its inactivity fee. Separately, Mercado Pago is ending debit-card top-ups from December.",
+      "why": "Both moves show platforms restructuring fees and funding options. As a no-fee, low-cost brand, Simplii can use this as a differentiation point. It also shows how a change to funding methods lands with customers."
     }
   ]
 }
