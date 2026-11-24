@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-23T21:37:32.550Z",
-  "tldr": "No direct Canadian competitor moved on product today; RBC Insurance's Men's Health Program was the only item from the named peer set, and it is a benefits play. The news that matters comes from the edges: tokenized stocks, AI-agent checkout, extended-hours trading and US charters for digital lenders, plus Latin American card-rewards and fee changes.",
+  "updated": "2026-11-24T09:28:19.353Z",
+  "tldr": "No direct Canadian-bank moves today besides a minor RBC Insurance benefits launch. The news that matters comes from the edges: tokenized stocks, agentic checkout, longer trading hours and wallet expansion are all raising customer expectations, while Latin American players tinker with fees and card perks.",
   "themes": [
     "Tokenized and extended-hours trading",
     "AI agents in payments and analytics",
-    "Digital players winning bank charters",
-    "Card rewards and Black Friday promos",
-    "Fees and friction on funding and accounts"
+    "Fee restructuring (flat annual fees, funding-method cuts)",
+    "Travel-points and Black Friday card offers",
+    "Fintech charters and wallet expansion"
   ],
   "highlights": [
     {
-      "headline": "OKX and NYSE parent ICE launch a tokenized stock venue with 113 assets lined up, while Nasdaq publishes a 23/5 trading information hub.",
-      "why": "Tokenized equities and near-round-the-clock trading are becoming mainstream exchange offerings, which will raise customer expectations for Simplii's self-directed trading hours and asset access."
+      "headline": "OKX and NYSE parent ICE launch a tokenized stock venue with 113 assets lined up; Nasdaq is also publishing a 23/5 trading information hub",
+      "why": "Tokenized equities and near-round-the-clock trading are becoming mainstream. This is a signal for Simplii's brokerage roadmap (Direct Investing hours, product scope) to consider."
     },
     {
-      "headline": "Klarna is now available inside Adyen's AI agent checkout (Adyen Agentic), and Expensify launched AI-powered Insights analytics.",
-      "why": "Payments and spend tools are starting to build in agent-led purchasing and AI analysis of spending, which gives Simplii a reference point for how AI could show up in its payments and money-management features."
+      "headline": "Klarna is now available when an AI agent checks out through Adyen Agentic, and Expensify launched AI-powered Insights",
+      "why": "Agent-initiated payments and AI analytics are moving from concept to live product. Simplii should consider how its cards and accounts will work in agentic checkout, and whether to offer spend insights."
     },
     {
-      "headline": "Payoneer received preliminary OCC approval for a stablecoin national trust bank, and OakNorth secured a US national banking charter.",
-      "why": "Fintechs are gaining regulated status and stablecoin infrastructure. This is a category shift that points to more regulated, low-cost cross-border and digital-bank rivals."
+      "headline": "Google Wallet launched on iOS across the US",
+      "why": "Wallet competition on iPhone is widening. It is worth checking how Simplii's cards provision and perform across wallets, and whether wallet features could pull customers away from bank apps."
     },
     {
-      "headline": "RBC Insurance launched a Men's Health Program, extending its personalized Group Benefit Solutions.",
-      "why": "It's the only item from a named Canadian peer, and it shows RBC deepening its employer-benefits and wellness offering beyond core banking. It's worth a quick look, though it has little direct bearing on Simplii's retail products."
+      "headline": "Mercado Bitcoin is replacing its inactivity fee with a flat R$46.80 annual fee for all customers, and Mercado Pago is dropping debit cards as a way to add funds from December",
+      "why": "Fee and funding-method changes at fintechs show how providers are cutting cost-to-serve. They also show the customer backlash risk Simplii should weigh before changing no-fee positioning or funding options."
     }
   ]
 }
