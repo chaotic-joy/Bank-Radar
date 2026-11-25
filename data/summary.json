@@ -1,29 +1,29 @@
 {
-  "updated": "2026-11-24T20:17:26.746Z",
-  "tldr": "No moves from Simplii's direct Canadian competitors today. The one Canadian bank item is an RBC Insurance group-benefits launch, which is not relevant to Simplii. The useful signals come from exchanges and fintechs: low-minimum global ETFs, extended trading hours, tokenized stocks, and new payment rails. Mercado Bitcoin's fee change is a notable pricing move.",
+  "updated": "2026-11-25T09:32:35.293Z",
+  "tldr": "None of today's items come from Simplii's direct Canadian competitors. The only Canadian bank item is RBC Insurance's group benefits launch, which is marginal. The real signals are low-minimum global ETFs, tokenized and extended-hours trading, stablecoin spending, and AI-fed personal finance data, all from fintechs, exchanges and Brazilian banks.",
   "themes": [
-    "Low-minimum, fractional-style access to global ETFs",
-    "Extended-hours and tokenized trading",
-    "Agentic and card-free payment experiences",
-    "Fee restructuring and removing funding options",
-    "Premium card points and travel-perk arms race"
+    "Low-minimum investing access (global ETFs from R$50)",
+    "Tokenized assets and extended-hours trading",
+    "Stablecoin payments and licensing",
+    "AI and personal finance data in assistants and analytics",
+    "Fee changes and Black Friday card and rate promos"
   ],
   "highlights": [
     {
-      "headline": "Itaú launched a Vanguard-linked global stock ETF covering about 98% of global equities, with investments starting at R$50 (about C$13).",
-      "why": "A bank packaging a one-click global equity ETF at a tiny entry point resets expectations for low-minimum, diversified investing. Simplii's investing and self-directed offering should be benchmarked against this."
+      "headline": "Itaú launched a global stock ETF built with Vanguard, covering about 98% of global equities, with investments starting at R$50.",
+      "why": "A big incumbent bank is packaging one-click global diversification at a tiny minimum, which raises expectations for Simplii's self-directed and low-cost investing offer."
     },
     {
-      "headline": "Nasdaq published a 23/5 trading information hub, and OKX and ICE (NYSE's parent) are launching a tokenized-stock venue with 113 assets lined up.",
-      "why": "Near-around-the-clock and tokenized equity trading is moving from concept to infrastructure. Simplii should decide on its position on extended-hours trading before customers start asking for it."
+      "headline": "Plaid is helping Google bring personalized financial info into the Gemini AI app.",
+      "why": "Customers may soon query their own account data in general-purpose AI assistants, which makes open-banking and data-connectivity readiness, and Simplii's own AI roadmap, more urgent."
     },
     {
-      "headline": "Klarna is now payable inside Adyen's agentic AI checkout, and Mercado Pago launched 'Quick Payments' for buying without presenting a card.",
-      "why": "Payments are moving toward agent-driven and card-free flows. This could change how Simplii's debit and credit products show up at checkout, so tokenization and wallet readiness matter."
+      "headline": "OKX and NYSE parent ICE launched a tokenized stock venue with 113 assets lined up. Nasdaq also published a 23/5 trading information hub.",
+      "why": "Tokenized equities and near-around-the-clock trading are moving toward the mainstream and could reset expectations for trading hours and access."
     },
     {
-      "headline": "Mercado Bitcoin will charge every customer a R$46.80 annual fee in place of its inactivity fee. Separately, Mercado Pago is ending debit-card top-ups from December.",
-      "why": "Both moves show platforms restructuring fees and funding options. As a no-fee, low-cost brand, Simplii can use this as a differentiation point. It also shows how a change to funding methods lands with customers."
+      "headline": "Deel launched a card that lets contractors spend their stablecoin balance, and Payoneer received preliminary OCC conditional approval for a stablecoin national trust bank.",
+      "why": "Stablecoin-to-spend is becoming a regulated, mainstream payments path, which matters for cross-border and freelancer banking needs."
     }
   ]
 }
